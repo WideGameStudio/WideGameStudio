@@ -1,2 +1,0 @@
-# WideGameStudio
-Hello World
