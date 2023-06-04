@@ -77,7 +77,7 @@ background-image: url(../img/works/2.jpg);
 }
 
 .item-works-02 {
-background-image: url(../img/wgs/bravi.png);
+background-image: url(../img/wgs/nightwatch.png);
 }
 
 .item-works-03 {
@@ -2627,7 +2627,7 @@ margin: -7px auto 4px auto;
 
 .the-button {
 position: relative;
-width: 175px;
+width: 200px;
 font-size: 10px;
 font-weight: 700;
 text-transform: uppercase;
