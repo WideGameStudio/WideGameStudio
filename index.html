@@ -1,1887 +1,1451 @@
 <!DOCTYPE html>
-<html lang="zxx">
-    <head>
-        <meta charset="utf-8">
-        <title>
-            Wide Game Studio
-        </title>
-        <!-- favicon -->
-        <link href="img//wgs/wgslogo.png" rel="shortcut icon" type="image/x-icon">
-        <meta content="" name="description">
-        <meta content="" name="author">
-        <meta content="" name="keywords">
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-        <!-- Runex v1.0 || ex nihilo || September 2021 -->
-        <!-- style start -->
-        <link href="css/plugins.css" media="all" rel="stylesheet" type="text/css">
-        <link href="css/style-DARK.css" media="all" rel="stylesheet" type="text/css">
-        <!-- style end -->
-        <!-- google fonts start -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700" rel="stylesheet" type="text/css">
-        <!-- google fonts end -->
-    </head>
-    <body>
-        <!-- preloader start -->
-        <div class="preloader-bg"></div>
-        <div id="preloader">
-            <div id="preloader-status">
-                <div class="preloader-position loader">
-                    <span></span>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>WGS</title>
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+
+  <!-- Core Style Sheets -->
+  <link rel="stylesheet" href="assets/css/master.css">
+  <!-- Responsive Style Sheets -->
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- Revolution Style Sheets -->
+  <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+  <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+  <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+
+</head>
+
+<body>
+
+  <!--== Loader Start ==-->
+  <div id="loader-overlay">
+    <div class="loader">
+      <div class="spinner">
+        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="length" fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+        </svg>
+        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+        </svg>
+        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+        </svg>
+        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!--== Loader End ==-->
+
+  <!--== Wrapper Start ==-->
+  <div class="wrapper">
+
+    <!--== Header Start ==-->
+    <nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav on no-full brand-center">
+      <div class="container">
+        <!--== Start Atribute Navigation ==-->
+        <!-- <div class="attr-nav hidden-xs sm-display-none">
+          <ul>
+            <li class="side-menu"><a href="#"><i class="icofont icofont-navigation-menu"></i></a></li>
+          </ul>
+        </div> -->
+        <!--== End Atribute Navigation ==-->
+
+        <!--== Start Header Navigation ==-->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i
+              class="tr-icon ion-android-menu"></i> </button>
+          <div class="logo"> <a href="index.html"> <img class="logo logo-display"
+                src="assets/images/logo-full-light-psd.png" alt=> <img class="logo logo-scrolled"
+                src="assets/images/logo-black-full-psd.png" alt=""> </a> </div>
+        </div>
+        <!--== End Header Navigation ==-->
+
+        <!--== Collect the nav links, forms, and other content for toggling ==-->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
+            <li class="dropdown"><a href="#home" class="dropdown-toggle page-scroll" data-toggle="dropdown">Home</a>
+              <!-- <ul class="dropdown-menu">
+                <li>
+                  <a href="parallax.html">Parallax</a>
+                </li>
+                <li>
+                  <a href="parallax-dark.html">Parallax Dark</a>
+                </li>
+                <li>
+                  <a href="parallax-text-rotate.html">Parallax Text Rotate</a>
+                </li>
+                <li>
+                  <a href="revolution-slider.html">Revolution Slider</a>
+                </li>
+                <li>
+                  <a href="revolution-slider-dark.html">Revolution Slider Dark</a>
+                </li>
+                <li>
+                  <a href="html5-video.html">HTML5 Video</a>
+                </li>
+                <li>
+                  <a href="html5-video-dark.html">HTML5 Video Dark</a>
+                </li>
+                <li>
+                  <a href="creative-agency.html">Creative Agency</a>
+                </li>
+                <li>
+                  <a href="creative-agency-dark.html">Creative Agency Dark</a>
+                </li>
+              </ul> -->
+            </li>
+
+
+            <!-- <li><a class="page-scroll" href="#service">Services</a></li> -->
+            <li><a class="page-scroll" href="#work">Works</a></li>
+            <li><a class="page-scroll" href="#about">About</a></li>
+            <li><a class="page-scroll" href="#team">Team</a></li>
+            <!-- <li><a class="page-scroll" href="#testimonial">Testimonials</a></li> -->
+            <!-- <li><a class="page-scroll" href="#blog">Blog</a></li> -->
+            <li><a class="page-scroll" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <!--== /.navbar-collapse ==-->
+      </div>
+
+      <!-- Start Side Menu -->
+      <!-- <div class="side dark-bg">
+        <a href="index.html" class="logo-side"><img src="assets/images/logo-full-light.png" alt="side-logo" /></a>
+        <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
+        <div class="widget mt-120">
+          <ul class="link">
+            <li class="link-item"><a class="page-scroll" href="#home">Home</a></li>
+            <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
+            <li class="link-item"><a class="page-scroll" href="#team">Team</a></li>
+            <li class="link-item"><a class="page-scroll" href="#service">Services</a></li>
+            <li class="link-item"><a class="page-scroll" href="#work">Works</a></li>
+            <li class="link-item"><a class="page-scroll" href="#testimonial">Testimonials</a></li>
+            <li class="link-item"><a class="page-scroll" href="#blog">Blog</a></li>
+            <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <ul class="social-media">
+          <li><a href="#" class="icofont icofont-social-facebook"></a></li>
+          <li><a href="#" class="icofont icofont-social-twitter"></a></li>
+          <li><a href="#" class="icofont icofont-social-behance"></a></li>
+          <li><a href="#" class="icofont icofont-social-dribble"></a></li>
+          <li><a href="#" class="icofont icofont-social-linkedin"></a></li>
+        </ul>
+      </div>  -->
+      <!-- End Side Menu -->
+
+    </nav>
+    <!--== Header End ==-->
+
+    <!--== Hero Slider Start ==-->
+    <div class="remove-padding transition-none" id="home">
+      <div id="rev_slider_1078_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+        data-alias="classic4export" data-source="gallery"
+        style="margin:0px auto;background-color:#000000;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
+        <div id="rev_slider_1078_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+          <ul> <!-- SLIDE  -->
+            <li data-index="rs-3045" data-transition="slidingoverlayhorizontal" data-slotamount="default"
+              data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
+              data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="" data-param1=""
+              data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8=""
+              data-param9="" data-param10="" data-description="">
+              <!-- MAIN IMAGE -->
+              <img src="assets/images/slides/home-bg-wgs.jpg" alt="" class="rev-slidebg" data-bgposition="center center"
+                data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="on" data-duration="20000"
+                data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="200" data-offsetstart="0 0"
+                data-offsetend="0 0" data-rotatestart="0" data-rotateend="0">
+              <!-- LAYERS -->
+
+              <!-- LAYER NR. 1 -->
+              <div class="hero-text-wrap">
+                <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-1"
+                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                  data-y="['middle','middle','middle','middle']" data-voffset="['-90','-90','-90','-50']"
+                  data-fontsize="['20','20','20','16']" data-lineheight="['30','30','30','20']" data-width="none"
+                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                  data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
+                  data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
+                  style="font-family: 'Raleway', sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:5px;">
+                  Widen</div>
+
+                <!-- LAYER NR. 2 -->
+                <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-2"
+                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                  data-y="['middle','middle','middle','middle']" data-voffset="['-10','-10','-10','-10']"
+                  data-fontsize="['56','56','56','30']" data-lineheight="['66','66','66','40']" data-width="none"
+                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                  data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
+                  data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
+                  style="font-family: 'Raleway', sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:10px;">
+                  Your Horizon</div>
+
+
+                <!-- LAYER NR. 3 -->
+                <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-3"
+                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                  data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','40']"
+                  data-fontsize="['16','16','16','16']" data-lineheight="['20','20','20','20']" data-width="none"
+                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                  data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                  style="font-family: 'Raleway', sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:5px;">
+                  FOCUSING VR GAMES</div>
+
+                <!-- LAYER NR. 4 -->
+                <!-- <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-4"
+        			data-x="['center','center','center','center']" data-hoffset="['0','0','0','50']"
+        			data-y="['middle','middle','middle','middle']" data-voffset="['150','150','150','120']"
+        			data-width="none"
+        			data-height="none"
+        			data-whitespace="['normal','nowrap','nowrap','nowrap']"
+        			data-type="button"
+              data-basealign="slide"
+        			data-responsive_offset="on"
+        			data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+        			data-textAlign="['inherit','inherit','inherit','inherit']"
+        			data-paddingtop="[0,0,0,0]"
+        			data-paddingright="[0,0,0,0]"
+        			data-paddingbottom="[0,0,0,0]"
+        			data-paddingleft="[0,0,0,0]"><a class="btn btn-lg btn-light-outline btn-square">See Our Works</a></div>
+
+            </div>
+
+      	</li> -->
+                <!-- SLIDE  -->
+            <li data-index="rs-3046" data-transition="slidingoverlayhorizontal" data-slotamount="default"
+              data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
+              data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="" data-param1=""
+              data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8=""
+              data-param9="" data-param10="" data-description="">
+              <!-- MAIN IMAGE -->
+              <img src="assets/videos/home-bg-2.jpg" alt="" data-bgposition="center center" data-bgfit="cover"
+                data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+              <!-- BACKGROUND VIDEO LAYER -->
+              <div class="rs-background-video-layer" data-forcerewind="on" data-volume="mute" data-videowidth="100%"
+                data-videoheight="100%" data-videomp4="assets/videos/html5-video.mp4" data-videopreload="auto"
+                data-videoloop="loop" data-aspectratio="16:9" data-autoplay="true" data-autoplayonlyfirsttime="false">
+              </div>
+
+              <!-- LAYERS -->
+              <!-- LAYER NR. 1 -->
+              <div class="hero-text-wrap">
+                <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-5"
+                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                  data-y="['middle','middle','middle','middle']" data-voffset="['-90','-90','-90','-50']"
+                  data-fontsize="['20','20','20','16']" data-lineheight="['30','30','30','20']" data-width="none"
+                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                  data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
+                  data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
+                  style="font-family: 'Raleway', sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:5px;">
+                  Explore the Future</div>
+
+                <!-- LAYER NR. 2 -->
+                <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-6"
+                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                  data-y="['middle','middle','middle','middle']" data-voffset="['-10','-10','-10','-10']"
+                  data-fontsize="['56','56','56','30']" data-lineheight="['66','66','66','40']" data-width="none"
+                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                  data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
+                  data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
+                  style="font-family: 'Raleway', sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:10px;">
+                  Experience Virtual Reality with Us!</div>
+
+
+                <!-- LAYER NR. 3 -->
+                <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-7"
+                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                  data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','40']"
+                  data-fontsize="['16','16','16','16']" data-lineheight="['20','20','20','20']" data-width="none"
+                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                  data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                  style="font-family: 'Raleway', sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:5px;">
                 </div>
-            </div>
+
+                <!-- LAYER NR. 4 -->
+                <!-- <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-8"
+                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','50']"
+                  data-y="['middle','middle','middle','middle']" data-voffset="['150','150','150','120']"
+                  data-width="none" data-height="none" data-whitespace="['normal','nowrap','nowrap','nowrap']"
+                  data-type="button" data-basealign="slide" data-responsive_offset="on"
+                  data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a
+                    class="btn btn-lg btn-light-outline btn-square">See Our Works</a></div>
+
+              </div>
+            </li> -->
+                <!-- SLIDE  -->
+
+          </ul>
+          <div class="tp-bannertimer" style="height: 3px; background-color: rgba(255, 255, 255, 0.25);"></div>
         </div>
-        <div class="preloader-after">
-            <div class="preloader-after-inner"></div>
+      </div>
+    </div>
+    <!--== Hero Slider End ==-->
+
+    <!--== Portfolio Start ==-->
+    <section class="grey-bg pb-0" id="work">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font">Our Works</h1>
+              <hr class="center_line default-bg">
+            </div>
+          </div>
         </div>
-        <!-- preloader end -->
-        <!-- header start -->
-        <div id="header">
-            <!-- navigation start -->
-            <!-- navigation button start -->
-            <div class="round-menu navigation-fire">
-                <span class="dot-1"></span><span class="dot-2"></span><span class="dot-3"></span>
+        <!-- <div class="row">
+          <div class="col-md-12">
+            <div id="portfolio-gallery-filter" class="cbp-l-filters-alignCenter text-sm-center mt-50">
+              <div data-filter="*" class="cbp-filter-item-active cbp-filter-item dark">
+                All
+              </div>
+              <div data-filter=".branding" class="cbp-filter-item">
+                Branding
+              </div>
+              <div data-filter=".print" class="cbp-filter-item">
+                Print Design
+              </div>
+              <div data-filter=".web-design" class="cbp-filter-item">
+                Web Design
+              </div>
+              <div data-filter=".advertising" class="cbp-filter-item">
+                Advertising
+              </div>
+              <div data-filter=".photography" class="cbp-filter-item">
+                Photography
+              </div>
             </div>
-            <!-- navigation button end -->
-            <!-- center container start -->
-            <div class="center-container-menu">
-                <!-- center block start -->
-                <div class="center-block-menu">
-                    <!-- navigation menu start -->
-                    <nav class="navigation-menu">
-                        <!-- navigation menu wrapper start -->
-                        <div class="nav-menu-wrapper">
-                            <!-- navigation menu animation start -->
-                            <div class="nav-menu-animation">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                                    <path d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
-                                        C97.3,23.7,75.7,2.3,49.9,2.5"/>
-                                </svg>
-                            </div>
-                            <!-- navigation menu animation end -->
-                            <!-- center container start -->
-                            <div class="center-container">
-                                <!-- center block start -->
-                                <div class="center-block">
-                                    <!-- navigation menu links start -->
-                                    <div class="nav-menu-links">
-                                        <ul class="menu">
-                                            <li>
-                                                <a class="page-scroll" href="#home">Home</a>
-                                            </li>
-                                            <li>
-                                                <a class="page-scroll" href="#about">About</a>
-                                            </li>
-                                            <li>
-                                                <a class="page-scroll" href="#works">Projects</a>
-                                            </li>
-                                            <!--
-                                            <li>
-                                                <a class="page-scroll" href="#news">News</a>       
-                                            </li>
-                                            -->
-                                            
-                                            <li>
-                                                <a class="page-scroll" href="#contact">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- navigation menu links end -->
-                                </div>
-                                <!-- center block end -->
-                            </div>
-                            <!-- center container end -->
-                        </div>
-                        <!-- navigation menu wrapper end -->
-                    </nav>
-                    <!-- navigation menu end -->
-                </div>
-                <!-- center block end -->
-            </div>
-            <!-- center container end -->
-            <!-- navigation end -->
-        </div>
-        <!-- header end -->
-        <!-- home start -->
-        <!-- left side start -->
-        <div class="left-side-home" id="home">
-            <!-- header start -->
-            <div class="header">
-                <!-- logo start -->
-                <div class="logo"></div>
-                <!-- logo end -->
-            </div>
-            <!-- header end -->
-            <!-- center container start -->
-            <div class="center-container-home">
-                <!-- center block start -->
-                <div class="center-block-home">
-                    <!-- container start -->
-                    <div class="container-home">
-                        <div class="introduction">
-                            <!-- page title start -->
-                            <h1 class="home-page-title">
-                                <span style="color: red"> W</span>ide <span style="color: red"> G</span>ame <span style="color: red"> S</span>tudio
-                            </h1>
-                            <!-- page title end -->
-                            <!-- divider start -->
-                            <div class="divider-m-2"></div>
-                            <!-- divider end -->
-                            <!-- page subtitle start -->
-                            <!-- 
-                            <h3>
-                                Build a remarkable website. Quite fast!
-                            </h3>   
-                            -->
-                            
-                            <!-- page subtitle end -->
-                            <!-- divider start -->
-                            
-                            <!-- divider end -->
-                            <!-- button start -->
-                            <div class="the-button-wrapper the-button-wrapper-home">
-                                <a class="page-scroll" href="#about">
-                                    <div class="the-button">
-                                        Read more
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- button end -->
-                        </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="container-fluid remove-padding">
+
+        <div class="row mt-50">
+          <div class="col-md-12">
+            <div id="portfolio-gallery" class="cbp">
+              <div class="cbp-item branding col-md-6 col-sm-12">
+                <div class="portfolio gallery-image-hover text-center">
+                  <div class="folio-overlay"></div>
+                  <img src="assets/images/portfolio/grid/1a.jpg" alt="" style="object-fit: fill;">
+                  <div class="portfolio-wrap">
+                    <div class="portfolio-description">
+                      <h3 class="portfolio-title mt-0">Flare Frenzy</h3>
+                      <h6 class="links"></h6>
                     </div>
-                    <!-- container end -->
+                    <ul class="portfolio-details">
+                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/1.jpg"><i
+                            class="icofont icofont-search"></i></a></li>
+                      <li><a
+                          href="https://www.oculus.com/deeplink/?action=view&path=app/5489531501137764&ref=oculus_desktop"><i
+                            class="icofont icofont-link"></i></a></li>
+                    </ul>
+                  </div>
                 </div>
-                <!-- center block end -->
-            </div>
-            <!-- center container end -->
-            <!-- social icons start -->
-            <div class="social-icons-home-wrapper">
-                <ul class="social-icons-home">
-                    <li class="social-icon">
-                        <a class="ion-social-twitter" href="https://twitter.com/WideGameStudio" target=”_blank”></a>
-                    </li>
-                    <li class="social-icon">
-                        <a class="ion-social-youtube" href="https://www.youtube.com/@widegamestudio" target=”_blank”></a>
-                    </li>
-                    <li class="social-icon">
-                        <a class="ion-social-linkedin" href="https://www.linkedin.com/company/wide-game-studio/?originalSubdomain=tr" target=”_blank”></a>
-                    </li>
-                    <li class="social-icon">
-                        <a class="ion-social-instagram" href="https://www.instagram.com/widegamestudio/" target=”_blank”></a>
-                    </li>
-                    <li class="social-icon">
-                        <img src="fonts/tiktok.svg" alt="TikTok Icon">
-                    </li>
+              </div>
 
-                </ul>
-            </div>
-            <!-- social icons end -->
 
+              <div class="cbp-item branding web-design col-md-6 col-sm-12">
+                <div class="portfolio gallery-image-hover text-center">
+                  <div class="folio-overlay"></div>
+                  <img src="assets/images/portfolio/grid/2a.jpg" class="object-fit-none">
+                  <div class="portfolio-wrap">
+                    <div class="portfolio-description">
+                      <h3 class="portfolio-title mt-0">Hex'O'Cura</h3>
+                      <h6 class="links"></h6>
+                    </div>
+                    <ul class="portfolio-details">
+                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/2.jpg"><i
+                            class="icofont icofont-search"></i></a></li>
+                      <li><a href="https://www.meta.com/s/1Np8GSi5L"><i class="icofont icofont-link"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="cbp-item web-design print col-md-4 col-sm-6">
+                <div class="portfolio gallery-image-hover text-center">
+                  <div class="folio-overlay"></div>
+                  <img src="assets/images/portfolio/grid/3.jpg" alt="">
+                  <div class="portfolio-wrap">
+                    <div class="portfolio-description">
+                      <h3 class="portfolio-title mt-0">Project Name 3</h3>
+                      <h6 class="links">Print, Website</h6>
+                    </div>
+                    <ul class="portfolio-details">
+                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/3.jpg"><i
+                            class="icofont icofont-search"></i></a></li>
+                      <li><a href="works.html"><i class="icofont icofont-link"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> -->
+
+              <!-- <div class="cbp-item web-design advertising col-md-4 col-sm-6">
+                <div class="portfolio gallery-image-hover text-center">
+                  <div class="folio-overlay"></div>
+                  <img src="assets/images/portfolio/grid/4.jpg" alt="">
+                  <div class="portfolio-wrap">
+                    <div class="portfolio-description">
+                      <h3 class="portfolio-title mt-0">Project Name 4</h3>
+                      <h6 class="links">Advertising, Website</h6>
+                    </div>
+                    <ul class="portfolio-details">
+                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/4.jpg"><i
+                            class="icofont icofont-search"></i></a></li>
+                      <li><a href="works.html"><i class="icofont icofont-link"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbp-item photography col-md-4 col-sm-6">
+                <div class="portfolio gallery-image-hover text-center">
+                  <div class="folio-overlay"></div>
+                  <img src="assets/images/portfolio/grid/5.jpg" alt="">
+                  <div class="portfolio-wrap">
+                    <div class="portfolio-description">
+                      <h3 class="portfolio-title mt-0">Project Name 5</h3>
+                      <h6 class="links">Photography</h6>
+                    </div>
+                    <ul class="portfolio-details">
+                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/5.jpg"><i
+                            class="icofont icofont-search"></i></a></li>
+                      <li><a href="works.html"><i class="icofont icofont-link"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cbp-item web-design col-md-4 col-sm-6">
+                <div class="portfolio gallery-image-hover text-center">
+                  <div class="folio-overlay"></div>
+                  <img src="assets/images/portfolio/grid/6.jpg" alt="">
+                  <div class="portfolio-wrap">
+                    <div class="portfolio-description">
+                      <h3 class="portfolio-title mt-0">Project Name 6</h3>
+                      <h6 class="links">Website</h6>
+                    </div>
+                    <ul class="portfolio-details">
+                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/6.jpg"><i
+                            class="icofont icofont-search"></i></a></li>
+                      <li><a href="works.html"><i class="icofont icofont-link"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+          </div>
         </div>
-        <div class="container-home">
-            <div class="introduction">
-                <div class="the-button-wrapper the-button-wrapper-home">
-                    <a class="page-scroll" href="https://discord.gg/dkRBtnpR" target=”_blank”>
-                        <div class="the-button">
-                            Discord Channel
-                        </div>
+
+        <!-- <div class="row">
+          <div class="col-md-12 remove-padding default-bg">
+            <p class="mt-0 centerize-col text-center pt-60 pb-60 mb-0">
+              <a class="btn btn-lg btn-light-outline btn-square">View All Works</a>
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!--== Portfolio End ==-->
+
+
+    <!--== Who We Are Start ==-->
+    <section class="white-bg xs-pb-100" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h2 class="raleway-font default-color">Who We Are</h2>
+              <hr class="center_line default-bg">
+              <h1 class="raleway-font">Virtual Reality Game Studio</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-50">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="feature-box text-center xs-mb-30 feature-box-default-bg center-feature">
+              <i class="icofont icofont-skydiving-goggles font-40px"></i>
+              <h4 class="mt-0 font-600">Immersive Virtual Worlds</h4>
+              <p class="font-400">Immerse yourself in captivating virtual realms that seamlessly blend reality and
+                imagination, offering an unparalleled gaming adventure.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="feature-box text-center xs-mb-30 feature-box-default-bg center-feature">
+              <i class="icofont icofont-micro-chip font-40px"></i>
+              <h4 class="mt-0 font-600">Advanced VR Technology</h4>
+              <p class="font-400">Explore the potential of cutting-edge VR innovations, delivering an unmatched thrill
+                in gaming powered by state-of-the-art technology.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="feature-box text-center feature-box-default-bg center-feature">
+              <i class="icofont icofont-group font-40px"></i>
+              <h4 class="mt-0 font-600">Connected VR Community</h4>
+              <p class="font-400">Join a vibrant community of virtual reality enthusiasts, uniting players through
+                shared adventures for an engaging and immersive gaming experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== Who We Are End ==-->
+
+    <!--== About Company Start ==-->
+    <section class="grey-bg xs-pb-60">
+      <div class="col-md-6 col-sm-6 bg-flex bg-flex-left">
+        <div class="bg-flex-holder bg-flex-cover" style="background-image: url(assets/images/bg-left-img-2.jpg);">
+          <div class="video-box_overlay">
+            <div class="center-layout">
+              <div class="v-align-middle"> <a class="popup-youtube" href="https://www.youtube.com/watch?v=rSVxRK1Mo-g">
+                  <div class="play-button"><i class="tr-icon ion-android-arrow-dropright"></i></div>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="col-md-6 col-sm-6 col-md-offset-6 col-sm-offset-6">
+          <div class="col-inner spacer text-left">
+            <h2 class="raleway-font mt-0 font-20px xs-font-17px default-color">Our Amazing Story</h2>
+            <h1 class="raleway-font mt-0 font-50px font-600 xs-font-27px">Explore Unrivaled Virtual Adventures with Our
+              Cutting-edge VR Games</h1>
+            <!-- <p class="mt-30 intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+            <br />
+            <br />
+            <div class="row">
+              <div class="col-md-6">
+                <h3>Our Mission</h3>
+                <p>At Wide Game Studio, our mission is to deliver unparalleled virtual reality gaming and application
+                  experiences, catering to users with a focus on innovation. We push the boundaries of imagination with
+                  enthusiasm and excitement, aspiring to be pioneers in the virtual reality sector.</p>
+              </div>
+              <div class="col-md-6">
+                <h3>Our Vision</h3>
+                <p>At Wide Game Studio, our vision is to innovate and advance in the virtual reality industry,
+                  captivating users with immersive stories from diverse universes. We aspire to be pioneers, ensuring
+                  user fascination through our cutting-edge virtual reality projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== About Company End ==-->
+
+    <!--== Video Start ==-->
+    <section class="relative">
+      <div class="parallax-overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="display-table col-md-8 col-md-offset-2 col-sm-12">
+            <div class="v-align-middle text-center">
+              <div class="white-color text-center">
+                <h1
+                  class="font-700 font-60px line-height-60 xs-font-40px xs-line-height-50 sm-font-60px sm-line-height-70 play-font">
+                  Ready to Rock? Dive into uncharted realms with Wide Game Studio.</h1>
+                <hr class="center_line default-bg">
+                <p>
+                  Embark on an unparalleled gaming journey with Wide Game Studio, where cutting-edge technology meets
+                  limitless imagination. Our virtual reality experiences redefine entertainment, promising excitement at
+                  every turn. Explore the extraordinary – because at Wide Game Studio, we're not just ready to rock;
+                  we're ready to revolutionize your gaming world.
+                </p>
+                <p class="mt-30">
+                  <a href="https://linktr.ee/widegamestudio" class="btn btn-lg btn-light-outline btn-square">Get
+                    Started</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <video autoplay="" muted="" loop="" controls="" class="html5-video">
+        <source src="assets/videos/ready_to_rock.mp4" type="video/mp4">
+        <source src="assets/videos/home-video.webm" type="video/webm">
+      </video>
+    </section>
+    <!--== Video End ==-->
+
+    <!--== Team Start ==-->
+    <section class="grey-bg pb-0" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font">Our Creative Team</h1>
+              <hr class="center_line default-bg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row mt-50">
+
+          <a href="https://www.linkedin.com/in/ramazan-mert-ural-963494164/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-mert.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">Ramazan Mert Ural</h4>
+                    <p class="default-color">CEO</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
                     </a>
-                </div>
-            </div>
-        </div>
-        <!-- left side end -->
-        <!-- right side start -->
-        <div class="right-side">
-            <!-- container start -->
-            <div class="container">
-                <!-- copyright home start -->
-                <div class="copyright-home">
-                    Wide Game Studio &copy; All Rights Reserved.
-                </div>
-                <!-- copyright home end -->
-            </div>
-            <!-- container end -->
-            <!-- home page IMG/VIDEO bg start -->
-            <div class="home-img-container overlay overlay-dark-60">
-                <!-- single IMG start -->
-                <div class="slide-img">
-                    <!-- single IMG bg start -->
-                    <img alt="BG Img" src="img/wgs/wgscover.png">
-                    <!-- single IMG bg end -->
-                </div>
-                <!-- single IMG end -->
-            </div>
-            <!-- home page IMG/VIDEO bg end -->
-            <!-- section page IMG bg mobile start -->
-            <!-- about IMG mobile start -->
-            <div class="about-img-container mobile overlay overlay-dark-60">
-                <div class="slide-img">
-                    <img alt="BG Img" src="img/wgs/stock/5.jpg">
-                </div>
-            </div>
-            <!-- about IMG mobile end -->
-            <!-- works IMG mobile start -->
-            <div class="works-img-container mobile overlay overlay-dark-60">
-                <div class="slide-img">
-                    <img alt="BG Img" src="img/wgs/stock/1.jpg">
-                </div>
-            </div>
-            <!-- works IMG mobile end -->
-            <!-- services IMG mobile start -->
-            
-            <!-- services IMG mobile end -->
-            <!-- news IMG mobile start -->
-            
-            <!-- news IMG mobile end -->
-            <!-- contact IMG mobile start -->
-            <div class="contact-img-container mobile overlay overlay-dark-60">
-                <div class="slide-img">
-                    <img alt="BG Img" src="img/wgs/stock/4.jpg">
-                </div>
-            </div>
-            <!-- contact IMG mobile end -->
-            <!-- section page IMG bg mobile end -->
-        </div>
-        <!-- right side end -->
-        <!-- home end -->
-        <!-- pages start -->
-        <section class="fireOT">
-            <!-- about start -->
-            <!-- section left start -->
-            <div class="fireOT-left left-side" id="about">
-                <!-- divider start -->
-                <div class="divider-xl"></div>
-                <!-- divider end -->
-                <!-- container start -->
-                <div class="container">
-                    <!-- row start -->
-                    <div class="row">
-                        <!-- col start -->
-                        <div class="col-lg-12">
-                            <!-- section subtitle start -->
-                            <div class="section-subheading-wrapper-all">
-                                <h2 class="section-subheading">
-                                    <span>Who we are</span>
-                                </h2>
-                            </div>
-                            <!-- section subtitle end -->
-                            <!-- divider start -->
-                            <div class="divider-s"></div>
-                            <!-- divider end -->
-                            <!-- page title start -->
-                            <h2 class="home-page-title-all">
-                                About
-                            </h2>
-                            <!-- page title end -->
-                        </div>
-                        <!-- col end -->
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
                     </div>
-                    <!-- row end -->
-                    <!-- divider start -->
-                    <div class="divider-l"></div>
-                    <!-- divider end -->
-                    <!-- row start -->
-                    <div class="row">
-                        <!-- col start -->
-                        <div class="col-md-6 col-all">
-                            <!-- section subtitle start -->
-                            <h6 class="about">
-                                <span style="color:red">Brand</span> Mission
-                            </h6>
-                            <!-- section subtitle end -->
-                            <!-- divider start -->
-                            <div class="divider-m"></div>
-                            <!-- divider end -->
-                            <!-- section txt start -->
-                            <div class="txt">
-                                <p>
-                                    As Wide Game Studio, we have a mission based on bringing virtual reality game and application experiences and focused games and applications to users in the best way. We aim at users by pushing the limits of imagination with enthusiasm and excitement of users. In this context, being a pioneer in the virtual reality sector is among our goals.
-                                </p>
-                            </div>
-                            <!-- section txt end -->
-                            <!-- divider start -->
-                            <div class="divider-m visible-mobile-devices"></div>
-                            <!-- divider end -->
-                        </div>
-                        <!-- col end -->
-                        <!-- col start -->
-                        <div class="col-md-6 col-all">
-                            <!-- section subtitle start -->
-                            <h6 class="about">
-                                <span style="color: red;">Brand</span> Vision
-                            </h6>
-                            <!-- section subtitle end -->
-                            <!-- divider start -->
-                            <div class="divider-m"></div>
-                            <!-- divider end -->
-                            <!-- section txt start -->
-                            <div class="txt">
-                                <p>
-                                    Wide Game Studio has a vision that aims to push the limits in virtual reality industry, fasten on innovation and development in the emerging virtual reality industry. With our virtual reality projects, we try to ensure users to experience fascinating and entertaining stories of different universes. Our vision is to fascinate users with the projects we have developed in the virtual reality industry and to be a pioneer in this sector.
-                                </p>
-                            </div>
-                            <!-- section txt end -->
-                        </div>
-                        <!-- col end -->
-                    </div>
-                    <!-- row end -->
-                    <!-- divider start -->
-                    <!-- divider end -->
-                    <!-- row start -->
-                    
-                <!-- container end -->
-                <!-- divider start -->
-                <div class="divider-l visible-mobile-devices-xs"></div>
-                <!-- divider end -->
-            </div>
-            <!-- section left end -->
-            <!-- section right start -->
-           
-            <!-- section right end -->
-            <!-- about end -->   
-            <!-- works start -->
-            <!-- section left start -->
-            <div class="fireOT-left left-side" id="works">
-                <!-- divider start -->
-                <div class="divider-xl"></div>
-                <!-- divider end -->
-                <!-- container start -->
-                <div class="container">
-                    <!-- row start -->
-                    <div class="row">
-                        <!-- col start -->
-                        <div class="col-lg-12">
-                            <!-- section subtitle start -->
-                            <div class="section-subheading-wrapper-all">
-                                <h2 class="section-subheading">
-                                    <span>What it look like</span>
-                                </h2>
-                            </div>
-                            <!-- section subtitle end -->
-                            <!-- divider start -->
-                            <div class="divider-s"></div>
-                            <!-- divider end -->
-                            <!-- page title start -->
-                            <h2 class="home-page-title-all">
-                                Projects
-                            </h2>
-                            <!-- page title end -->
-                        </div>
-                        <!-- col end -->
-                    </div>
-                    <!-- row end -->
-                    <!-- divider start -->
-                    <div class="divider-l"></div>
-                    <!-- divider end -->
+                  </div>
                 </div>
-                <!-- container end -->
-                <!-- container start -->
-                <div class="container">
-                    <!-- carousel start -->
-                    <div class="owl-carousel" id="owl-carousel-works">
-                        <!-- row start -->
-                        <div class="row">
-                            <!-- col start -->
-                            <div class="col-md-12">
-                                <div class="inner-spacer">
-                                    <!-- circle wrapper start -->
-                                    <div class="circle-wrapper-full">
-                                        <a href="https://flarefrenzy.widegamestudio.com" target="_blank" class="carousel-item-all item-works-01"></a>
-                                        
-                                        <!-- center container start -->
-                                        
-                                            <!-- center block start -->                       
-                                            
-                                                <!-- button start -->
-                                            
-                                                    
-                                                    <!-- works item description start -->
-                                                    
-                                                    <!-- works item description end -->
-                                               
-                                                <!-- button end -->
-                                            
-                                            <!-- center block end -->
-                                        
-                                        <!-- center container end -->
-                                    </div>
-                                    <!-- circle wrapper end -->
-                                    <!-- divider start -->
-                                    <div class="divider-m-2"></div>
-                                    <!-- divider end -->
-                                </div>
-                            </div>
-                            <!-- col end -->
-                            <!-- col start -->
-                            <div class="col-md-12">
-                                <div class="inner-spacer">
-                                    <!-- circle wrapper start -->
-                                    <div class="circle-wrapper-full">
-                                        <a href="#" class="carousel-item-all item-works-02"></a>
-                                        <!-- center container start -->
-                                        
-                                        <!-- center container end -->
-                                    </div>
-                                    <!-- circle wrapper end -->
-                                </div>
-                            </div>
-                            <!-- col end -->
-                        </div>
-                        <!-- row end -->
-                        <!-- row start -->
-                        
-                        <!-- row end -->
-                        <!-- row start -->
-                        <div class="row">
-                            <!-- col start -->
-                            <div class="col-md-12">
-                                <div class="inner-spacer">
-                                    <!-- circle wrapper start -->
-                                    <div class="circle-wrapper-full">
-                                        <a href="https://www.youtube.com/watch?v=3oBjJR_1cIk" target="_blank" class="carousel-item-all item-works-03"></a>
-                                        <!-- center container start -->
-                                        
-                                        <!-- center container end -->
-                                    </div>
-                                    <!-- circle wrapper end -->
-                                    <!-- divider start -->
-                                    <div class="divider-m-2"></div>
-                                    <!-- divider end -->
-                                </div>
-                            </div>
-                            <!-- col end -->
-                            <!-- col start -->
-                            <div class="col-md-12">
-                                <div class="inner-spacer">
-                                    <!-- circle wrapper start -->
-                                    <div class="circle-wrapper-full">
-                                        <a href="https://www.youtube.com/watch?v=_TF2QY3oTWc" target="_blank" class="carousel-item-all item-works-04"></a>
-                                        <!-- center container end -->
-                                    </div>
-                                    <!-- circle wrapper end -->
-                                </div>
-                            </div>
-                            <!-- col end -->
-                        </div>
-                        <!-- row end -->
-                        <!-- row start -->
-                        
-                        <!-- row end -->
-                    </div>
-                    <!-- carousel end -->
-                    <!-- divider start -->
-                    <div class="divider-m"></div>
-                    <!-- divider end -->
-                    <!-- owl nav start -->
-                    <div class="owl-nav owl-nav-custom-works"></div>
-                    <!-- owl nav end -->
-                </div>
-                <!-- container end -->
-                <!-- divider start -->
-                <div class="divider-l visible-mobile-devices-xs"></div>
-                <!-- divider end -->
+              </div>
             </div>
-            <!-- section left end -->
-            <!-- section right start -->
-            
-            <!-- section right end -->
-            <!-- works end -->
-           
-            <div class="divider-l visible-mobile-devices-xs"></div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/ahmeddemirezen/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
 
-            
-            <!-- section right end -->
-            <!-- services end -->
-            <!-- news start -->
-            <!-- section left start -->
-            
-            <!-- section right end -->
-            <!-- news end -->
-            <!-- contact start -->
-            <!-- section left start -->
-            <div class="fireOT-left left-side" id="contact">
-                <!-- divider start -->
-                <div class="divider-xl"></div>
-                <!-- divider end -->
-                <!-- container start -->
-                <div class="container">
-                    <!-- row start -->
-                    <div class="row">
-                        <!-- col start -->
-                        <div class="col-lg-12">
-                            <!-- section subtitle start -->
-                            <div class="section-subheading-wrapper-all">
-                                <h2 class="section-subheading">
-                                    <span>Get in touch</span>
-                                </h2>
-                            </div>
-                            <!-- section subtitle end -->
-                            <!-- divider start -->
-                            <div class="divider-s"></div>
-                            <!-- divider end -->
-                            <!-- page title start -->
-                            <h2 class="home-page-title-all">
-                                Contact
-                            </h2>
-                            <!-- page title end -->
-                        </div>
-                        <!-- col end -->
-                    </div>
-                    <!-- row end -->
-                    <!-- divider start -->
-                    <div class="divider-l"></div>
-                    <!-- divider end -->
-                    <!-- row start -->
-                    <div class="row">
-                        <!-- col start -->
-                        <div class="col-md-6 col-all">
-                            <!-- section subtitle start -->
-                            <h6 class="contact">
-                                <span style="color: red;">Street</span> address
-                            </h6>
-                            <!-- section subtitle end -->
-                            <!-- divider start -->
-                            <div class="divider-m"></div>
-                            <!-- divider end -->
-                            <!-- section txt start -->
-                            <div class="txt">
-                                <p>
-                                    Barbaros, Sümer Kampüsü, Erkilet Blv., 38080 Kocasinan/Kayseri
-                                </p>
-                            </div>
-                            <!-- section txt end -->
-                            <!-- divider start -->
-                            <div class="divider-m visible-mobile-devices"></div>
-                            <!-- divider end -->
-                        </div>
-                        <!-- col end -->
-                        <!-- col start -->
-                        <div class="col-md-6 col-all">
-                            <!-- section subtitle start -->
-                            <h6 class="contact">
-                                <span style="color:red">Contact</span> inquiry
-                            </h6>
-                            <!-- section subtitle end -->
-                            <!-- divider start -->
-                            <div class="divider-m"></div>
-                            <!-- divider end -->
-                            <!-- section txt start -->
-                            <div class="txt">
-                                <p>
-                                    <a class="link-effect" href="mailto:info@widegamestudio.com">info@widegamestudio.com</a><br>
-                                    +90 507 239 67 69
-                                </p>
-                            </div>
-                            <!-- section txt end -->
-                        </div>
-                        <!-- col end -->
-                    </div>
-                    <!-- row end -->
-                    <!-- divider start -->
-                    <div class="divider-l"></div>
-                    <!-- divider end -->
-                    <!-- row start -->
-                    <div class="row">
-                        <!-- col start -->
-                        <div class="col-lg-12 col-all">
-                            <!-- section subtitle start -->
-                            <h6 class="contact">
-                                <span style="color: red;">Inquiry</span> form
-                            </h6>
-                            <!-- section subtitle end -->
-                            <!-- divider start -->
-                            <div class="divider-m"></div>
-                            <!-- divider end -->
-                        </div>
-                        <!-- col end -->
-                        <!-- contact form start -->
-                        <div id="contact-form">
-                            <form action="contact.php" id="form" method="post" name="send">
-                                <!-- col start -->
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <input class="requiredField name" id="name" name="name" placeholder="Name" type="text">
-                                </div>
-                                <!-- col end -->
-                                <!-- col start -->
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <input class="requiredField email" id="email" name="email" placeholder="Email" type="text">
-                                </div>
-                                <!-- col end -->
-                                <!-- col start -->
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <input class="requiredField subject" id="subject" name="subject" placeholder="Subject" type="text">
-                                </div>
-                                <!-- col end -->
-                                <!-- col start -->
-                                <div class="make-space">
-                                    <textarea class="requiredField message" id="message" name="message" placeholder="Message"></textarea>
-                                </div>
-                                <!-- col end -->
-                                <div>
-                                    <!-- contact form submit button start -->
-                                    <div class="the-button-wrapper the-button-wrapper-form">
-                                        <button class="the-button the-button-submit" id="submit" type="submit"><span>Submit</span></button>
-                                    </div>
-                                    <!-- contact form submit button end -->
-                                </div>
-                            </form>
-                        </div>
-                        <!-- contact form end -->
-                    </div>
-                    <!-- row end -->
-                    <!-- divider start -->
-                    <div class="divider-xl"></div>
-                    <!-- divider end -->
-                    <!-- row start -->
-                    <div class="row">
-                        <!-- col start -->
-                        <div class="col-lg-12 text-center">
-                            <!-- copyright start -->
-                            <div class="copyright">
-                                <a href="#">Wide Game Studio</a> &copy; All Rights Reserved.
-                            </div>
-                            <!-- copyright end -->
-                        </div>
-                        <!-- col end -->
-                    </div>
-                    <!-- row end -->
+                    <img src="assets/images/team/team-ahmed.jpg" alt="your-image">
+
+                  </div>
                 </div>
-                <!-- container end -->
-                <!-- divider start -->
-                <div class="divider-l-2"></div>
-                <!-- divider end -->
-            </div>
-            <!-- section left end -->
-            <!-- section right start -->
-            
-            <!-- section right end -->
-            <!-- contact end -->
-        </section>
-        <!-- pages end -->
-        <!-- news modal 1 start -->
-        <div aria-hidden="true" class="news-modal modal fade" id="newsModal-1" role="dialog" tabindex="-1">
-            <!-- news modal content start -->
-            <div class="lower-page lower-page-modal">
-                <div class="modal-content">
-                    <!-- container start -->
-                    <div class="container">
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- divider start -->
-                                <div class="divider-xl"></div>
-                                <!-- divider end -->
-                                <div class="text">
-                                    <!-- section subtitle start -->
-                                    <div class="news-info-date">
-                                        September 1, 2021
-                                    </div>
-                                    <!-- section subtitle end -->
-                                    <!-- divider start -->
-                                    <div class="divider-s"></div>
-                                    <!-- divider end -->
-                                    <!-- section title start -->
-                                    <div class="news-info-title">
-                                        Simplicity is complex
-                                    </div>
-                                    <!-- section title end -->
-                                    <!-- divider start -->
-                                    <div class="divider-s"></div>
-                                    <!-- divider end -->
-                                    <!-- section subtitle start -->
-                                    <div class="news-info-category">
-                                        Beauty / Fashion
-                                    </div>
-                                    <!-- divider start -->
-                                    <div class="divider-l"></div>
-                                    <!-- divider end -->
-                                </div>
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">AHMED DEMİREZEN</h4>
+                    <p class="default-color">CTO</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
                     </div>
-                    <!-- container end -->
-                    <!-- container start -->
-                    <div class="container-fluid nopadding nopadding-xs">
-                        <!-- divider start -->
-                        <div class="divider-l"></div>
-                        <!-- divider end -->
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <!-- carousel start -->
-                                <div class="carousel-item-img-wrapper carousel-item-img-wrapper-all">
-                                    <div class="owl-carousel" id="owl-carousel-news-1">
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-1/1.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    C. Eastwood
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-1/2.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    W. Kar-wai
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-1/3.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    R. Redford
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-1/4.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    T. Scott
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-1/5.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    C. Nolan
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                    </div>
-                                </div>
-                                <!-- carousel end -->
-                                <!-- divider start -->
-                                <div class="divider-m"></div>
-                                <!-- divider end -->
-                                <!-- owl nav start -->
-                                <div class="owl-nav owl-nav-custom-news-all owl-nav-custom-news-1"></div>
-                                <!-- owl nav end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                    </div>
-                    <!-- container end -->
-                    <!-- container start -->
-                    <div class="container">
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <div class="blog-quote">
-                                    <p>Sed ut <span>perspiciatis unde</span> omnis iste natus error sit voluptatem accusantium doloremque laudantium, <span>totam rem</span> aperiam.</p>
-                                </div>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- button start -->
-                                <div class="the-button-wrapper the-button-wrapper-more">
-                                    <button class="button-all the-button the-button-more" data-toggle="modal" data-dismiss="modal">
-                                    <span>Close</span>
-                                    </button>
-                                </div>
-                                <!-- button end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                        <!-- divider start -->
-                        <div class="divider-xl"></div>
-                        <!-- divider end -->
-                    </div>
-                    <!-- container end -->
+                  </div>
                 </div>
+              </div>
             </div>
-            <!-- news modal content end -->
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/melih-%C3%B6ztorun-a48841180/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-melih.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">Melih Öztorun</h4>
+                    <p class="default-color">Creative Director</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/muharrem-ataberk-sand%C4%B1k%C3%A7%C4%B1-b3628b1ab/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-ataberk.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">Muharrem Ataberk Sandıkçı</h4>
+                    <p class="default-color">Marketing Director</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/%C5%9Fafak-bera-%C5%9Fafak-4842b3251/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-safak.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">ŞAFAK BERA ŞAFAK</h4>
+                    <p class="default-color">Game Developer</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/abdulkadir-bozoglu/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-kadir.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">ABDULKADİR BOZOĞLU</h4>
+                    <p class="default-color">3D Designer</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/yusufsaityildirim/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-yusuf.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">YUSUF SAİT YILDIRIM</h4>
+                    <p class="default-color">3D Designer</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/burak-millidere/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-burak.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">BURAK MİLLİDERE</h4>
+                    <p class="default-color">VFX Artist</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/sadik-besata-37b323220/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-sadik.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">SADIK BESATA</h4>
+                    <p class="default-color">Game Developer</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/g%C3%BCne%C5%9F-karata%C5%9F/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-gunes.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">GÜNEŞ KARATAŞ</h4>
+                    <p class="default-color">Script Writer & Voice Artist</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+          <a href="https://www.linkedin.com/in/emrah-utkutag-262032172/">
+            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
+              <div class="o-team-wrap">
+                <div class="o-team-img">
+                  <div class="o-team-media-img">
+                    <img src="assets/images/team/team-emrah.jpg" alt="your-image">
+                  </div>
+                </div>
+                <div class="o-tean-content">
+                  <div class="o-tean-content-inner">
+                    <h4 class="mt-10 white-color text-uppercase">EMRAH UTKUTAĞ</h4>
+                    <p class="default-color">Script Writer</p>
+                    <div class="o-team-social-icons">
+                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-behance"></span>
+                    </a>
+                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-dribbble"></span>
+                    </a>
+                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
+                      <span class="icofont icofont-facebook"></span>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--== Member End ==-->
+
         </div>
-        <!-- news modal 1 end -->
-        <!-- news modal 2 start -->
-        <div aria-hidden="true" class="news-modal modal fade" id="newsModal-2" role="dialog" tabindex="-1">
-            <!-- news modal content start -->
-            <div class="lower-page lower-page-modal">
-                <div class="modal-content">
-                    <!-- container start -->
-                    <div class="container">
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- divider start -->
-                                <div class="divider-xl"></div>
-                                <!-- divider end -->
-                                <div class="text">
-                                    <!-- section subtitle start -->
-                                    <div class="news-info-date">
-                                        September 2, 2021
-                                    </div>
-                                    <!-- section subtitle end -->
-                                    <!-- divider start -->
-                                    <div class="divider-s"></div>
-                                    <!-- divider end -->
-                                    <!-- section title start -->
-                                    <div class="news-info-title">
-                                        Design is a process
-                                    </div>
-                                    <!-- section title end -->
-                                    <!-- divider start -->
-                                    <div class="divider-s"></div>
-                                    <!-- divider end -->
-                                    <!-- section subtitle start -->
-                                    <div class="news-info-category">
-                                        Nature / Wild
-                                    </div>
-                                    <!-- divider start -->
-                                    <div class="divider-l"></div>
-                                    <!-- divider end -->
-                                </div>
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                    </div>
-                    <!-- container end -->
-                    <!-- container start -->
-                    <div class="container-fluid nopadding nopadding-xs">
-                        <!-- divider start -->
-                        <div class="divider-l"></div>
-                        <!-- divider end -->
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <!-- carousel start -->
-                                <div class="carousel-item-img-wrapper carousel-item-img-wrapper-all">
-                                    <div class="owl-carousel" id="owl-carousel-news-2">
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-2/1.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    C. Eastwood
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-2/2.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    W. Kar-wai
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-2/3.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    R. Redford
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-2/4.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    T. Scott
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-2/5.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    C. Nolan
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                    </div>
-                                </div>
-                                <!-- carousel end -->
-                                <!-- divider start -->
-                                <div class="divider-m"></div>
-                                <!-- divider end -->
-                                <!-- owl nav start -->
-                                <div class="owl-nav owl-nav-custom-news-all owl-nav-custom-news-2"></div>
-                                <!-- owl nav end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                    </div>
-                    <!-- container end -->
-                    <!-- container start -->
-                    <div class="container">
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <div class="blog-quote">
-                                    <p>Sed ut <span>perspiciatis unde</span> omnis iste natus error sit voluptatem accusantium doloremque laudantium, <span>totam rem</span> aperiam.</p>
-                                </div>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- button start -->
-                                <div class="the-button-wrapper the-button-wrapper-more">
-                                    <button class="button-all the-button the-button-more" data-toggle="modal" data-dismiss="modal">
-                                    <span>Close</span>
-                                    </button>
-                                </div>
-                                <!-- button end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                        <!-- divider start -->
-                        <div class="divider-xl"></div>
-                        <!-- divider end -->
-                    </div>
-                    <!-- container end -->
-                </div>
+
+      </div>
+    </section>
+    <!--== Team End ==-->
+
+    <!--== Counters Start ==-->
+    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
+      data-parallax-bg-image="assets/images/background/parallax-bg-2.jpg" data-parallax-speed="0.5"
+      data-parallax-direction="up">
+      <div class="overlay-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font white-color">Fun Facts</h1>
+              <hr class="center_line default-bg">
             </div>
-            <!-- news modal content end -->
+          </div>
         </div>
-        <!-- news modal 2 end -->
-        <!-- news modal 3 start -->
-        <div aria-hidden="true" class="news-modal modal fade" id="newsModal-3" role="dialog" tabindex="-1">
-            <!-- news modal content start -->
-            <div class="lower-page lower-page-modal">
-                <div class="modal-content">
-                    <!-- container start -->
-                    <div class="container">
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- divider start -->
-                                <div class="divider-xl"></div>
-                                <!-- divider end -->
-                                <div class="text">
-                                    <!-- section subtitle start -->
-                                    <div class="news-info-date">
-                                        September 3, 2021
-                                    </div>
-                                    <!-- section subtitle end -->
-                                    <!-- divider start -->
-                                    <div class="divider-s"></div>
-                                    <!-- divider end -->
-                                    <!-- section title start -->
-                                    <div class="news-info-title">
-                                        Aesthetic is a decision
-                                    </div>
-                                    <!-- section title end -->
-                                    <!-- divider start -->
-                                    <div class="divider-s"></div>
-                                    <!-- divider end -->
-                                    <!-- section subtitle start -->
-                                    <div class="news-info-category">
-                                        Royalty / Stock
-                                    </div>
-                                    <!-- divider start -->
-                                    <div class="divider-l"></div>
-                                    <!-- divider end -->
-                                </div>
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                    </div>
-                    <!-- container end -->
-                    <!-- container start -->
-                    <div class="container-fluid nopadding nopadding-xs">
-                        <!-- divider start -->
-                        <div class="divider-l"></div>
-                        <!-- divider end -->
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <!-- carousel start -->
-                                <div class="carousel-item-img-wrapper carousel-item-img-wrapper-all">
-                                    <div class="owl-carousel" id="owl-carousel-news-3">
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-3/1.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    C. Eastwood
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-3/2.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    W. Kar-wai
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-3/3.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    R. Redford
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-3/4.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    T. Scott
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-3/5.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    C. Nolan
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                    </div>
-                                </div>
-                                <!-- carousel end -->
-                                <!-- divider start -->
-                                <div class="divider-m"></div>
-                                <!-- divider end -->
-                                <!-- owl nav start -->
-                                <div class="owl-nav owl-nav-custom-news-all owl-nav-custom-news-3"></div>
-                                <!-- owl nav end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                    </div>
-                    <!-- container end -->
-                    <!-- container start -->
-                    <div class="container">
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <div class="blog-quote">
-                                    <p>Sed ut <span>perspiciatis unde</span> omnis iste natus error sit voluptatem accusantium doloremque laudantium, <span>totam rem</span> aperiam.</p>
-                                </div>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- button start -->
-                                <div class="the-button-wrapper the-button-wrapper-more">
-                                    <button class="button-all the-button the-button-more" data-toggle="modal" data-dismiss="modal">
-                                    <span>Close</span>
-                                    </button>
-                                </div>
-                                <!-- button end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                        <!-- divider start -->
-                        <div class="divider-xl"></div>
-                        <!-- divider end -->
-                    </div>
-                    <!-- container end -->
-                </div>
+        <div class="row mt-50 row-flex flex-center">
+          <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-50 sm-mb-50">
+            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.1s">
+              <i class="icon-trophy font-70px"></i>
+              <h2><span class="counter font-600">3521</span></h2>
+              <h3 class="font-200 text-uppercase">Happy Clients</h3>
             </div>
-            <!-- news modal content end -->
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-50 sm-mb-50">
+            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.2s">
+              <i class="icon-toolbox font-70px"></i>
+              <h2><span class="counter font-600">974</span></h2>
+              <h3 class="dark-color font-200 text-uppercase">Cups of Coffee</h3>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-50">
+            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.3s">
+              <i class="icon-lifesaver font-70px"></i>
+              <h2><span class="counter font-600">634</span></h2>
+              <h3 class="dark-color font-200 text-uppercase">Project Delivered</h3>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.4s">
+              <i class="icon-linegraph font-70px"></i>
+              <h2><span class="counter font-600">449</span></h2>
+              <h3 class="dark-color font-200 text-uppercase">Awards Won</h3>
+            </div>
+          </div>
         </div>
-        <!-- news modal 3 end -->
-        <!-- news modal 4 start -->
-        <div aria-hidden="true" class="news-modal modal fade" id="newsModal-4" role="dialog" tabindex="-1">
-            <!-- news modal content start -->
-            <div class="lower-page lower-page-modal">
-                <div class="modal-content">
-                    <!-- container start -->
-                    <div class="container">
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- divider start -->
-                                <div class="divider-xl"></div>
-                                <!-- divider end -->
-                                <div class="text">
-                                    <!-- section subtitle start -->
-                                    <div class="news-info-date">
-                                        September 4, 2021
-                                    </div>
-                                    <!-- section subtitle end -->
-                                    <!-- divider start -->
-                                    <div class="divider-s"></div>
-                                    <!-- divider end -->
-                                    <!-- section title start -->
-                                    <div class="news-info-title">
-                                        Style is everything
-                                    </div>
-                                    <!-- section title end -->
-                                    <!-- divider start -->
-                                    <div class="divider-s"></div>
-                                    <!-- divider end -->
-                                    <!-- section subtitle start -->
-                                    <div class="news-info-category">
-                                        People / Life
-                                    </div>
-                                    <!-- divider start -->
-                                    <div class="divider-l"></div>
-                                    <!-- divider end -->
-                                </div>
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                    </div>
-                    <!-- container end -->
-                    <!-- container start -->
-                    <div class="container-fluid nopadding nopadding-xs">
-                        <!-- divider start -->
-                        <div class="divider-l"></div>
-                        <!-- divider end -->
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <!-- carousel start -->
-                                <div class="carousel-item-img-wrapper carousel-item-img-wrapper-all">
-                                    <div class="owl-carousel" id="owl-carousel-news-4">
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-4/1.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    C. Eastwood
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-4/2.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    W. Kar-wai
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-4/3.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    R. Redford
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-4/4.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    T. Scott
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                        <!-- section item start -->
-                                        <div class="post-box">
-                                            <!-- team item start -->
-                                            <div class="team-item">
-                                                <div class="team-item-inner">
-                                                    <div class="team-box">
-                                                        <div class="image-works">
-                                                            <img alt="Img" src="img/news/news-gallery/gallery-4/5.jpg">                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- divider start -->
-                                                <div class="team-item-divider">
-                                                </div>
-                                                <!-- divider end -->
-                                            </div>
-                                            <!-- team item end -->
-                                            <div class="post-box-inner">
-                                                <!-- divider start -->
-                                                <div class="divider-m"></div>
-                                                <!-- divider end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner">
-                                                    Photo Credit:
-                                                </div>
-                                                <!-- section title end -->
-                                                <!-- section title start -->
-                                                <div class="section-title-inner section-title-inner-dark">
-                                                    C. Nolan
-                                                </div>
-                                                <!-- section title end -->
-                                            </div>
-                                        </div>
-                                        <!-- section item end -->
-                                    </div>
-                                </div>
-                                <!-- carousel end -->
-                                <!-- divider start -->
-                                <div class="divider-m"></div>
-                                <!-- divider end -->
-                                <!-- owl nav start -->
-                                <div class="owl-nav owl-nav-custom-news-all owl-nav-custom-news-4"></div>
-                                <!-- owl nav end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                    </div>
-                    <!-- container end -->
-                    <!-- container start -->
-                    <div class="container">
-                        <!-- row start -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <div class="blog-quote">
-                                    <p>Sed ut <span>perspiciatis unde</span> omnis iste natus error sit voluptatem accusantium doloremque laudantium, <span>totam rem</span> aperiam.</p>
-                                </div>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- section txt start -->
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a class="link-effect" href="#">magna aliqua</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a class="link-effect" href="#">est laborum</a>.
-                                </p>
-                                <!-- section txt end -->
-                                <!-- divider start -->
-                                <div class="divider-l"></div>
-                                <!-- divider end -->
-                                <!-- button start -->
-                                <div class="the-button-wrapper the-button-wrapper-more">
-                                    <button class="button-all the-button the-button-more" data-toggle="modal" data-dismiss="modal">
-                                    <span>Close</span>
-                                    </button>
-                                </div>
-                                <!-- button end -->
-                            </div>
-                        </div>
-                        <!-- row end -->
-                        <!-- divider start -->
-                        <div class="divider-xl"></div>
-                        <!-- divider end -->
-                    </div>
-                    <!-- container end -->
-                </div>
+      </div>
+    </section> -->
+    <!--== Counters End ==-->
+
+    <!--== Services Start ==-->
+    <!-- <section class="white-bg pb-0" id="service">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font">Our Services</h1>
+              <hr class="center_line default-bg">
             </div>
-            <!-- news modal content end -->
+          </div>
         </div>
-        <!-- news modal 4 end -->
-        <!-- photoSwipe background start -->
-        <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-            <div class="pswp__bg"></div>
-            <div class="pswp__scroll-wrap">
-                <div class="pswp__container">
-                    <div class="pswp__item"></div>
-                    <div class="pswp__item"></div>
-                    <div class="pswp__item"></div>
-                </div>
-                <div class="pswp__ui pswp__ui--hidden">
-                    <div class="pswp__top-bar">
-                        <div class="pswp__counter"></div>
-                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                            "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
-                            "Zoom in/out"></button>
-                        <div class="pswp__preloader">
-                            <div class="pswp__preloader__icn">
-                                <div class="pswp__preloader__cut">
-                                    <div class="pswp__preloader__donut"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                        <div class="pswp__share-tooltip"></div>
-                    </div>
-                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
-                        "Next (arrow right)"></button>
-                    <div class="pswp__caption">
-                        <div class="pswp__caption__center"></div>
-                    </div>
-                </div>
+
+        <div class="row mt-50">
+          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.1s">
+            <div class="pull-left"><i class="icon-pencil font-40px"></i></div>
+            <div class="pull-right">
+              <h4 class="mt-0 font-600 raleway-font">Web Design</h4>
+              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
+          </div>
+          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">
+            <div class="pull-left"><i class="icon-tablet font-40px"></i></div>
+            <div class="pull-right">
+              <h4 class="mt-0 font-600 raleway-font">Branding</h4>
+              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          </div>
+          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
+            <div class="pull-left"><i class="icon-pictures font-40px"></i></div>
+            <div class="pull-right">
+              <h4 class="mt-0 font-600 raleway-font">Digital Solution</h4>
+              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          </div>
+          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.1s">
+            <div class="pull-left"><i class="icon-desktop font-40px"></i></div>
+            <div class="pull-right">
+              <h4 class="mt-0 font-600 raleway-font">Mobile Apps</h4>
+              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          </div>
+          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">
+            <div class="pull-left"><i class="icon-layers font-40px"></i></div>
+            <div class="pull-right">
+              <h4 class="mt-0 font-600 raleway-font">SEO Services</h4>
+              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          </div>
+          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
+            <div class="pull-left"><i class="icon-lightbulb font-40px"></i></div>
+            <div class="pull-right">
+              <h4 class="mt-0 font-600 raleway-font">Copywriter</h4>
+              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+          </div>
         </div>
-        <!-- photoSwipe background end -->
-        <!-- to top arrow start -->
-        <a class="page-scroll" href="#home">
-            <div class="to-top-arrow to-top-arrow">
-                <span class="ion-ios-arrow-up"></span>
+        <div class="col-md-12 text-center">
+          <img src="assets/images/screens.png" alt="xtract-img" class="img-responsive screens" />
+        </div>
+
+      </div>
+    </section> -->
+    <!--== Services End ==-->
+
+    <!--== Skills Start ==-->
+    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
+      data-parallax-bg-image="assets/images/background/parallax-bg.jpg" data-parallax-speed="0.5"
+      data-parallax-direction="up">
+      <div class="overlay-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font white-color">Our Skills</h1>
+              <hr class="center_line default-bg">
             </div>
-        </a>
-        <!-- to top arrow end -->
-        <!-- scripts start -->
-        <script src="js/plugins.js"></script> 
-        <script src="js/runex.js"></script>
-        <!-- scripts end -->
-    </body>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mt-30 col-xs-12 xs-mt-0">
+            <div class="skillbar-wrap skillbar-style-01">
+              <div class="skillbar" data-percent="70">
+                <span class="skillbar-title white-color font-18px">Design</span>
+                <p class="skillbar-bar default-bg"></p>
+              </div> -->
+    <!-- End Skill Bar -->
+
+    <!-- <div class="skillbar" data-percent="66">
+                <span class="skillbar-title white-color font-18px">Marketing</span>
+                <p class="skillbar-bar default-bg"></p>
+              </div> -->
+    <!-- End Skill Bar -->
+
+    <!-- <div class="skillbar" data-percent="85">
+                <span class="skillbar-title white-color font-18px">Monitoring</span>
+                <p class="skillbar-bar default-bg"></p>
+              </div> -->
+    <!-- End Skill Bar -->
+
+    <!-- </div>
+          </div>
+
+          <div class="col-md-6 mt-30 col-xs-12 xs-mt-0">
+            <div class="skillbar-wrap skillbar-style-01">
+              <div class="skillbar" data-percent="30">
+                <span class="skillbar-title white-color font-18px">Development</span>
+                <p class="skillbar-bar default-bg"></p>
+              </div> -->
+    <!-- End Skill Bar -->
+
+    <!-- <div class="skillbar" data-percent="99">
+                <span class="skillbar-title white-color font-18px">Branding</span>
+                <p class="skillbar-bar default-bg"></p>
+              </div> -->
+    <!-- End Skill Bar -->
+
+    <!-- <div class="skillbar" data-percent="50">
+                <span class="skillbar-title white-color font-18px">Supporting</span>
+                <p class="skillbar-bar default-bg"></p>
+              </div> -->
+    <!-- End Skill Bar -->
+
+    <!-- </div>
+          </div>
+
+        </div>
+      </div>
+    </section> -->
+    <!--== Skills End ==-->
+
+
+    <!--== Testimonials Start ==-->
+    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
+      data-parallax-bg-image="assets/images/background/parallax-bg-3.jpg" data-parallax-speed="0.5"
+      data-parallax-direction="up" id="testimonial">
+      <div class="overlay-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font white-color">Our Testimonials</h1>
+              <hr class="center_line default-bg">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="slick testimonial">
+            <div class="col-md-4 col-sm-6 col-xs-12"> -->
+    <!--== Slide ==-->
+    <!-- <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <i class="icofont icofont-quote-left font-50px default-color mt-20"></i>
+                  <img class="img-responsive img-circle text-center" src="assets/images/team/avatar-1.jpg"
+                    alt="avatar-1" />
+                  <div class="text-center">
+                    <h4 class="font-600 mb-0 raleway-font white-color">Anne McAdams</h4>
+                    <span class="default-color font-14px">Customer</span>
+                    <div class="clearfix mb-20"></div>
+                    <p class="mt-20 line-height-26 font-14px white-color">Lorem ipsum dolor sit amet, consectetur
+                      adipiscing elit. Donec sodales nec nulla ac aliquet. Duis vel nunc eget.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12"> -->
+    <!--== Slide ==-->
+    <!-- <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <i class="icofont icofont-quote-left font-50px default-color mt-20"></i>
+                  <img class="img-responsive img-circle text-center" src="assets/images/team/avatar-2.jpg"
+                    alt="avatar-2" />
+                  <div class="text-center">
+                    <h4 class="font-600 mb-0 raleway-font white-color">Jared Kane</h4>
+                    <span class="default-color font-14px">Customer</span>
+                    <div class="clearfix mb-20"></div>
+                    <p class="mt-20 line-height-26 font-14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Donec sodales nec nulla ac aliquet. Duis vel nunc eget.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12"> -->
+    <!--== Slide ==-->
+    <!-- <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <i class="icofont icofont-quote-left font-50px default-color mt-20"></i>
+                  <img class="img-responsive img-circle" src="assets/images/team/avatar-3.jpg" alt="avatar-1" />
+                  <div class="text-center">
+                    <h4 class="font-600 mb-0 raleway-font white-color">Nani Wale</h4>
+                    <span class="default-color font-14px">Customer</span>
+                    <div class="clearfix mb-20"></div>
+                    <p class="mt-20 line-height-26 font-14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Donec sodales nec nulla ac aliquet. Duis vel nunc eget.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12"> -->
+    <!--== Slide ==-->
+    <!-- <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <i class="icofont icofont-quote-left font-50px default-color mt-20"></i>
+                  <img class="img-responsive img-circle" src="assets/images/team/avatar-4.jpg" alt="avatar-1" />
+                  <div class="text-center">
+                    <h4 class="font-600 mb-0 raleway-font white-color">John Doe</h4>
+                    <span class="default-color font-14px">Customer</span>
+                    <div class="clearfix mb-20"></div>
+                    <p class="mt-20 line-height-26 font-14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Donec sodales nec nulla ac aliquet. Duis vel nunc eget.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--== Testimonials End ==-->
+
+    <!--== Blogs Start ==-->
+    <!-- <section id="blog" class="white-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font">Our Blogs</h1>
+              <hr class="center_line default-bg">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-50">
+          <div class="col-md-4 blog-list">
+            <div class="post-wrap xs-mb-30 sm-mb-30">
+              <div class="post-img">
+                <div class="blog-grid-slider slick">
+                  <div class="item"><img class="img-responsive" src="assets/images/post/post-01.jpg" alt="" /></div>
+                  <div class="item"><img class="img-responsive" src="assets/images/post/post-02.jpg" alt="" /></div>
+                </div>
+              </div>
+              <div class="date-box">
+                <span class="day default-bg">20</span>
+                <span class="month">NOV</span>
+              </div>
+              <div class="post-text">
+                <h3><a href="blog.html">Photography Tips</a></h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.
+                </p>
+                <a href="#" class="btn-text">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 blog-list">
+            <div class="post-wrap xs-mb-30 sm-mb-30">
+              <div class="post-img">
+                <div class="blog-grid-slider slick">
+                  <div class="item"><img class="img-responsive" src="assets/images/post/post-03.jpg" alt="" /></div>
+                  <div class="item"><img class="img-responsive" src="assets/images/post/post-04.jpg" alt="" /></div>
+                </div>
+              </div>
+              <div class="date-box">
+                <span class="day default-bg">17</span>
+                <span class="month">OCT</span>
+              </div>
+              <div class="post-text">
+                <h3><a href="blog.html">Gaming</a></h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.
+                </p>
+                <a href="#" class="btn-text">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 blog-list">
+            <div class="post-wrap">
+              <div class="post-img">
+                <div class="blog-grid-slider slick">
+                  <div class="item"><img class="img-responsive" src="assets/images/post/post-05.jpg" alt="" /></div>
+                  <div class="item"><img class="img-responsive" src="assets/images/post/post-06.jpg" alt="" /></div>
+                </div>
+              </div>
+              <div class="date-box">
+                <span class="day default-bg">15</span>
+                <span class="month">JAN</span>
+              </div>
+              <div class="post-text">
+                <h3><a href="blog.html">Illustration</a></h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua.
+                </p>
+                <a href="#" class="btn-text">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--== Blogs End ==-->
+
+    <!--== Clients Start ==-->
+    <div class="dark-bg pt-60 pb-60">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font white-color">Our Partners</h1>
+              <hr class="center_line default-bg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-sm-12 text-center"><img class=""
+              src="assets/images/clients/readyplayerme-light.png" /></div>
+          <div class="col-md-6 col-sm-12 text-center"><img class="" src="assets/images/clients/liv-light.png" /></div>
+        </div>
+      </div>
+    </div>
+    <!--== Clients End ==-->
+
+    <!--== Contact Start ==-->
+    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="assets/images/team/team-all.jpg"
+      data-parallax-speed="0.5" data-parallax-direction="up" id="contact">
+      <div class="overlay-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title">
+              <h1 class="raleway-font white-color">Contact Us</h1>
+              <hr class="center_line default-bg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-70">
+          <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+            <form name="contact-form" id="contact-form" action="php/contact.php" method="POST"
+              class="contact-form-style-01 xs-mb-50">
+              <div class="messages"></div>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label class="sr-only" for="name">Name</label>
+                    <input type="text" name="name" class="md-input style-02" id="name" placeholder="Name *" required
+                      data-error="Your Name is Required">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label class="sr-only" for="email">Email</label>
+                    <input type="email" name="email" class="md-input style-02" id="email" placeholder="Email *" required
+                      data-error="Please Enter Valid Email">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="form-group">
+                    <label class="sr-only" for="message">Message</label>
+                    <textarea name="message" class="md-textarea style-02" id="message" rows="7"
+                      placeholder="Project Details" required data-error="Please, Leave us a message"></textarea>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="text-left">
+                    <button type="submit" name="submit"
+                      class="btn btn-light-outline btn-md btn-square btn-animate remove-margin"><span>Send Message <i
+                          class="ion-android-arrow-forward"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div> -->
+
+          <div class="col-md-12 col-sm-12 col-xs-12 xs-mb-50">
+            <div class="row">
+              <div class="col-md-12 col-sm-6 col-xs-12 text-center">
+                <div class="section-title">
+                  <h2 class="raleway-font default-color">Postal Address</h2>
+                  <p class="mt-30">Yıldırım Beyazıt Mah. Aşık Vevysel Blv. no:67/4-67 Melikgazi/KAYSERİ</p>
+                </div>
+              </div>
+              <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="section-title">
+                  <h2 class="raleway-font default-color">Office Numbers</h2>
+                  <p class="mb-0 mt-30"> +44 1234 567 9</p>
+                  <p class="mb-0"> +44 1234 567 9</p>
+                </div>
+              </div> -->
+            </div>
+            <div class="row mt-20">
+              <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                <div class="section-title">
+                  <h2 class="raleway-font default-color">Our Email</h2>
+                  <p class="mb-0 mt-30">info@widegamestudio.com</p>
+                  <!-- <p class="mb-0">Request : request@yourwebsite.com</p> -->
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                <div class="section-title">
+                  <h2 class="raleway-font default-color">Fast Support</h2>
+                  <p class="mb-0 mt-30">contact@widegamestudio.com</p>
+                  <!-- <p class="mb-0">career@yourwebsite.com</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== Contact End ==-->
+
+    <!--== Footer Start ==-->
+    <footer class="footer">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+              <div class="copy-right text-left">© 2019 Wide Game Studio. All rights reserved</div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <ul class="social-media">
+                <li><a href="https://www.instagram.com/widegamestudio/" class="icofont icofont-instagram"></a></li>
+                <li><a href="https://twitter.com/home" class="icofont icofont-twitter"></a></li>
+                <li><a href="https://www.youtube.com/@widegamestudio" class="icofont icofont-youtube"></a></li>
+
+                <li><a href="https://www.linkedin.com/company/76121850/" class="icofont icofont-linkedin"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--== Footer End ==-->
+
+    <!--== Go to Top  ==-->
+    <a href="javascript:" id="return-to-top"><i class="icofont icofont-arrow-up"></i></a>
+    <!--== Go to Top End ==-->
+
+  </div>
+  <!--== Wrapper End ==-->
+
+  <!--== Javascript Plugins ==-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNGOwO2hJpJ9kz8e0UUPjZhEbgDJTTXE"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/smoothscroll.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/master.js"></script>
+
+  <!-- Revolution js Files -->
+  <script src="revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="revolution/js/revolution.extension.actions.min.js"></script>
+  <script src="revolution/js/revolution.extension.carousel.min.js"></script>
+  <script src="revolution/js/revolution.extension.kenburn.min.js"></script>
+  <script src="revolution/js/revolution.extension.layeranimation.min.js"></script>
+  <script src="revolution/js/revolution.extension.migration.min.js"></script>
+  <script src="revolution/js/revolution.extension.navigation.min.js"></script>
+  <script src="revolution/js/revolution.extension.parallax.min.js"></script>
+  <script src="revolution/js/revolution.extension.slideanims.min.js"></script>
+  <script src="revolution/js/revolution.extension.video.min.js"></script>
+  <!--== Javascript Plugins End ==-->
+
+</body>
+
 </html>
