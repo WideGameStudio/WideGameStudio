@@ -1,1454 +1,932 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>WGS</title>
-  <link rel="shortcut icon" href="assets/images/favicon.png">
 
-  <!-- Core Style Sheets -->
-  <link rel="stylesheet" href="assets/css/master.css">
-  <!-- Responsive Style Sheets -->
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  <!-- Revolution Style Sheets -->
-  <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
-  <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
-  <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- grid css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/fontawesome.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- okai css -->
+    <link rel="stylesheet" href="css/style-stylish.css">
+    <!-- page title -->
+    <title>Pixy</title>
 
 </head>
 
 <body>
 
-  <!--== Loader Start ==-->
-  <div id="loader-overlay">
-    <div class="loader">
-      <div class="spinner">
-        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-          <circle class="length" fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
-        </svg>
-        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-          <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
-        </svg>
-        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-          <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
-        </svg>
-        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-          <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
-        </svg>
-      </div>
-    </div>
-  </div>
-  <!--== Loader End ==-->
+    <!-- wrapper -->
+    <div id="smooth-wrapper" class="mil-page-wrapper">
 
-  <!--== Wrapper Start ==-->
-  <div class="wrapper">
+        <!-- cursor -->
+        <div class="mil-cursor-follower"></div>
+        <!-- cursor end -->
 
-    <!--== Header Start ==-->
-    <nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav on no-full brand-center">
-      <div class="container">
-        <!--== Start Atribute Navigation ==-->
-        <!-- <div class="attr-nav hidden-xs sm-display-none">
-          <ul>
-            <li class="side-menu"><a href="#"><i class="icofont icofont-navigation-menu"></i></a></li>
-          </ul>
-        </div> -->
-        <!--== End Atribute Navigation ==-->
-
-        <!--== Start Header Navigation ==-->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i
-              class="tr-icon ion-android-menu"></i> </button>
-          <div class="logo"> <a href="index.html"> <img class="logo logo-display"
-                src="assets/images/logo-full-light-psd.png" alt=> <img class="logo logo-scrolled"
-                src="assets/images/logo-black-full-psd.png" alt=""> </a> </div>
-        </div>
-        <!--== End Header Navigation ==-->
-
-        <!--== Collect the nav links, forms, and other content for toggling ==-->
-        <div class="collapse navbar-collapse" id="navbar-menu">
-          <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
-            <li class="dropdown"><a href="#home" class="dropdown-toggle page-scroll" data-toggle="dropdown">Home</a>
-              <!-- <ul class="dropdown-menu">
-                <li>
-                  <a href="parallax.html">Parallax</a>
-                </li>
-                <li>
-                  <a href="parallax-dark.html">Parallax Dark</a>
-                </li>
-                <li>
-                  <a href="parallax-text-rotate.html">Parallax Text Rotate</a>
-                </li>
-                <li>
-                  <a href="revolution-slider.html">Revolution Slider</a>
-                </li>
-                <li>
-                  <a href="revolution-slider-dark.html">Revolution Slider Dark</a>
-                </li>
-                <li>
-                  <a href="html5-video.html">HTML5 Video</a>
-                </li>
-                <li>
-                  <a href="html5-video-dark.html">HTML5 Video Dark</a>
-                </li>
-                <li>
-                  <a href="creative-agency.html">Creative Agency</a>
-                </li>
-                <li>
-                  <a href="creative-agency-dark.html">Creative Agency Dark</a>
-                </li>
-              </ul> -->
-            </li>
-
-
-            <!-- <li><a class="page-scroll" href="#service">Services</a></li> -->
-            <li><a class="page-scroll" href="#work">Works</a></li>
-            <li><a class="page-scroll" href="#about">About</a></li>
-            <li><a class="page-scroll" href="#team">Team</a></li>
-            <!-- <li><a class="page-scroll" href="#testimonial">Testimonials</a></li> -->
-            <!-- <li><a class="page-scroll" href="#blog">Blog</a></li> -->
-            <li><a class="page-scroll" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <!--== /.navbar-collapse ==-->
-      </div>
-
-      <!-- Start Side Menu -->
-      <!-- <div class="side dark-bg">
-        <a href="index.html" class="logo-side"><img src="assets/images/logo-full-light.png" alt="side-logo" /></a>
-        <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
-        <div class="widget mt-120">
-          <ul class="link">
-            <li class="link-item"><a class="page-scroll" href="#home">Home</a></li>
-            <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
-            <li class="link-item"><a class="page-scroll" href="#team">Team</a></li>
-            <li class="link-item"><a class="page-scroll" href="#service">Services</a></li>
-            <li class="link-item"><a class="page-scroll" href="#work">Works</a></li>
-            <li class="link-item"><a class="page-scroll" href="#testimonial">Testimonials</a></li>
-            <li class="link-item"><a class="page-scroll" href="#blog">Blog</a></li>
-            <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <ul class="social-media">
-          <li><a href="#" class="icofont icofont-social-facebook"></a></li>
-          <li><a href="#" class="icofont icofont-social-twitter"></a></li>
-          <li><a href="#" class="icofont icofont-social-behance"></a></li>
-          <li><a href="#" class="icofont icofont-social-dribble"></a></li>
-          <li><a href="#" class="icofont icofont-social-linkedin"></a></li>
-        </ul>
-      </div>  -->
-      <!-- End Side Menu -->
-
-    </nav>
-    <!--== Header End ==-->
-
-    <!--== Hero Slider Start ==-->
-    <div class="remove-padding transition-none" id="home">
-      <div id="rev_slider_1078_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
-        data-alias="classic4export" data-source="gallery"
-        style="margin:0px auto;background-color:#000000;padding:0px;margin-top:0px;margin-bottom:0px;">
-        <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
-        <div id="rev_slider_1078_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
-          <ul> <!-- SLIDE  -->
-            <li data-index="rs-3045" data-transition="slidingoverlayhorizontal" data-slotamount="default"
-              data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-              data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="" data-param1=""
-              data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8=""
-              data-param9="" data-param10="" data-description="">
-              <!-- MAIN IMAGE -->
-              <img src="assets/images/slides/home-bg-wgs.jpg" alt="" class="rev-slidebg" data-bgposition="center center"
-                data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="on" data-duration="20000"
-                data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="200" data-offsetstart="0 0"
-                data-offsetend="0 0" data-rotatestart="0" data-rotateend="0">
-              <!-- LAYERS -->
-
-              <!-- LAYER NR. 1 -->
-              <div class="hero-text-wrap">
-                <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-1"
-                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                  data-y="['middle','middle','middle','middle']" data-voffset="['-90','-90','-90','-50']"
-                  data-fontsize="['20','20','20','16']" data-lineheight="['30','30','30','20']" data-width="none"
-                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
-                  data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
-                  data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
-                  style="font-family: 'Raleway', sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:5px;">
-                  Widen</div>
-
-                <!-- LAYER NR. 2 -->
-                <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-2"
-                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                  data-y="['middle','middle','middle','middle']" data-voffset="['-10','-10','-10','-10']"
-                  data-fontsize="['56','56','56','30']" data-lineheight="['66','66','66','40']" data-width="none"
-                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
-                  data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
-                  data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
-                  style="font-family: 'Raleway', sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:10px;">
-                  Your Horizon</div>
-
-
-                <!-- LAYER NR. 3 -->
-                <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-3"
-                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                  data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','40']"
-                  data-fontsize="['16','16','16','16']" data-lineheight="['20','20','20','20']" data-width="none"
-                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
-                  data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                  style="font-family: 'Raleway', sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:5px;">
-                  FOCUSING VR GAMES</div>
-
-                <!-- LAYER NR. 4 -->
-                <!-- <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-4"
-        			data-x="['center','center','center','center']" data-hoffset="['0','0','0','50']"
-        			data-y="['middle','middle','middle','middle']" data-voffset="['150','150','150','120']"
-        			data-width="none"
-        			data-height="none"
-        			data-whitespace="['normal','nowrap','nowrap','nowrap']"
-        			data-type="button"
-              data-basealign="slide"
-        			data-responsive_offset="on"
-        			data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-        			data-textAlign="['inherit','inherit','inherit','inherit']"
-        			data-paddingtop="[0,0,0,0]"
-        			data-paddingright="[0,0,0,0]"
-        			data-paddingbottom="[0,0,0,0]"
-        			data-paddingleft="[0,0,0,0]"><a class="btn btn-lg btn-light-outline btn-square">See Our Works</a></div>
-
-            </div>
-
-      	</li> -->
-                <!-- SLIDE  -->
-            <li data-index="rs-3046" data-transition="slidingoverlayhorizontal" data-slotamount="default"
-              data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-              data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="" data-param1=""
-              data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8=""
-              data-param9="" data-param10="" data-description="">
-              <!-- MAIN IMAGE -->
-              <img src="assets/videos/home-bg-2.jpg" alt="" data-bgposition="center center" data-bgfit="cover"
-                data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-
-              <!-- BACKGROUND VIDEO LAYER -->
-              <div class="rs-background-video-layer" data-forcerewind="on" data-volume="mute" data-videowidth="100%"
-                data-videoheight="100%" data-videomp4="assets/videos/html5-video.mp4" data-videopreload="auto"
-                data-videoloop="loop" data-aspectratio="16:9" data-autoplay="true" data-autoplayonlyfirsttime="false">
-              </div>
-
-              <!-- LAYERS -->
-              <!-- LAYER NR. 1 -->
-              <div class="hero-text-wrap">
-                <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-5"
-                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                  data-y="['middle','middle','middle','middle']" data-voffset="['-90','-90','-90','-50']"
-                  data-fontsize="['20','20','20','16']" data-lineheight="['30','30','30','20']" data-width="none"
-                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
-                  data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
-                  data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
-                  style="font-family: 'Raleway', sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:5px;">
-                  Explore the Future</div>
-
-                <!-- LAYER NR. 2 -->
-                <div class="tp-caption NotGeneric-Title tp-resizeme" id="slide-3045-layer-6"
-                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                  data-y="['middle','middle','middle','middle']" data-voffset="['-10','-10','-10','-10']"
-                  data-fontsize="['56','56','56','30']" data-lineheight="['66','66','66','40']" data-width="none"
-                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
-                  data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
-                  data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
-                  style="font-family: 'Raleway', sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:10px;">
-                  Experience Virtual Reality with Us!</div>
-
-
-                <!-- LAYER NR. 3 -->
-                <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-7"
-                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                  data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','40']"
-                  data-fontsize="['16','16','16','16']" data-lineheight="['20','20','20','20']" data-width="none"
-                  data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
-                  data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                  style="font-family: 'Raleway', sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:5px;">
+        <!-- preloader -->
+        <div class="mil-preloader">
+            <div class="mil-preloader-animation">
+                <div class="mil-pos-abs mil-animation-1">
+                    <p class="mil-head1 mil-m1">Widen</p>
+                    <p class="mil-head1 mil-a2">Your</p>
+                    <p class="mil-head1 mil-m1">Horizon</p>
                 </div>
-
-                <!-- LAYER NR. 4 -->
-                <!-- <div class="tp-caption NotGeneric-SubTitle tp-resizeme" id="slide-3045-layer-8"
-                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','50']"
-                  data-y="['middle','middle','middle','middle']" data-voffset="['150','150','150','120']"
-                  data-width="none" data-height="none" data-whitespace="['normal','nowrap','nowrap','nowrap']"
-                  data-type="button" data-basealign="slide" data-responsive_offset="on"
-                  data-frames='[{"delay":0,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a
-                    class="btn btn-lg btn-light-outline btn-square">See Our Works</a></div>
-
-              </div>
-            </li> -->
-                <!-- SLIDE  -->
-
-          </ul>
-          <div class="tp-bannertimer" style="height: 3px; background-color: rgba(255, 255, 255, 0.25);"></div>
-        </div>
-      </div>
-    </div>
-    <!--== Hero Slider End ==-->
-
-    <!--== Portfolio Start ==-->
-    <section class="grey-bg pb-0" id="work">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font">Our Works</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-        <!-- <div class="row">
-          <div class="col-md-12">
-            <div id="portfolio-gallery-filter" class="cbp-l-filters-alignCenter text-sm-center mt-50">
-              <div data-filter="*" class="cbp-filter-item-active cbp-filter-item dark">
-                All
-              </div>
-              <div data-filter=".branding" class="cbp-filter-item">
-                Branding
-              </div>
-              <div data-filter=".print" class="cbp-filter-item">
-                Print Design
-              </div>
-              <div data-filter=".web-design" class="cbp-filter-item">
-                Web Design
-              </div>
-              <div data-filter=".advertising" class="cbp-filter-item">
-                Advertising
-              </div>
-              <div data-filter=".photography" class="cbp-filter-item">
-                Photography
-              </div>
-            </div>
-          </div>
-        </div> -->
-      </div>
-      <div class="container-fluid remove-padding">
-
-        <div class="row mt-50">
-          <div class="col-md-12">
-            <div id="portfolio-gallery" class="cbp">
-              <div class="cbp-item branding col-md-6 col-sm-12">
-                <div class="portfolio gallery-image-hover text-center">
-                  <div class="folio-overlay"></div>
-                  <img src="assets/images/portfolio/grid/1a.jpg" alt="1" style="object-fit: fill;">
-                  <div class="portfolio-wrap">
-                    <div class="portfolio-description">
-                      <h3 class="portfolio-title mt-0">Flare Frenzy</h3>
-                      <h6 class="links"></h6>
+                <div class="mil-pos-abs mil-animation-2">
+                    <div class="mil-reveal-frame">
+                        <p class="mil-reveal-box"></p>
+                        <p class="mil-head1 mil-m1">wide game studio</p>
                     </div>
-                    <ul class="portfolio-details">
-                      <!-- <li><a class="cbp-lightbox" data-gallery="example-gallery" href="assets/images/portfolio/grid/FF2.jpg" />
-                        <i class="icofont icofont-search"></i>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+        <!-- scroll progress -->
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+        <!-- scroll progress end -->
+
+        <!-- fixed elements -->
+        <div class="mil-fixed">
+            <div class="mil-top-panel-2">
+                <div class="container">
+                    <div class="mil-left-side mil-tp-transition" id="swupTpLeft">
+                        <a href="#top" class="mil-logo mil-scroll-to" data-no-swup>
+                            <img src="img/brands/logo.png" alt="logo" width="90px" height="91px">
+                            <span>Wide Game Studio</span>
                         </a>
-                      </li> -->
-
-
-                      <li><a
-                          href="https://www.oculus.com/deeplink/?action=view&path=app/5489531501137764&ref=oculus_desktop"><i
-                            class="icofont icofont-link"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="cbp-item branding web-design col-md-6 col-sm-12">
-                <div class="portfolio gallery-image-hover text-center">
-                  <div class="folio-overlay"></div>
-                  <img src="assets/images/portfolio/grid/2a.jpg" class="object-fit-none">
-                  <div class="portfolio-wrap">
-                    <div class="portfolio-description">
-                      <h3 class="portfolio-title mt-0">Wizard's Legacy</h3>
-                      <h6 class="links"></h6>
                     </div>
-                    <ul class="portfolio-details">
-                      <!-- <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/FF1.jpg"><i
-                            class="icofont icofont-search"></i></a></li> -->
-                      <li><a href=""><i class="icofont icofont-link"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
 
-              <!-- <div class="cbp-item web-design print col-md-4 col-sm-6">
-                <div class="portfolio gallery-image-hover text-center">
-                  <div class="folio-overlay"></div>
-                  <img src="assets/images/portfolio/grid/3.jpg" alt="">
-                  <div class="portfolio-wrap">
-                    <div class="portfolio-description">
-                      <h3 class="portfolio-title mt-0">Project Name 3</h3>
-                      <h6 class="links">Print, Website</h6>
+                    <div class="mil-onepage-nav" id="swup-opm">
+                        <ul>
+                            <li><a href="#about" class="mil-scroll-to" data-no-swup>About</a></li>
+                            <li><a href="#portfolio" class="mil-scroll-to" data-no-swup>Games</a></li>
+                            <li><a href="#reviews" class="mil-scroll-to" data-no-swup>Team</a></li>
+                            <li><a href="#contact" class="mil-scroll-to" data-no-swup>Contact</a></li>
+                        </ul>
                     </div>
-                    <ul class="portfolio-details">
-                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/3.jpg"><i
-                            class="icofont icofont-search"></i></a></li>
-                      <li><a href="works.html"><i class="icofont icofont-link"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div> -->
 
-              <!-- <div class="cbp-item web-design advertising col-md-4 col-sm-6">
-                <div class="portfolio gallery-image-hover text-center">
-                  <div class="folio-overlay"></div>
-                  <img src="assets/images/portfolio/grid/4.jpg" alt="">
-                  <div class="portfolio-wrap">
-                    <div class="portfolio-description">
-                      <h3 class="portfolio-title mt-0">Project Name 4</h3>
-                      <h6 class="links">Advertising, Website</h6>
+                    <div class="mil-buttons-tp-frame mil-c-gone">
+                        <div class="mil-buttons">
+                            <a href="https://linktr.ee/widegamestudio" class="mil-tp-btn"><i
+                                    class="fal fa-envelope"></i></a>
+                            <!-- <div class="mil-tp-btn">
+                                <div class="mil-menu-btn"><span></span></div>
+                            </div> -->
+                        </div>
                     </div>
-                    <ul class="portfolio-details">
-                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/4.jpg"><i
-                            class="icofont icofont-search"></i></a></li>
-                      <li><a href="works.html"><i class="icofont icofont-link"></i></a></li>
-                    </ul>
-                  </div>
                 </div>
-              </div>
+            </div>
 
-              <div class="cbp-item photography col-md-4 col-sm-6">
-                <div class="portfolio gallery-image-hover text-center">
-                  <div class="folio-overlay"></div>
-                  <img src="assets/images/portfolio/grid/5.jpg" alt="">
-                  <div class="portfolio-wrap">
-                    <div class="portfolio-description">
-                      <h3 class="portfolio-title mt-0">Project Name 5</h3>
-                      <h6 class="links">Photography</h6>
+            <div class="mil-menu-frame mil-menu-frame-2">
+                <div class="mil-menu-window">
+                    <div class="container">
+                        <div class="row mil-no-g">
+                            <div class="col-lg-6">
+                                <div class="mil-left-side">
+                                    <div class="mil-menu-part mil-inner-scroll" id="swupMenu">
+                                        <ul class="mil-main-menu mil-c-gone">
+                                            <li class="mil-has-children">
+                                                <a href="#.">Template style</a>
+                                                <ul>
+                                                    <li><a href="home-1.html" target="_blank" data-no-swup>Friendly</a>
+                                                    </li>
+                                                    <li class="mil-current"><a href="home-4.html" target="_blank"
+                                                            data-no-swup>Stylish</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="mil-has-children">
+                                                <a href="#.">Home type</a>
+                                                <ul>
+                                                    <li><a href="home-4.html">Corporate</a></li>
+                                                    <li class="mil-current"><a href="home-5.html">Agency</a></li>
+                                                    <li><a href="home-6.html">Personal</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="mil-has-children">
+                                                <a href="#.">Portfolio</a>
+                                                <ul>
+                                                    <li><a href="portfolio-1-stl.html">Grid type 1</a></li>
+                                                    <li><a href="portfolio-2-stl.html">Grid type 2</a></li>
+                                                    <li><a href="portfolio-3-stl.html">Grid type 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="mil-has-children">
+                                                <a href="#.">Pages</a>
+                                                <ul>
+                                                    <li><a href="team-stl.html">Team</a></li>
+                                                    <li><a href="contact-stl.html">Contact</a></li>
+                                                    <li><a href="services-stl.html">Services</a></li>
+                                                    <li><a href="service-stl.html">Service single</a></li>
+                                                    <li><a href="blog-stl.html">Blog</a></li>
+                                                    <li><a href="publication-stl.html">Publication</a></li>
+                                                    <li><a href="404-stl.html">404</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mil-bottom-part">
+                                        <p class="mil-text-sm">©2024. All rights reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mil-right-side">
+                                    <div class="mil-links-part">
+                                        <ul class="mil-links">
+                                            <li><a href="#.">Privacy policy</a></li>
+                                            <li><a href="#.">Therms and conditions</a></li>
+                                            <li><a href="#.">Site map</a></li>
+                                            <li><a href="#.">Careers</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mil-blog-part">
+                                        <div class="mil-blog-section">
+                                            <div class="mil-jcb mil-aic">
+                                                <h4 class="mil-head4 mil-mb30">Latest from blog</h4>
+                                                <div class="mil-sb-nav mil-mb30">
+                                                    <div class="mil-slider-btn mil-sb-prev mil-c-gone"><i
+                                                            class="fal fa-arrow-left"></i></div>
+                                                    <div class="mil-slider-btn mil-sb-next mil-c-gone"><i
+                                                            class="fal fa-arrow-right"></i></div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-container mil-blog-slider-sm">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <a href="publication-stl.html"
+                                                            class="mil-blog-card-sm mil-c-gone">
+                                                            <div class="mil-cover">
+                                                                <div class="mil-hover-frame">
+                                                                    <img src="img/blog/9.jpg" alt="cover">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mil-text-frame">
+                                                                <h4 class="mil-head6 mil-max-1row-text">How to Become a
+                                                                    Graphic Designer in 10 Simple Steps</h4>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <a href="publication-stl.html"
+                                                            class="mil-blog-card-sm mil-c-gone">
+                                                            <div class="mil-cover">
+                                                                <div class="mil-hover-frame">
+                                                                    <img src="img/blog/10.jpg" alt="cover">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mil-text-frame">
+                                                                <h4 class="mil-head6 mil-max-1row-text">10 Essential
+                                                                    Tools Every Graphic Designer Should Master</h4>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <a href="publication-stl.html"
+                                                            class="mil-blog-card-sm mil-c-gone">
+                                                            <div class="mil-cover">
+                                                                <div class="mil-hover-frame">
+                                                                    <img src="img/blog/11.jpg" alt="cover">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mil-text-frame">
+                                                                <h4 class="mil-head6 mil-max-1row-text">The Ultimate
+                                                                    Guide to UI/UX Design for Beginners</h4>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <a href="publication-stl.html"
+                                                            class="mil-blog-card-sm mil-c-gone">
+                                                            <div class="mil-cover">
+                                                                <div class="mil-hover-frame">
+                                                                    <img src="img/blog/12.jpg" alt="cover">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mil-text-frame">
+                                                                <h4 class="mil-head6 mil-max-1row-text">How to Create
+                                                                    Stunning Visuals with Minimal Effort</h4>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mil-menu-social">
+                                            <ul class="mil-social mil-c-gone">
+                                                <li><a href="#." target="_blank" data-no-swup><i
+                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="#." target="_blank" data-no-swup><i
+                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="#." target="_blank" data-no-swup><i
+                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="#." target="_blank" data-no-swup><i
+                                                            class="far fa-circle"></i></a></li>
+                                                <li><a href="#." target="_blank" data-no-swup><i
+                                                            class="far fa-circle"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="portfolio-details">
-                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/5.jpg"><i
-                            class="icofont icofont-search"></i></a></li>
-                      <li><a href="works.html"><i class="icofont icofont-link"></i></a></li>
-                    </ul>
-                  </div>
                 </div>
-              </div>
+            </div>
+        </div>
+        <!-- fixed elements end -->
 
-              <div class="cbp-item web-design col-md-4 col-sm-6">
-                <div class="portfolio gallery-image-hover text-center">
-                  <div class="folio-overlay"></div>
-                  <img src="assets/images/portfolio/grid/6.jpg" alt="">
-                  <div class="portfolio-wrap">
-                    <div class="portfolio-description">
-                      <h3 class="portfolio-title mt-0">Project Name 6</h3>
-                      <h6 class="links">Website</h6>
+        <!-- page transition -->
+        <div class="mil-transition-fade" id="swup">
+            <div class="mil-transition-frame">
+
+                <!-- content -->
+                <div id="smooth-content" class="mil-content">
+
+                    <!-- hero -->
+                    <div class="mil-hero-4 mil-up" id="top">
+                        <div id="scene" class="mil-hero-scene">
+                            <div class="mil-anim-frame" data-depth="0.25">
+                                <img src="img/shapes/6.png" alt="shapes" class="mil-hero-animation" data-depth="0.25">
+                            </div>
+                            <div class="mil-pad-frame" data-depth="0.35">
+                                <div class="mil-shape-pad"></div>
+                            </div>
+                        </div>
+                        <div class="mil-overlay"></div>
+                        <div class="container mil-hero-main mil-relative">
+                            <div class="mil-hero-text">
+                                <!-- <i class="fal fa-award mil-mb15"></i> -->
+                                <p class="mil-stylized mil-m2 mil-mb60">awesome people<br>awesome ideas</p>
+                                <h1 class="mil-display2 mil-rubber">immersive <br>virtual <br>worlds.</h1>
+                                <div class="mil-circle-text-frame">
+                                    <a href="#scroll" class="mil-circle-text mil-scroll-to mil-c-gone" data-no-swup>
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 300 300" enable-background="new 0 0 300 300"
+                                            xml:space="preserve" data-value="360" class="mil-rotate">
+                                            <defs>
+                                                <path id="circlePath"
+                                                    d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                                            </defs>
+                                            <circle cx="150" cy="100" r="75" fill="none" />
+                                            <g>
+                                                <use xlink:href="#circlePath" fill="none" />
+                                                <text style="letter-spacing: 2px">
+                                                    <!-- circle text -->
+                                                    <textPath xlink:href="#circlePath">scroll down - scroll down -
+                                                        scroll down - </textPath>
+                                                </text>
+                                            </g>
+                                        </svg>
+                                        <span class="mil-arrow">
+                                            <i class="fal fa-arrow-down"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="portfolio-details">
-                      <li><a class="cbp-lightbox" href="assets/images/portfolio/grid/6.jpg"><i
-                            class="icofont icofont-search"></i></a></li>
-                      <li><a href="works.html"><i class="icofont icofont-link"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>-->
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="row">
-          <div class="col-md-12 remove-padding default-bg">
-            <p class="mt-0 centerize-col text-center pt-60 pb-60 mb-0">
-              <a class="btn btn-lg btn-light-outline btn-square">View All Works</a>
-            </p>
-          </div>
-        </div> -->
-      </div>
-    </section>
-    <!--== Portfolio End ==-->
+                    <!-- hero end -->
 
 
-    <!--== Who We Are Start ==-->
-    <section class="white-bg xs-pb-100" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h2 class="raleway-font default-color">Who We Are</h2>
-              <hr class="center_line default-bg">
-              <h1 class="raleway-font">Virtual Reality Game Studio</h1>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-50">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="feature-box text-center xs-mb-30 feature-box-default-bg center-feature">
-              <i class="icofont icofont-skydiving-goggles font-40px"></i>
-              <h4 class="mt-0 font-600">Immersive Virtual Worlds</h4>
-              <p class="font-400">Immerse yourself in captivating virtual realms that seamlessly blend reality and
-                imagination, offering an unparalleled gaming adventure.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="feature-box text-center xs-mb-30 feature-box-default-bg center-feature">
-              <i class="icofont icofont-micro-chip font-40px"></i>
-              <h4 class="mt-0 font-600">Advanced VR Technology</h4>
-              <p class="font-400">Explore the potential of cutting-edge VR innovations, delivering an unmatched thrill
-                in gaming powered by state-of-the-art technology.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="feature-box text-center feature-box-default-bg center-feature">
-              <i class="icofont icofont-group font-40px"></i>
-              <h4 class="mt-0 font-600">Connected VR Community</h4>
-              <p class="font-400">Join a vibrant community of virtual reality enthusiasts, uniting players through
-                shared adventures for an engaging and immersive gaming experience.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== Who We Are End ==-->
 
-    <!--== About Company Start ==-->
-    <section class="grey-bg xs-pb-60">
-      <div class="col-md-6 col-sm-6 bg-flex bg-flex-left">
-        <div class="bg-flex-holder bg-flex-cover" style="background-image: url(assets/images/bg-left-img-2.jpg);">
-          <div class="video-box_overlay">
-            <div class="center-layout">
-              <div class="v-align-middle"> <a class="popup-youtube" href="https://www.youtube.com/watch?v=rSVxRK1Mo-g">
-                  <div class="play-button"><i class="tr-icon ion-android-arrow-dropright"></i></div>
-                </a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="col-md-6 col-sm-6 col-md-offset-6 col-sm-offset-6">
-          <div class="col-inner spacer text-left">
-            <h2 class="raleway-font mt-0 font-20px xs-font-17px default-color">Our Amazing Story</h2>
-            <h1 class="raleway-font mt-0 font-50px font-600 xs-font-27px">Explore Unrivaled Virtual Adventures with Our
-              Cutting-edge VR Games</h1>
-            <!-- <p class="mt-30 intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-            <br />
-            <br />
-            <div class="row">
-              <div class="col-md-6">
-                <h3>Our Mission</h3>
-                <p>At Wide Game Studio, our mission is to deliver unparalleled virtual reality gaming and application
-                  experiences, catering to users with a focus on innovation. We push the boundaries of imagination with
-                  enthusiasm and excitement, aspiring to be pioneers in the virtual reality sector.</p>
-              </div>
-              <div class="col-md-6">
-                <h3>Our Vision</h3>
-                <p>At Wide Game Studio, our vision is to innovate and advance in the virtual reality industry,
-                  captivating users with immersive stories from diverse universes. We aspire to be pioneers, ensuring
-                  user fascination through our cutting-edge virtual reality projects.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== About Company End ==-->
+                    <!-- about -->
+                    <div id="about">
+                        <div class="container">
+                            <div class="row mil-jcb mil-aic">
+                                <div class="col-lg-5 mil-mb130">
+                                    <p class="mil-stylized mil-m2 mil-mb60 mil-up">About us</p>
+                                    <h2 class="mil-head1 mil-mb60 mil-up">Discover <br> <span
+                                            class="mil-a1">Wide Game Studio</span></h2>
+                                    <p class="mil-text-md mil-mb30 mil-up">We are Wide Game Studio, a passionate team dedicated to pushing the boundaries of virtual reality. Our mission is to deliver immersive VR gaming experiences that captivate people and spark inspiration.
 
-    <!--== Video Start ==-->
-    <section class="relative">
-      <div class="parallax-overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="display-table col-md-8 col-md-offset-2 col-sm-12">
-            <div class="v-align-middle text-center">
-              <div class="white-color text-center">
-                <h1
-                  class="font-700 font-60px line-height-60 xs-font-40px xs-line-height-50 sm-font-60px sm-line-height-70 play-font">
-                  Ready to Rock? Dive into uncharted realms with Wide Game Studio.</h1>
-                <hr class="center_line default-bg">
-                <p>
-                  Embark on an unparalleled gaming journey with Wide Game Studio, where cutting-edge technology meets
-                  limitless imagination. Our virtual reality experiences redefine entertainment, promising excitement at
-                  every turn. Explore the extraordinary – because at Wide Game Studio, we're not just ready to rock;
-                  we're ready to revolutionize your gaming world.
-                </p>
-                <p class="mt-30">
-                  <a href="https://linktr.ee/widegamestudio" class="btn btn-lg btn-light-outline btn-square">Get
-                    Started</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <video autoplay="" muted="" loop="" controls="" class="html5-video">
-        <source src="assets/videos/ready_to_rock.mp4" type="video/mp4">
-        <source src="assets/videos/home-video.webm" type="video/webm">
-      </video>
-    </section>
-    <!--== Video End ==-->
-
-    <!--== Team Start ==-->
-    <section class="grey-bg pb-0" id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font">Our Creative Team</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row mt-50">
-
-          <a href="https://www.linkedin.com/in/ramazan-mert-ural-963494164/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-mert.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">Ramazan Mert Ural</h4>
-                    <p class="default-color">CEO</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
+                                    </p>
+                                    <p class="mil-text-md mil-mb160 mil-up">We believe in the power of imagination and technology to create immersive worlds that transport users to magical places. Our vision is to be at the forefront of the VR industry and  setting the trends by crafting innovative projects that redefine the future of virtual reality.
+                                    </p>
+                                    <!-- <div class="mil-team-quote mil-up">
+                                        <div class="mil-portrait">
+                                            <img src="img/team/ceo.jpg" alt="SEO portrait">
+                                        </div>
+                                        <p class="mil-text-md mil-m1"><span class="mil-bold">Passionately Creating</span> Design Wonders: <br><span class="mil-bold">Unleashing</span> Boundless Creativity</p>
+                                    </div> -->
+                                </div>
+                                <div class="col-lg-6 mil-mb30">
+                                    <div class="mil-about-img-frame">
+                                        <div class="mil-about-img mil-up">
+                                            <img src="img/home-5/2.jpg" alt="About" class="mil-scale-img"
+                                                data-value-1="1.25" data-value-2="1">
+                                        </div>
+                                        <!-- <div class="mil-button-box">
+                                            <div class="mil-up"><a href="services-stl.html" class="mil-btn mil-btn-border mil-c-gone">Read more about us</a></div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/ahmeddemirezen/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
+                    <!-- about end -->
 
-                    <img src="assets/images/team/team-ahmed.jpg" alt="your-image">
-
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">AHMED DEMİREZEN</h4>
-                    <p class="default-color">CTO</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
+                    <!-- services -->
+                    <div id="services" class="mil-bug-fix">
+                        <div class="container">
+                            <div class="row mil-jcb">
+                                <div class="col-12">
+                                    <p class="mil-stylized mil-m2 mil-mb60 mil-up">Our Services</p>
+                                    <h2 class="mil-head1 mil-mb90 mil-up">We generate <span class="mil-a1">unique</span>
+                                        ideas</h2>
+                                </div>
+                                <div class="col-lg-7">
+                                    <ul class="mil-services-list mil-mb160">
+                                        <li class="mil-service-item mil-768-mb60 mil-up">
+                                            <div class="mil-item-text mil-mb30">
+                                                <h3 class="mil-head3 mil-mb30 mil-up">Realistic Experiences</h3>
+                                                <p class="mil-text-md mil-deco-text mil-max-3row-text mil-up">Our games
+                                                    offer unique and exciting experiences using cutting-edge VR
+                                                    technology to make you feel like you are truly there.</p>
+                                            </div>
+                                            <!-- <div class="mil-mb30 mil-up">
+                                                <a href="service-stl.html" class="mil-stylized-btn mil-c-gone">
+                                                    <i class="fal fa-arrow-up"></i>
+                                                    <span>Read more</span>
+                                                </a>
+                                            </div> -->
+                                        </li>
+                                        <li class="mil-service-item mil-768-mb60 mil-up">
+                                            <div class="mil-item-text mil-mb30">
+                                                <h3 class="mil-head3 mil-mb30 mil-up">Creative, Passionate, and Fast
+                                                </h3>
+                                                <p class="mil-text-md mil-deco-text mil-max-3row-text mil-up">One of the
+                                                    things we are most proud of is being able to create VR worlds
+                                                    quickly. We utilize the latest technologies and tools to bring our
+                                                    creative ideas to life quickly and accurately.</p>
+                                            </div>
+                                            <!-- <div class="mil-mb30 mil-up">
+                                                <a href="service-stl.html" class="mil-stylized-btn mil-c-gone">
+                                                    <i class="fal fa-arrow-up"></i>
+                                                    <span>Read more</span>
+                                                </a>
+                                            </div> -->
+                                        </li>
+                                        <li class="mil-service-item mil-up">
+                                            <div class="mil-item-text mil-mb30">
+                                                <h3 class="mil-head3 mil-mb30 mil-up">Community Focused</h3>
+                                                <p class="mil-text-md mil-deco-text mil-max-3row-text mil-up">We
+                                                    prioritize our community! Join us on our adventure of making magical
+                                                    VR worlds.</p>
+                                            </div>
+                                            <!-- <div class="mil-mb30 mil-up">
+                                                <a href="service-stl.html" class="mil-stylized-btn mil-c-gone">
+                                                    <i class="fal fa-arrow-up"></i>
+                                                    <span>Read more</span>
+                                                </a>
+                                            </div> -->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 mil-mb130">
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-12">
+                                            <div class="mil-counter-item mil-mb30 mil-768-mb60 mil-up">
+                                                <h4 class="mil-offset-number mil-up">5<span class="mil-a2">+</span></h4>
+                                                <div class="mil-counter-text">
+                                                    <h5 class="mil-head4 mil-m1 mil-up">Years experience</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-lg-12">
+                                            <div class="mil-counter-item mil-mb30 mil-768-mb60 mil-up">
+                                                <h4 class="mil-offset-number mil-up">8<span class="mil-a2">+</span></h4>
+                                                <div class="mil-counter-text">
+                                                    <h5 class="mil-head4 mil-m1 mil-up">Projects</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-lg-12">
+                                            <div class="mil-counter-item mil-mb30 mil-up">
+                                                <h4 class="mil-offset-number mil-up">6<span class="mil-a2">+</span></h4>
+                                                <div class="mil-counter-text">
+                                                    <h5 class="mil-head4 mil-m1 mil-up">Awards</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/melih-%C3%B6ztorun-a48841180/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-melih.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">Melih Öztorun</h4>
-                    <p class="default-color">Creative Director</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
+                    <!-- services end -->
+
+                    <!-- iconboxes -->
+                    <!-- <div class="mil-p-0-100" id="scroll">
+                        <div class="container">
+                            <div class="row mil-jcc">
+                                <div class="col-sm-8 col-lg-4">
+                                    <div class="mil-iconbox mil-tac mil-mb60">
+                                        <img src="img/home-1/iconbox/2.svg" alt="icon" class="mil-mb30 mil-up">
+                                        <h4 class="mil-head4 mil-mb30 mil-up">Expert Team</h4>
+                                        <p class="mil-text-md mil-shortened mil-up">Our team consists of experienced professionals who work with passion, delivering high-quality projects.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-4">
+                                    <div class="mil-iconbox mil-mb60">
+                                        <img src="img/home-1/iconbox/1.svg" alt="icon" class="mil-mb30 mil-up">
+                                        <h4 class="mil-head4 mil-mb30 mil-up">Innovative Solutions</h4>
+                                        <p class="mil-text-md mil-shortened mil-up">We offer unique and creative approaches that help your business stand out in the market and achieve success.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-4">
+                                    <div class="mil-iconbox mil-tac mil-mb60">
+                                        <img src="img/home-1/iconbox/3.svg" alt="icon" class="mil-mb30 mil-up">
+                                        <h4 class="mil-head4 mil-mb30 mil-up">Client Focus</h4>
+                                        <p class="mil-text-md mil-shortened mil-up">We prioritize client needs, deeply understanding them to create tailored solutions for maximum results.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- iconboxes end -->
+
+                    <!-- portfolio -->
+                    <div id="portfolio">
+                        <div class="container">
+                            <div class="row mil-aie mil-mb30">
+                                <div class="col-md-7">
+                                    <h2 class="mil-head1 mil-mb60 mil-up">Designing the <span
+                                            class="mil-a2">future</span> of VR gaming</h2>
+                                </div>
+                                <!-- <div class="col-md-5">
+                                    <p class="mil-stylized mil-m1 mil-tar mil-768-tal mil-mb60 mil-up"><a href="portfolio-1-stl.html" class="mil-arrow-link mil-c-gone">View all</a></p>
+                                </div> -->
+                            </div>
+                            <div class="row mil-mb60">
+                                <div class="col-md-6">
+                                    <div class="mil-work-card mil-stl mil-mb30">
+                                        <div class="mil-cover mil-port mil-up">
+                                            <div class="mil-hover-frame">
+                                                <img src="img/works/1/1-s.jpg" alt="cover" class="mil-scale-img"
+                                                    data-value-1="1.15" data-value-2="1">
+                                            </div>
+                                        </div>
+                                        <div class="mil-hover-overlay">
+                                            <a href="https://www.meta.com/experiences/7194998517279874/" class="mil-descr">
+                                                <div class="mil-text-frame">
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-m1 mil-c-gone">
+                                                        Wizard's Legacy</h4>
+                                                </div>
+                                                <div class="mil-768-gone mil-c-gone">
+                                                    <div class="mil-stylized-btn mil-a1">
+                                                        <i class="fal fa-arrow-up"></i>
+                                                        <span>Play now!</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="mil-work-card mil-stl mil-mb30">
+                                        <div class="mil-cover mil-square mil-up">
+                                            <div class="mil-hover-frame">
+                                                <img src="img/works/2/1-s.jpg" alt="cover" class="mil-scale-img" data-value-1="1.15" data-value-2="1">
+                                            </div>
+                                        </div>
+                                        <div class="mil-hover-overlay">
+                                            <a href="project-2-stl.html" class="mil-descr">
+                                                <div class="mil-text-frame">
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-m1 mil-c-gone">Projection</h4>
+                                                </div>
+                                                <div class="mil-768-gone mil-c-gone">
+                                                    <div class="mil-stylized-btn mil-a1">
+                                                        <i class="fal fa-arrow-up"></i>
+                                                        <span>Read more</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> -->
+                                    <div class="mil-work-card mil-stl mil-mb30">
+                                        <div class="mil-cover mil-land mil-up">
+                                            <div class="mil-hover-frame">
+                                                <img src="img/works/3/1-s.jpg" alt="cover" class="mil-scale-img"
+                                                    data-value-1="1.15" data-value-2="1">
+                                            </div>
+                                        </div>
+                                        <div class="mil-hover-overlay">
+                                            <a href="project-3-stl.html" class="mil-descr">
+                                                <div class="mil-text-frame">
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-m1 mil-c-gone">Project:COZ
+                                                    </h4>
+                                                </div>
+                                                <div class="mil-768-gone mil-c-gone">
+                                                    <div class="mil-stylized-btn mil-a1">
+                                                        <!-- <i class="fal fa-arrow-up"></i> -->
+                                                        <span>Coming Soon</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mil-work-card mil-stl mil-mb30">
+                                        <div class="mil-cover mil-land mil-up">
+                                            <div class="mil-hover-frame">
+                                                <img src="img/works/4/1.png" alt="cover" class="mil-scale-img"
+                                                    data-value-1="1.15" data-value-2="1">
+                                            </div>
+                                        </div>
+                                        <div class="mil-hover-overlay">
+                                            <a href="https://www.meta.com/tr-tr/experiences/flare-frenzy/5489531501137764/" class="mil-descr">
+                                                <div class="mil-text-frame">
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-m1 mil-c-gone">Flare Frenzy</h4>
+                                                </div>
+                                                <div class="mil-768-gone mil-c-gone">
+                                                    <div class="mil-stylized-btn mil-a1">
+                                                        <i class="fal fa-arrow-up"></i>
+                                                        <span>Play now!</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="mil-work-card mil-stl mil-mb30">
+                                        <div class="mil-cover mil-port mil-up">
+                                            <div class="mil-hover-frame">
+                                                <img src="img/works/5/1-s.jpg" alt="cover" class="mil-scale-img" data-value-1="1.15" data-value-2="1">
+                                            </div>
+                                        </div>
+                                        <div class="mil-hover-overlay">
+                                            <a href="project-5-stl.html" class="mil-descr">
+                                                <div class="mil-text-frame">
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-m1 mil-c-gone">Exit into the sunset</h4>
+                                                </div>
+                                                <div class="mil-768-gone mil-c-gone">
+                                                    <div class="mil-stylized-btn mil-a1">
+                                                        <i class="fal fa-arrow-up"></i>
+                                                        <span>Read more</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> -->
+                                    <div class="mil-work-card mil-stl mil-mb30">
+                                        <div class="mil-cover mil-square mil-up">
+                                            <div class="mil-hover-frame">
+                                                <img src="img/works/6/1-s.jpg" alt="cover" class="mil-scale-img"
+                                                    data-value-1="1.15" data-value-2="1">
+                                            </div>
+                                        </div>
+                                        <div class="mil-hover-overlay">
+                                            <a href="project-6-stl.html" class="mil-descr">
+                                                <div class="mil-text-frame">
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-m1 mil-c-gone">MR. Knuckles</h4>
+                                                </div>
+                                                <div class="mil-768-gone mil-c-gone">
+                                                    <div class="mil-stylized-btn mil-a1">
+                                                        <!-- <i class="fal fa-arrow-up"></i> -->
+                                                        <span>Coming Soon</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mil-aic mil-p-0-130">
+                                <div class="col-md-6 mil-mb30">
+                                    <p class="mil-text-md mil-deco-text mil-up">We've been working for several years to
+                                        build a portfolio <br>that truly reflects our diversity.</p>
+                                </div>
+                                <!-- <div class="col-md-6 mil-jce mil-768-jcs mil-mb30">
+                                    <span class="mil-up"><a href="portfolio-1-stl.html" class="mil-btn mil-a2 mil-c-gone">View all projects</a></span>
+                                </div> -->
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/muharrem-ataberk-sand%C4%B1k%C3%A7%C4%B1-b3628b1ab/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-ataberk.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">Muharrem Ataberk Sandıkçı</h4>
-                    <p class="default-color">Marketing Director</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
+                    <!-- portfolio end -->
+
+                    <!-- reviews -->
+                    <div id="reviews">
+                        <div class="container">
+                            <div class="row mil-jcc">
+                                <div class="col-lg-12 mil-tac">
+                                    <p class="mil-stylized mil-m2 mil-mb60 mil-up">Team</p>
+                                    <h2 class="mil-head1 mil-mb90 mil-up">WGS introduces: <br>Our <span
+                                            class="mil-a2">Team</span>!</h2>
+                                </div>
+                                <div class="col-lg-6 mil-relative">
+                                    <div class="swiper-container mil-reviews-slider mil-c-swipe mil-c-dark">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/1.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        R. Mert Ural</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">CEO</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">A developer obsessed with
+                                                        technology. Motorcycle and trap enthusiast.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/2.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Ahmed Demirezen</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">CTO</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up"> Basically a wizard with his
+                                                        keyboard, a commando when it comes to discipline.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/3.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Melih Öztorun</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">Creative Director</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">A quirky musician and a
+                                                        passionate gamer. He writes stories.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/4.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        M. Ataberk Sandıkçı</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">Marketing Director
+                                                    </p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">An industrial engineer with a
+                                                        keen eye for content marketing.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/5.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Güneş Karataş</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">Community Manager</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">A social butterfly who loves
+                                                        human interaction. She is witty, sadly not that humorous.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/6.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Şafak Bera Şafak</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">Developer</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">A developer who is in love with
+                                                        his job. Yes, his name and lastname are the same. </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/7.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Sadık Besata</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">Developer</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">First of his class, a great developer but a bullying machine.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/8.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Burak Millidere</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">VFX Artist</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">An anime lover with a great sense of aesthetic. He creates visual magic.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/9.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Yusuf Said Yıldırım</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">3D Designer</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">A hyperactive 3D designer and a walking meme archieve.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/10.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Abdulkadir Bozoğlu</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">3D Designer</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">A silent looking guy until you unlock the limitless talking potential. A hardworking 3D designer.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/11.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Emrah Utkutağ</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">Creative Assistant</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">He is of theatre origin, a little weird but naturally funny.</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="mil-review" data-swiper-parallax-scale="0.8">
+                                                    <div class="mil-portrait mil-mb30 mil-up">
+                                                        <img src="img/reviews/12.jpg" alt="Client">
+                                                    </div>
+                                                    <h4 class="mil-head4 mil-max-1row-text mil-mb15 mil-up mil-c-gone">
+                                                        Sarper Özhan</h4>
+                                                    <p class="mil-stylized mil-m2 mil-mb30 mil-up">2D Artist</p>
+                                                    <p class="mil-text-lg mil-m1 mil-up">He has been passionate about drawing and has a natural talent for it since a young age.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="mil-sr-pagination mil-up"></div>
+                                    <div class="mil-rs-nav mil-up">
+                                        <div class="mil-slider-btn mil-sr-prev mil-c-gone"></div>
+                                        <div class="mil-slider-btn mil-sr-next mil-c-gone"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/%C5%9Fafak-bera-%C5%9Fafak-4842b3251/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-safak.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">ŞAFAK BERA ŞAFAK</h4>
-                    <p class="default-color">Game Developer</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/abdulkadir-bozoglu/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-kadir.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">ABDULKADİR BOZOĞLU</h4>
-                    <p class="default-color">3D Designer</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/yusufsaityildirim/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-yusuf.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">YUSUF SAİT YILDIRIM</h4>
-                    <p class="default-color">3D Designer</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/burak-millidere/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-burak.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">BURAK MİLLİDERE</h4>
-                    <p class="default-color">VFX Artist</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/sadik-besata-37b323220/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-sadik.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">SADIK BESATA</h4>
-                    <p class="default-color">Game Developer</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/g%C3%BCne%C5%9F-karata%C5%9F/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-gunes.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">GÜNEŞ KARATAŞ</h4>
-                    <p class="default-color">Community Manager</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
-          <a href="https://www.linkedin.com/in/emrah-utkutag-262032172/">
-            <div class="col-md-2 col-sm-6 col-xs-12 remove-padding">
-              <div class="o-team-wrap">
-                <div class="o-team-img">
-                  <div class="o-team-media-img">
-                    <img src="assets/images/team/team-emrah.jpg" alt="your-image">
-                  </div>
-                </div>
-                <div class="o-tean-content">
-                  <div class="o-tean-content-inner">
-                    <h4 class="mt-10 white-color text-uppercase">EMRAH UTKUTAĞ</h4>
-                    <p class="default-color">Script Writer</p>
-                    <div class="o-team-social-icons">
-                      <!-- <a href="https://www.behance.net/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-behance"></span>
-                    </a>
-                    <a href="https://dribbble.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-dribbble"></span>
-                    </a>
-                    <a href="https://facebook.com/designsninja" class="o-team-social-icon" target="_blank">
-                      <span class="icofont icofont-facebook"></span>
-                    </a> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!--== Member End ==-->
+                    <!-- reviews end -->
 
+                    <!-- partners -->
+                    <!-- <div class="mil-p-160-130">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6 col-md-3 mil-up">
+                                    <a href="#." class="mil-partner mil-invert mil-mb30" target="_blank" data-no-swup>
+                                        <img src="img/brands/1.png" alt="partner logo">
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mil-up">
+                                    <a href="#." class="mil-partner mil-invert mil-mb30" target="_blank" data-no-swup>
+                                        <img src="img/brands/2.png" alt="partner logo">
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mil-up">
+                                    <a href="#." class="mil-partner mil-invert mil-mb30" target="_blank" data-no-swup>
+                                        <img src="img/brands/3.png" alt="partner logo">
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mil-up">
+                                    <a href="#." class="mil-partner mil-invert mil-mb30" target="_blank" data-no-swup>
+                                        <img src="img/brands/4.png" alt="partner logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- partners end -->
+
+                    <!-- call to action -->
+                    <div class="container" id="contact">
+                        <div class="mil-half-container mil-stl mil-up">
+                            <div class="mil-text-box mil-g-m4 mil-p-160-160">
+                                <p class="mil-stylized mil-m2 mil-mb60 mil-up">Contact</p>
+                                <h2 class="mil-display3 mil-mb60 mil-m1 mil-up">Let’s <span class="mil-a1">talk </span>
+                                    <br>about <span class="mil-a1">VR.</span><br></h2>
+                                <p class="mil-text-md mil-deco-text mil-shortened mil-up">Welcome to <span
+                                        class="mil-a2">Wide Game Studio</span> where we deliver amazing gaming experiences. Your opinion matters.</p>
+                                        <p class="mil-text-md mil-deco-text mil-shortened mil-up">info@widegamestudio.com</p>
+                            </div>
+                            <div class="mil-image-box">
+                                <div class="mil-image-frame">
+                                    image background <img src="img/pages/1.png" alt="img" class="mil-scale-img" data-value-1="1.20" data-value-2="1">
+                                    <!-- <video class="mil-scale-img" data-value-1="1" data-value-2="1.1" autoplay="autoplay"
+                                        loop="loop" muted="" playsinline="" oncontextmenu="return false;"
+                                        preload="auto">
+                                        <source src="img/pages/3.mp4">
+                                    </video> -->
+                                    <div class="mil-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row mil-aic mil-jcb mil-no-g">
+                            <div class="col-lg-4 mil-992-gone">
+                                <p class="mil-text-sm mil-up">We accept your requests 24/7. Feel free to <a
+                                        href="contact-stl.html" class="mil-text-link mil-a2 mil-c-gone">write to us</a>
+                                    whenever it is convenient for you</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mil-button-pad mil-a2">
+                                    <span class="mil-up"><a href="contact-stl.html"
+                                            class="mil-btn mil-btn-border mil-m1 mil-c-gone">Get in touch</a></span>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="row mil-aic mil-jcb mil-no-g mil-992-gone">
+                            <div class="col-lg-6">
+                                <div class="mil-button-pad mil-a1 mil-jst" style="display: block"></div>
+                            </div>
+                            <div class="col-lg-6 mil-992-gone"></div>
+                        </div>
+                    </div> -->
+                    <!-- call to action end -->
+
+                    <!-- footer -->
+                    <footer class="mil-footer mil-p-160-160">
+                        <div class="container">
+                            <div class="row mil-no-g">
+                                <div class="col-lg-6 mil-up">
+                                    <a href="mailto: info@widegamestudio.com" class="mil-footer-contact mil-mb90">
+                                        <h6 class="mil-footer-link mil-rubber mil-m1">Let’s TALK</h6>
+                                        <span class="mil-stylized-btn mil-c-gone">
+                                            <i class="fal fa-arrow-up"></i>
+                                            <!-- <span>Read more</span> -->
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="mil-footer-menu-frame mil-mb90 mil-up">
+                                        <!-- <ul class="mil-footer-menu">
+                                            <li><a href="#." class="mil-c-gone">Home</a></li>
+                                            <li><a href="#." class="mil-c-gone">Services</a></li>
+                                            <li><a href="#." class="mil-c-gone">About</a></li>
+                                            <li><a href="#." class="mil-c-gone">Portfolio</a></li>
+                                            <li><a href="#." class="mil-c-gone">Contact</a></li>
+                                        </ul> -->
+                                        <ul class="mil-social mil-c-gone">
+                                            <li><a href="https://www.youtube.com/@widegamestudio" target="_blank" data-no-swup><i
+                                                        class="fab fa-youtube"></i></a></li>
+                                            <li><a href="https://www.tiktok.com/@wizardslegacy1" target="_blank" data-no-swup><i
+                                                        class="fab fa-tiktok"></i></a></li>
+                                            <li><a href="https://www.instagram.com/widegamestudio/" target="_blank" data-no-swup><i
+                                                        class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/company/wide-game-studio/" target="_blank" data-no-swup><i
+                                                        class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="https://www.facebook.com/people/Wide-Game-Studio/61556721355629/" target="_blank" data-no-swup><i
+                                                        class="fab fa-facebook"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="mil-footer-bottom mil-up">
+                                        <p class="mil-text-sm">©2024. All rights reserved.</p>
+                                        <!-- <p class="mil-text-sm">Design by: <a
+                                                href="https://themeforest.net/user/millerdigitaldesign/portfolio"
+                                                class="mil-text-link mil-a2 mil-c-gone">Nazar Miller</a></p> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </footer>
+                    <!-- footer end -->
+
+                </div>
+                <!-- content -->
+
+            </div>
         </div>
+        <!-- page transition -->
 
-      </div>
-    </section>
-    <!--== Team End ==-->
-
-    <!--== Counters Start ==-->
-    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
-      data-parallax-bg-image="assets/images/background/parallax-bg-2.jpg" data-parallax-speed="0.5"
-      data-parallax-direction="up">
-      <div class="overlay-bg"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font white-color">Fun Facts</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-        <div class="row mt-50 row-flex flex-center">
-          <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-50 sm-mb-50">
-            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.1s">
-              <i class="icon-trophy font-70px"></i>
-              <h2><span class="counter font-600">3521</span></h2>
-              <h3 class="font-200 text-uppercase">Happy Clients</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-50 sm-mb-50">
-            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.2s">
-              <i class="icon-toolbox font-70px"></i>
-              <h2><span class="counter font-600">974</span></h2>
-              <h3 class="dark-color font-200 text-uppercase">Cups of Coffee</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-50">
-            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.3s">
-              <i class="icon-lifesaver font-70px"></i>
-              <h2><span class="counter font-600">634</span></h2>
-              <h3 class="dark-color font-200 text-uppercase">Project Delivered</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.4s">
-              <i class="icon-linegraph font-70px"></i>
-              <h2><span class="counter font-600">449</span></h2>
-              <h3 class="dark-color font-200 text-uppercase">Awards Won</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!--== Counters End ==-->
-
-    <!--== Services Start ==-->
-    <!-- <section class="white-bg pb-0" id="service">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font">Our Services</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-50">
-          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.1s">
-            <div class="pull-left"><i class="icon-pencil font-40px"></i></div>
-            <div class="pull-right">
-              <h4 class="mt-0 font-600 raleway-font">Web Design</h4>
-              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">
-            <div class="pull-left"><i class="icon-tablet font-40px"></i></div>
-            <div class="pull-right">
-              <h4 class="mt-0 font-600 raleway-font">Branding</h4>
-              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
-            <div class="pull-left"><i class="icon-pictures font-40px"></i></div>
-            <div class="pull-right">
-              <h4 class="mt-0 font-600 raleway-font">Digital Solution</h4>
-              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.1s">
-            <div class="pull-left"><i class="icon-desktop font-40px"></i></div>
-            <div class="pull-right">
-              <h4 class="mt-0 font-600 raleway-font">Mobile Apps</h4>
-              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">
-            <div class="pull-left"><i class="icon-layers font-40px"></i></div>
-            <div class="pull-right">
-              <h4 class="mt-0 font-600 raleway-font">SEO Services</h4>
-              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-          <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
-            <div class="pull-left"><i class="icon-lightbulb font-40px"></i></div>
-            <div class="pull-right">
-              <h4 class="mt-0 font-600 raleway-font">Copywriter</h4>
-              <p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 text-center">
-          <img src="assets/images/screens.png" alt="xtract-img" class="img-responsive screens" />
-        </div>
-
-      </div>
-    </section> -->
-    <!--== Services End ==-->
-
-    <!--== Skills Start ==-->
-    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
-      data-parallax-bg-image="assets/images/background/parallax-bg.jpg" data-parallax-speed="0.5"
-      data-parallax-direction="up">
-      <div class="overlay-bg"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font white-color">Our Skills</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mt-30 col-xs-12 xs-mt-0">
-            <div class="skillbar-wrap skillbar-style-01">
-              <div class="skillbar" data-percent="70">
-                <span class="skillbar-title white-color font-18px">Design</span>
-                <p class="skillbar-bar default-bg"></p>
-              </div> -->
-    <!-- End Skill Bar -->
-
-    <!-- <div class="skillbar" data-percent="66">
-                <span class="skillbar-title white-color font-18px">Marketing</span>
-                <p class="skillbar-bar default-bg"></p>
-              </div> -->
-    <!-- End Skill Bar -->
-
-    <!-- <div class="skillbar" data-percent="85">
-                <span class="skillbar-title white-color font-18px">Monitoring</span>
-                <p class="skillbar-bar default-bg"></p>
-              </div> -->
-    <!-- End Skill Bar -->
-
-    <!-- </div>
-          </div>
-
-          <div class="col-md-6 mt-30 col-xs-12 xs-mt-0">
-            <div class="skillbar-wrap skillbar-style-01">
-              <div class="skillbar" data-percent="30">
-                <span class="skillbar-title white-color font-18px">Development</span>
-                <p class="skillbar-bar default-bg"></p>
-              </div> -->
-    <!-- End Skill Bar -->
-
-    <!-- <div class="skillbar" data-percent="99">
-                <span class="skillbar-title white-color font-18px">Branding</span>
-                <p class="skillbar-bar default-bg"></p>
-              </div> -->
-    <!-- End Skill Bar -->
-
-    <!-- <div class="skillbar" data-percent="50">
-                <span class="skillbar-title white-color font-18px">Supporting</span>
-                <p class="skillbar-bar default-bg"></p>
-              </div> -->
-    <!-- End Skill Bar -->
-
-    <!-- </div>
-          </div>
-
-        </div>
-      </div>
-    </section> -->
-    <!--== Skills End ==-->
-
-
-    <!--== Testimonials Start ==-->
-    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
-      data-parallax-bg-image="assets/images/background/parallax-bg-3.jpg" data-parallax-speed="0.5"
-      data-parallax-direction="up" id="testimonial">
-      <div class="overlay-bg"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font white-color">Our Testimonials</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="slick testimonial">
-            <div class="col-md-4 col-sm-6 col-xs-12"> -->
-    <!--== Slide ==-->
-    <!-- <div class="testimonial-item">
-                <div class="testimonial-content">
-                  <i class="icofont icofont-quote-left font-50px default-color mt-20"></i>
-                  <img class="img-responsive img-circle text-center" src="assets/images/team/avatar-1.jpg"
-                    alt="avatar-1" />
-                  <div class="text-center">
-                    <h4 class="font-600 mb-0 raleway-font white-color">Anne McAdams</h4>
-                    <span class="default-color font-14px">Customer</span>
-                    <div class="clearfix mb-20"></div>
-                    <p class="mt-20 line-height-26 font-14px white-color">Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit. Donec sodales nec nulla ac aliquet. Duis vel nunc eget.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12"> -->
-    <!--== Slide ==-->
-    <!-- <div class="testimonial-item">
-                <div class="testimonial-content">
-                  <i class="icofont icofont-quote-left font-50px default-color mt-20"></i>
-                  <img class="img-responsive img-circle text-center" src="assets/images/team/avatar-2.jpg"
-                    alt="avatar-2" />
-                  <div class="text-center">
-                    <h4 class="font-600 mb-0 raleway-font white-color">Jared Kane</h4>
-                    <span class="default-color font-14px">Customer</span>
-                    <div class="clearfix mb-20"></div>
-                    <p class="mt-20 line-height-26 font-14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sodales nec nulla ac aliquet. Duis vel nunc eget.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12"> -->
-    <!--== Slide ==-->
-    <!-- <div class="testimonial-item">
-                <div class="testimonial-content">
-                  <i class="icofont icofont-quote-left font-50px default-color mt-20"></i>
-                  <img class="img-responsive img-circle" src="assets/images/team/avatar-3.jpg" alt="avatar-1" />
-                  <div class="text-center">
-                    <h4 class="font-600 mb-0 raleway-font white-color">Nani Wale</h4>
-                    <span class="default-color font-14px">Customer</span>
-                    <div class="clearfix mb-20"></div>
-                    <p class="mt-20 line-height-26 font-14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sodales nec nulla ac aliquet. Duis vel nunc eget.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12"> -->
-    <!--== Slide ==-->
-    <!-- <div class="testimonial-item">
-                <div class="testimonial-content">
-                  <i class="icofont icofont-quote-left font-50px default-color mt-20"></i>
-                  <img class="img-responsive img-circle" src="assets/images/team/avatar-4.jpg" alt="avatar-1" />
-                  <div class="text-center">
-                    <h4 class="font-600 mb-0 raleway-font white-color">John Doe</h4>
-                    <span class="default-color font-14px">Customer</span>
-                    <div class="clearfix mb-20"></div>
-                    <p class="mt-20 line-height-26 font-14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sodales nec nulla ac aliquet. Duis vel nunc eget.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!--== Testimonials End ==-->
-
-    <!--== Blogs Start ==-->
-    <!-- <section id="blog" class="white-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font">Our Blogs</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-        <div class="row mt-50">
-          <div class="col-md-4 blog-list">
-            <div class="post-wrap xs-mb-30 sm-mb-30">
-              <div class="post-img">
-                <div class="blog-grid-slider slick">
-                  <div class="item"><img class="img-responsive" src="assets/images/post/post-01.jpg" alt="" /></div>
-                  <div class="item"><img class="img-responsive" src="assets/images/post/post-02.jpg" alt="" /></div>
-                </div>
-              </div>
-              <div class="date-box">
-                <span class="day default-bg">20</span>
-                <span class="month">NOV</span>
-              </div>
-              <div class="post-text">
-                <h3><a href="blog.html">Photography Tips</a></h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua.
-                </p>
-                <a href="#" class="btn-text">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 blog-list">
-            <div class="post-wrap xs-mb-30 sm-mb-30">
-              <div class="post-img">
-                <div class="blog-grid-slider slick">
-                  <div class="item"><img class="img-responsive" src="assets/images/post/post-03.jpg" alt="" /></div>
-                  <div class="item"><img class="img-responsive" src="assets/images/post/post-04.jpg" alt="" /></div>
-                </div>
-              </div>
-              <div class="date-box">
-                <span class="day default-bg">17</span>
-                <span class="month">OCT</span>
-              </div>
-              <div class="post-text">
-                <h3><a href="blog.html">Gaming</a></h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua.
-                </p>
-                <a href="#" class="btn-text">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 blog-list">
-            <div class="post-wrap">
-              <div class="post-img">
-                <div class="blog-grid-slider slick">
-                  <div class="item"><img class="img-responsive" src="assets/images/post/post-05.jpg" alt="" /></div>
-                  <div class="item"><img class="img-responsive" src="assets/images/post/post-06.jpg" alt="" /></div>
-                </div>
-              </div>
-              <div class="date-box">
-                <span class="day default-bg">15</span>
-                <span class="month">JAN</span>
-              </div>
-              <div class="post-text">
-                <h3><a href="blog.html">Illustration</a></h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua.
-                </p>
-                <a href="#" class="btn-text">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!--== Blogs End ==-->
-
-    <!--== Clients Start ==-->
-    <div class="dark-bg pt-60 pb-60">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font white-color">Our Partners</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-sm-12 text-center"><img class=""
-              src="assets/images/clients/readyplayerme-light.png" /></div>
-          <div class="col-md-6 col-sm-12 text-center"><img class="" src="assets/images/clients/liv-light.png" /></div>
-        </div>
-      </div>
     </div>
-    <!--== Clients End ==-->
+    <!-- wrapper end -->
 
-    <!--== Contact Start ==-->
-    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="assets/images/team/team-all.jpg"
-      data-parallax-speed="0.5" data-parallax-direction="up" id="contact">
-      <div class="overlay-bg"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              <h1 class="raleway-font white-color">Contact Us</h1>
-              <hr class="center_line default-bg">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row mt-70">
-          <!-- <div class="col-md-6 col-sm-6 col-xs-12">
-            <form name="contact-form" id="contact-form" action="php/contact.php" method="POST"
-              class="contact-form-style-01 xs-mb-50">
-              <div class="messages"></div>
-              <div class="row">
-                <div class="col-md-6 col-sm-6">
-                  <div class="form-group">
-                    <label class="sr-only" for="name">Name</label>
-                    <input type="text" name="name" class="md-input style-02" id="name" placeholder="Name *" required
-                      data-error="Your Name is Required">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="form-group">
-                    <label class="sr-only" for="email">Email</label>
-                    <input type="email" name="email" class="md-input style-02" id="email" placeholder="Email *" required
-                      data-error="Please Enter Valid Email">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-md-12 col-sm-12">
-                  <div class="form-group">
-                    <label class="sr-only" for="message">Message</label>
-                    <textarea name="message" class="md-textarea style-02" id="message" rows="7"
-                      placeholder="Project Details" required data-error="Please, Leave us a message"></textarea>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-md-12 col-sm-12">
-                  <div class="text-left">
-                    <button type="submit" name="submit"
-                      class="btn btn-light-outline btn-md btn-square btn-animate remove-margin"><span>Send Message <i
-                          class="ion-android-arrow-forward"></i></span></button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div> -->
+    <!-- swup js -->
+    <script src="js/plugins/swup.min.js"></script>
+    <!-- gsap js -->
+    <script src="js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
+    <script src="js/plugins/ScrollSmoother.min.js"></script>
+    <!-- scroll trigger js -->
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
+    <script src="js/plugins/ScrollTo.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- parallax js -->
+    <script src="js/plugins/parallax.js"></script>
 
-          <div class="col-md-12 col-sm-12 col-xs-12 xs-mb-50">
-            <div class="row">
-              <div class="col-md-12 col-sm-6 col-xs-12 text-center">
-                <div class="section-title">
-                  <h2 class="raleway-font default-color">Postal Address</h2>
-                  <p class="mt-30">Yıldırım Beyazıt Mah. Aşık Vevysel Blv. no:67/4-67 Melikgazi/KAYSERİ</p>
-                </div>
-              </div>
-              <!-- <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="section-title">
-                  <h2 class="raleway-font default-color">Office Numbers</h2>
-                  <p class="mb-0 mt-30"> +44 1234 567 9</p>
-                  <p class="mb-0"> +44 1234 567 9</p>
-                </div>
-              </div> -->
-            </div>
-            <div class="row mt-20">
-              <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-                <div class="section-title">
-                  <h2 class="raleway-font default-color">Our Email</h2>
-                  <p class="mb-0 mt-30">info@widegamestudio.com</p>
-                  <!-- <p class="mb-0">Request : request@yourwebsite.com</p> -->
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-                <div class="section-title">
-                  <h2 class="raleway-font default-color">Fast Support</h2>
-                  <p class="mb-0 mt-30">contact@widegamestudio.com</p>
-                  <!-- <p class="mb-0">career@yourwebsite.com</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== Contact End ==-->
-
-    <!--== Footer Start ==-->
-    <footer class="footer">
-      <div class="footer-copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-xs-12">
-              <div class="copy-right text-left">© 2019 Wide Game Studio. All rights reserved</div>
-            </div>
-            <div class="col-md-6 col-xs-12">
-              <ul class="social-media">
-                <li><a href="https://www.instagram.com/widegamestudio/" class="icofont icofont-instagram"></a></li>
-                <li><a href="https://twitter.com/WideGameStudio" class="icofont icofont-twitter"></a></li>
-                <li><a href="https://www.youtube.com/@widegamestudio" class="icofont icofont-youtube"></a></li>
-
-                <li><a href="https://www.linkedin.com/company/76121850/" class="icofont icofont-linkedin"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!--== Footer End ==-->
-
-    <!--== Go to Top  ==-->
-    <a href="javascript:" id="return-to-top"><i class="icofont icofont-arrow-up"></i></a>
-    <!--== Go to Top End ==-->
-
-  </div>
-  <!--== Wrapper End ==-->
-
-  <!--== Javascript Plugins ==-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNGOwO2hJpJ9kz8e0UUPjZhEbgDJTTXE"></script>
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/smoothscroll.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/master.js"></script>
-
-  <!-- Revolution js Files -->
-  <script src="revolution/js/jquery.themepunch.tools.min.js"></script>
-  <script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
-  <script src="revolution/js/revolution.extension.actions.min.js"></script>
-  <script src="revolution/js/revolution.extension.carousel.min.js"></script>
-  <script src="revolution/js/revolution.extension.kenburn.min.js"></script>
-  <script src="revolution/js/revolution.extension.layeranimation.min.js"></script>
-  <script src="revolution/js/revolution.extension.migration.min.js"></script>
-  <script src="revolution/js/revolution.extension.navigation.min.js"></script>
-  <script src="revolution/js/revolution.extension.parallax.min.js"></script>
-  <script src="revolution/js/revolution.extension.slideanims.min.js"></script>
-  <script src="revolution/js/revolution.extension.video.min.js"></script>
-  <!--== Javascript Plugins End ==-->
+    <!-- pixy js -->
+    <script src="js/main.js"></script>
 
 </body>
 
