@@ -286,3 +286,18 @@ main { position: relative; z-index: 1; background: var(--white); border-bottom: 
   .nav .btn { display: none; }
   .burst { height: 300px; }
 }
+/* Creator Crew promo (links to creator-crew.html) */
+.creator-promo { padding: clamp(60px, 8vw, 100px) 0 0; }
+.promo-card { position: relative; display: grid; grid-template-columns: 200px 1fr 220px; gap: 36px; align-items: center; overflow: hidden; padding: clamp(28px, 4vw, 48px); background: var(--ink); color: var(--white); border-radius: var(--radius); box-shadow: 0 14px 0 -4px var(--yellow); transition: transform .3s; }
+.promo-card:hover { transform: translateY(-6px); }
+.promo-card h2 { font-size: clamp(1.8rem, 3.8vw, 2.8rem); margin-bottom: 14px; }
+.promo-card p:not(.eyebrow) { color: #ffffffcc; margin-bottom: 24px; max-width: 560px; }
+.promo-card .eyebrow { color: var(--yellow); }
+.promo-card .btn { background: var(--yellow); color: var(--ink); }
+.promo-logo { width: 100%; }
+.promo-hat { width: 100%; align-self: end; margin-bottom: clamp(-48px, -4vw, -28px); }
+@media (max-width: 900px) {
+  .promo-card { grid-template-columns: 1fr; text-align: left; }
+  .promo-logo { width: 150px; }
+  .promo-hat { display: none; }
+}
