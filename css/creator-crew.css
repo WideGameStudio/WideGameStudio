@@ -80,21 +80,29 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 .btn.sm:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--outline); }
 .btn:focus-visible, .chip:focus-visible, input:focus-visible { outline: 4px solid var(--accent); outline-offset: 3px; }
 
-/* top bar */
-.topbar { position: sticky; top: 0; z-index: 30; background: var(--outline); color: var(--text-inverse); border-bottom: var(--line) solid var(--accent); }
-.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
-.topbar .home { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: .9rem; text-decoration: none; opacity: .9; }
-.topbar .home:hover { opacity: 1; color: var(--accent); }
-.topbar .home img { width: 30px; height: 30px; }
-.topbar nav { display: flex; gap: 22px; font-weight: 700; font-size: .95rem; }
-.topbar nav a { text-decoration: none; }
-.topbar nav a:hover { color: var(--accent); }
-.topbar .btn { font-size: .95rem; padding: 7px 14px; border-color: var(--text-inverse); box-shadow: none; border-width: 3px; }
+/* top bar: Wide Game Studio theme (same as the studio homepage nav), the rest of the page stays FISH ME! */
+.topbar { --wgs-ink: #151419; --wgs-yellow: #ffc83d; --wgs-white: #ffffff;
+  position: sticky; top: 0; z-index: 30; padding: 10px 0; background: var(--wgs-ink); color: var(--wgs-white); box-shadow: 0 4px 0 var(--wgs-yellow);
+  font-family: "Montserrat", system-ui, sans-serif; }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.topbar .home { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: .95rem; text-transform: uppercase; letter-spacing: .04em; text-decoration: none; }
+.topbar .home img { width: 44px; height: 44px; }
+.topbar ul { display: flex; gap: 30px; list-style: none; font-weight: 700; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.topbar ul a { position: relative; text-decoration: none; }
+.topbar ul a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 3px; background: var(--wgs-yellow); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.topbar ul a:hover::after, .topbar ul a.on::after { transform: scaleX(1); }
+.tb-btn { display: inline-flex; align-items: center; padding: 12px 22px; background: var(--wgs-white); color: var(--wgs-ink); font-weight: 800; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+.tb-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 0 -4px var(--wgs-yellow); }
+.topbar a:focus-visible { outline: 3px solid var(--wgs-yellow); outline-offset: 4px; }
 
 /* hero */
-.hero { position: relative; padding: 0 0 64px; background: linear-gradient(var(--primary) 0 50%, var(--background) 50%); }
-.hero-art { position: relative; max-width: 1600px; margin-inline: auto; }
-.hero-art img { width: 100%; height: auto; aspect-ratio: 10 / 3; object-fit: cover; object-position: 50% 50%; }
+.hero { position: relative; padding: 0 0 64px; background: var(--background); }
+/* full-bleed key art that eases in and melts into the sand background instead of ending on a hard edge */
+.hero-art { position: relative; overflow: hidden; }
+.hero-art img { width: 100%; height: auto; aspect-ratio: 10 / 3; object-fit: cover; object-position: 50% 40%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 100%); mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
+  animation: hero-in 1.6s cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes hero-in { from { opacity: 0; transform: scale(1.06); } }
 .hero-card { position: relative; z-index: 2; margin-top: clamp(-56px, -4vw, -24px); padding: clamp(28px, 5vw, 52px); display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
 .hero-card .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; margin-bottom: 18px; background: var(--secondary); border: 3px solid var(--outline); border-radius: 999px; font-family: var(--font-display); font-size: .95rem; letter-spacing: .03em; }
 .hero h1 { font-size: clamp(2.3rem, 5.6vw, 3.9rem); margin-bottom: 18px; color: var(--text-primary); }
@@ -294,9 +302,10 @@ td.gem .gem-chip { width: 26px; height: 26px; border-width: 2px; }
   .wins { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
-  .topbar .home span { display: none; }
-  .hero { background: linear-gradient(var(--primary) 0 30%, var(--background) 30%); }
-  .hero-art img { aspect-ratio: 16 / 10; object-position: 52% 50%; }
+  .topbar .home { font-size: .8rem; gap: 10px; }
+  .topbar .home img { width: 36px; height: 36px; }
+  .tb-btn { padding: 10px 14px; }
+  .hero-art img { aspect-ratio: 16 / 10; object-position: 52% 45%; }
   .points, .rules, .wins { grid-template-columns: minmax(0, 1fr); }
   .tier { grid-template-columns: 1fr; }
   .pt { grid-template-columns: 1fr; text-align: center; justify-items: center; }

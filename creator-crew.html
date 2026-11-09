@@ -11,6 +11,9 @@
     <meta property="og:image" content="https://www.widegamestudio.com/img/creator-crew/hero.webp">
     <link rel="icon" href="img/creator-crew/logo.webp">
     <link rel="preload" href="fonts/TitanOne-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/creator-crew.css">
 </head>
 
@@ -18,22 +21,24 @@
 
     <header class="topbar">
         <div class="wrap">
-            <a class="home" href="index.html"><img src="img/brands/logo200x200.png" alt=""><span>← Wide Game Studio</span></a>
+            <a class="home" href="index.html"><img src="img/brands/logo200x200.png" alt="">Wide Game Studio</a>
             <nav aria-label="Creator Crew sections">
-                <a href="#tiers">Tiers</a>
-                <a href="#points">Catch Points</a>
-                <a href="#rewards">Rewards</a>
-                <a href="#rules">Rules</a>
-                <a href="#ideas">Idea Board</a>
+                <ul>
+                    <li><a href="#tiers">Tiers</a></li>
+                    <li><a href="#points">Catch Points</a></li>
+                    <li><a href="#rewards">Rewards</a></li>
+                    <li><a href="#rules">Rules</a></li>
+                    <li><a href="#ideas">Idea Board</a></li>
+                </ul>
             </nav>
-            <a class="btn sm stroke-sm" href="#join">Join</a>
+            <a class="tb-btn" href="#join">Join the crew</a>
         </div>
     </header>
 
     <main>
         <!-- hero -->
         <section class="hero" id="top">
-            <div class="hero-art"><img src="img/creator-crew/hero.webp" alt="FISH ME! key art: a shocked monkey holds up a fish while a swordfish leaps out of the sea next to a tropical island" width="2000" height="600"></div>
+            <div class="hero-art"><img src="img/creator-crew/hero.webp" srcset="img/creator-crew/hero-1200.webp 1200w, img/creator-crew/hero.webp 2000w" sizes="100vw" alt="FISH ME! key art: a monkey in a fishing vest reels in a shark wearing a metal block on its head while another monkey aims a pistol from the beach" width="2000" height="600" fetchpriority="high"></div>
             <div class="wrap">
                 <div class="panel hero-card">
                     <div>
@@ -479,6 +484,13 @@
             if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
         }), { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+        // top bar: underline the section in view
+        const navLinks = [...document.querySelectorAll('.topbar ul a')];
+        const spy = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) navLinks.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+        }), { rootMargin: '-45% 0px -50% 0px' });
+        navLinks.forEach(a => { const s = document.querySelector(a.getAttribute('href')); if (s) spy.observe(s); });
 
         // rising bubbles in the tier dive
         const bub = document.querySelector('.bubbles');
