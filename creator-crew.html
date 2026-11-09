@@ -65,6 +65,7 @@
         <!-- tiers -->
         <section class="dive" id="tiers">
             <div class="bubbles" aria-hidden="true"></div>
+            <div class="swim" aria-hidden="true"><img src="img/creator-crew/icon-runner.webp" alt=""><img src="img/creator-crew/icon-runner.webp" alt=""></div>
             <div class="wrap">
                 <div class="head center reveal">
                     <p class="kicker">The 4 tiers</p>
@@ -81,7 +82,7 @@
                             <p class="tag">You're in the crew!</p>
                         </div>
                         <div class="gems">
-                            <span class="amt"><span class="gem-chip"><img src="img/creator-crew/glyph-diamond-white.webp" alt=""></span>120</span>
+                            <span class="amt"><img class="diamond" src="img/creator-crew/diamond.svg" alt=""><span class="count" data-to="120">120</span></span>
                             <small>Diamonds for every approved video</small>
                         </div>
                         <div class="perks-col">
@@ -93,7 +94,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="gate" aria-label="How to reach Angler">
+                    <li class="gate reveal" aria-label="How to reach Angler">
                         <div class="box">
                             <img class="gate-ico" src="img/creator-crew/glyph-rod-accent.webp" alt="">
                             <div>
@@ -112,7 +113,7 @@
                             <p class="tag">You found your rhythm.</p>
                         </div>
                         <div class="gems">
-                            <span class="amt"><span class="gem-chip"><img src="img/creator-crew/glyph-diamond-white.webp" alt=""></span>320</span>
+                            <span class="amt"><img class="diamond" src="img/creator-crew/diamond.svg" alt=""><span class="count" data-to="320">320</span></span>
                             <small>Diamonds for every approved video</small>
                         </div>
                         <div class="perks-col">
@@ -126,7 +127,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="gate" aria-label="How to reach Captain">
+                    <li class="gate reveal" aria-label="How to reach Captain">
                         <div class="box">
                             <img class="gate-ico" src="img/creator-crew/glyph-rod-accent.webp" alt="">
                             <div>
@@ -145,7 +146,7 @@
                             <p class="tag">You run the boat now.</p>
                         </div>
                         <div class="gems">
-                            <span class="amt"><span class="gem-chip"><img src="img/creator-crew/glyph-diamond-white.webp" alt=""></span>520</span>
+                            <span class="amt"><img class="diamond" src="img/creator-crew/diamond.svg" alt=""><span class="count" data-to="520">520</span></span>
                             <small>Diamonds for every approved video</small>
                         </div>
                         <div class="perks-col">
@@ -159,7 +160,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="gate" aria-label="How to reach Admiral">
+                    <li class="gate reveal" aria-label="How to reach Admiral">
                         <div class="box">
                             <img class="gate-ico" src="img/creator-crew/glyph-timer-accent.webp" alt="">
                             <div>
@@ -178,7 +179,7 @@
                             <p class="tag">Your name is on Creator Dock.</p>
                         </div>
                         <div class="gems">
-                            <span class="amt"><span class="gem-chip"><img src="img/creator-crew/glyph-diamond-white.webp" alt=""></span>10,000</span>
+                            <span class="amt"><img class="diamond" src="img/creator-crew/diamond.svg" alt=""><span class="count" data-to="10000">10,000</span></span>
                             <small>Diamonds every month</small>
                         </div>
                         <div class="perks-col">
@@ -280,10 +281,10 @@
                         <tbody>
                             <tr>
                                 <th scope="row">Diamonds</th>
-                                <td class="gem"><span class="gem-chip"><img src="img/creator-crew/glyph-diamond-white.webp" alt=""></span> 120 / video</td>
-                                <td class="gem"><span class="gem-chip"><img src="img/creator-crew/glyph-diamond-white.webp" alt=""></span> 320 / video</td>
-                                <td class="gem"><span class="gem-chip"><img src="img/creator-crew/glyph-diamond-white.webp" alt=""></span> 520 / video</td>
-                                <td class="gem"><span class="gem-chip"><img src="img/creator-crew/glyph-diamond-white.webp" alt=""></span> 10,000 / month</td>
+                                <td class="gem"><img class="diamond" src="img/creator-crew/diamond.svg" alt=""> 120 / video</td>
+                                <td class="gem"><img class="diamond" src="img/creator-crew/diamond.svg" alt=""> 320 / video</td>
+                                <td class="gem"><img class="diamond" src="img/creator-crew/diamond.svg" alt=""> 520 / video</td>
+                                <td class="gem"><img class="diamond" src="img/creator-crew/diamond.svg" alt=""> 10,000 / month</td>
                             </tr>
                             <tr><th scope="row">Special creator name tag</th><td><span class="yes" aria-label="Yes">✓</span></td><td><span class="yes" aria-label="Yes">✓</span></td><td><span class="yes" aria-label="Yes">✓</span></td><td><span class="yes" aria-label="Yes">✓</span></td></tr>
                             <tr><th scope="row">In-game Creator Hub access</th><td><span class="yes" aria-label="Yes">✓</span></td><td><span class="yes" aria-label="Yes">✓</span></td><td><span class="yes" aria-label="Yes">✓</span></td><td><span class="yes" aria-label="Yes">✓</span></td></tr>
@@ -476,13 +477,21 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
+        document.documentElement.classList.add('js');
         document.getElementById('year').textContent = new Date().getFullYear();
         const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         // fade-up on scroll
-        const io = new IntersectionObserver(es => es.forEach(e => {
-            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        }), { threshold: 0.12 });
+        const io = new IntersectionObserver(es => {
+            const seen = new Map(); // stagger siblings that arrive together, at most 5 steps
+            es.forEach(e => {
+                if (!e.isIntersecting) return;
+                const el = e.target, k = seen.get(el.parentElement) || 0;
+                seen.set(el.parentElement, k + 1);
+                if (!still && k) { el.style.transitionDelay = Math.min(k, 5) * 90 + 'ms'; setTimeout(() => el.style.transitionDelay = '', 1400); }
+                el.classList.add('in'); io.unobserve(el);
+            });
+        }, { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
         // top bar: underline the section in view
@@ -491,6 +500,37 @@
             if (e.isIntersecting) navLinks.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
         }), { rootMargin: '-45% 0px -50% 0px' });
         navLinks.forEach(a => { const s = document.querySelector(a.getAttribute('href')); if (s) spy.observe(s); });
+
+        // count Diamonds up when a tier card comes into view
+        const fmt = n => n.toLocaleString('en-US');
+        const countIO = new IntersectionObserver(es => es.forEach(e => {
+            if (!e.isIntersecting) return;
+            countIO.unobserve(e.target);
+            const el = e.target, to = +el.dataset.to, t0 = performance.now();
+            const tick = t => { const k = Math.min(1, (t - t0) / 1100); el.textContent = fmt(Math.round(to * (1 - Math.pow(1 - k, 3)))); if (k < 1) requestAnimationFrame(tick); };
+            requestAnimationFrame(tick);
+        }), { threshold: 0.6 });
+        if (!still) document.querySelectorAll('.amt .count').forEach(el => { el.textContent = '0'; countIO.observe(el); });
+
+        // reward table ticks pop in one after another
+        document.querySelectorAll('.table-wrap .yes').forEach((y, i) => y.style.setProperty('--i', i));
+
+        // idea cards pop in in order the first time the board is seen
+        const ideaList = document.getElementById('idea-list');
+        [...ideaList.children].forEach((li, i) => li.style.setProperty('--i', i));
+        new IntersectionObserver(([e], o) => {
+            if (!e.isIntersecting) return;
+            o.disconnect(); ideaList.classList.add('in');
+            setTimeout(() => ideaList.classList.add('done'), 2200);
+        }, { threshold: 0.05 }).observe(ideaList);
+
+        // hero art drifts slower than the page (parallax)
+        const heroImg = document.querySelector('.hero-art img');
+        let pTick = false;
+        if (!still) addEventListener('scroll', () => {
+            if (pTick) return; pTick = true;
+            requestAnimationFrame(() => { if (scrollY < innerHeight * 1.2) heroImg.style.translate = '0 ' + (scrollY * 0.32).toFixed(1) + 'px'; pTick = false; });
+        }, { passive: true });
 
         // rising bubbles in the tier dive
         const bub = document.querySelector('.bubbles');

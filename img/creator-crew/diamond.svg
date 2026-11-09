@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- FishMe UI glyph 198_fishme_diamond_icon, redrawn as a vector on its own 64px grid so it stays sharp at any size -->
+  <g stroke="#3d1f6e" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round">
+    <path fill="#fff8e6" d="M16 12 H48 L58 24 L32 60 L6 24 Z"/>
+    <path fill="#e7d6ff" d="M6 24 H21.5 L32 60 Z"/>
+    <path fill="#d2b8fb" d="M42.5 24 H58 L32 60 Z"/>
+    <path fill="#efe4ff" d="M16 12 L21.5 24 L32 12 Z M32 12 L42.5 24 L48 12 Z"/>
+    <path fill="none" d="M6 24 H58 M21.5 24 L32 60 L42.5 24"/>
+  </g>
+  <path fill="#ffffff" d="M24 15 L27.5 15 L23 21 Z" opacity=".9"/>
+</svg>

@@ -59,9 +59,8 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
   -2px -2px 0 var(--outline), 2px -2px 0 var(--outline), -2px 2px 0 var(--outline), 2px 2px 0 var(--outline),
   0 -2px 0 var(--outline), 0 2px 0 var(--outline), -2px 0 0 var(--outline), 2px 0 0 var(--outline); }
 
-/* currency chip: the white diamond glyph on currency-diamond, as the game shows it */
-.gem-chip { display: inline-grid; place-items: center; flex-shrink: 0; width: 1em; height: 1em; border: 3px solid var(--outline); border-radius: 50%; background: var(--currency-diamond); vertical-align: -.14em; }
-.gem-chip img { width: 60%; height: 60%; object-fit: contain; }
+/* Diamond: the FishMe diamond glyph redrawn as a vector (img/creator-crew/diamond.svg) */
+.diamond { display: inline-block; flex-shrink: 0; width: 1em; height: 1em; vertical-align: -.16em; filter: drop-shadow(0 2px 0 #3d1f6e59); }
 
 /* panels and buttons: thick brown outline with a hard drop, like the in-game tablets */
 .panel { background: var(--surface); border: var(--line) solid var(--outline); border-radius: var(--r); box-shadow: 0 6px 0 var(--outline); }
@@ -147,7 +146,7 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 .tier .tag { font-style: italic; color: var(--text-secondary); font-weight: 700; }
 .tier .gems { display: flex; flex-direction: column; gap: 4px; }
 .tier .gems .amt { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1; }
-.tier .gems .amt .gem-chip { width: .82em; height: .82em; }
+.tier .gems .amt .diamond { width: .92em; height: .92em; }
 .tier .gems small { font-weight: 700; color: var(--text-secondary); font-size: .95rem; }
 .perks { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
 .perks li { padding: 6px 12px; background: var(--surface); border: 3px solid var(--outline); border-radius: 10px; font-weight: 700; font-size: .92rem; }
@@ -211,7 +210,7 @@ thead th.t4 span { color: var(--text-inverse); }
 td .yes { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 3px solid var(--outline); border-radius: 50%; background: var(--success); color: var(--text-inverse); font-weight: 700; line-height: 1; }
 td .no { color: var(--text-secondary); }
 td.gem { font-family: var(--font-display); white-space: nowrap; }
-td.gem .gem-chip { width: 26px; height: 26px; border-width: 2px; }
+td.gem .diamond { width: 24px; height: 24px; margin-right: 2px; }
 
 .wins { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 44px; }
 .win { position: relative; padding: 22px 20px 22px; overflow: hidden; }
@@ -287,9 +286,86 @@ td.gem .gem-chip { width: 26px; height: 26px; border-width: 2px; }
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s, transform .6s cubic-bezier(.2, .7, .2, 1); }
 .reveal.in { opacity: 1; transform: none; }
 
+
+/* ---------- motion layer (all of it is switched off by prefers-reduced-motion below) ---------- */
+/* hero: the card glides up, steps slide in, the badge gives a little wiggle now and then */
+.hero-card { animation: card-in .9s .25s cubic-bezier(.2, 1.25, .3, 1) both; }
+@keyframes card-in { from { opacity: 0; transform: translateY(46px) scale(.97); } }
+.hero .steps li { animation: step-in .6s cubic-bezier(.2, 1.3, .3, 1) both; }
+.hero .steps li:nth-child(1) { animation-delay: .6s; }
+.hero .steps li:nth-child(2) { animation-delay: .75s; }
+.hero .steps li:nth-child(3) { animation-delay: .9s; }
+@keyframes step-in { from { opacity: 0; transform: translateX(34px); } }
+.hero-card .badge { animation: wiggle 4s ease-in-out 1.6s infinite; }
+@keyframes wiggle { 0%, 86%, 100% { rotate: 0deg; } 89% { rotate: -6deg; } 92% { rotate: 5deg; } 95% { rotate: -3deg; } }
+
+/* buttons: a light sweep on hover; the main hero button shimmers on its own */
+.btn, .tb-btn { position: relative; overflow: hidden; }
+.btn::after, .tb-btn::after { content: ""; position: absolute; top: -10%; bottom: -10%; left: -70%; width: 45%; background: linear-gradient(100deg, transparent, #ffffff8c, transparent); transform: skewX(-20deg); transition: left .6s; pointer-events: none; }
+.btn:hover::after, .tb-btn:hover::after { left: 130%; }
+.hero .actions .btn:first-child::after { animation: shine 4s ease-in-out 2.4s infinite; }
+@keyframes shine { 0%, 72% { left: -70%; } 100% { left: 130%; } }
+
+/* Diamonds bob and twinkle */
+.tier .gems .amt { position: relative; }
+.tier .gems .amt .diamond { animation: gem-bob 3.2s ease-in-out infinite; }
+.tier .gems .amt::after { content: "✦"; position: absolute; left: .6em; top: -.2em; font-size: .42em; line-height: 1; color: #ffffff; text-shadow: 0 0 6px #ffffff, 0 0 2px var(--currency-diamond); pointer-events: none; animation: twinkle 2.6s ease-in-out infinite; }
+.tier.t2 .gems .amt::after { animation-delay: -.7s; }
+.tier.t3 .gems .amt::after { animation-delay: -1.4s; }
+.tier.t4 .gems .amt::after { animation-delay: -2s; }
+@keyframes gem-bob { 50% { transform: translateY(-4px) rotate(-7deg); } }
+@keyframes twinkle { 0%, 55%, 100% { opacity: 0; transform: scale(.3) rotate(0deg); } 75% { opacity: 1; transform: scale(1) rotate(90deg); } }
+
+/* tiers swim in from alternating sides; hovering a card wobbles its icon */
+.tier.reveal { transform: translateX(-90px) rotate(-1.4deg); transition: opacity .7s, transform .85s cubic-bezier(.2, 1.15, .3, 1); }
+.tier.t2.reveal, .tier.t4.reveal { transform: translateX(90px) rotate(1.4deg); }
+.tier.reveal.in { transform: none; }
+.tier.reveal.in:hover { transform: translateY(-5px); transition: transform .25s; }
+.tier:hover .icon img, .win:hover .pic img { animation: wobble .6s ease; }
+@keyframes wobble { 25% { transform: rotate(-12deg) scale(1.1); } 50% { transform: rotate(9deg) scale(1.05); } 75% { transform: rotate(-4deg); } }
+
+/* the line between tiers flows down like a fishing line */
+.gate::before { border-left: 0; width: 4px; margin-left: -2px; background: repeating-linear-gradient(to bottom, #ffffffb3 0 10px, transparent 10px 20px); animation: flow .9s linear infinite; }
+@keyframes flow { to { background-position: 0 20px; } }
+.gate.reveal .box { transition: transform .6s cubic-bezier(.3, 1.6, .5, 1); }
+.gate.reveal:not(.in) .box { transform: scale(.8); }
+
+/* fish swim across the dive behind the cards */
+.swim { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.swim img { position: absolute; left: -110px; width: 72px; filter: drop-shadow(0 6px 0 #00000026); animation: swim 19s linear infinite; }
+.swim img:nth-child(1) { top: 24%; }
+.swim img:nth-child(2) { top: 66%; width: 52px; animation-duration: 26s; animation-delay: -11s; opacity: .85; }
+@keyframes swim {
+  0% { transform: translate(0, 0); } 25% { transform: translate(30vw, -16px); } 50% { transform: translate(60vw, 10px); }
+  75% { transform: translate(90vw, -10px); } 100% { transform: translate(calc(100vw + 220px), 0); }
+}
+
+/* points, badges and table ticks pop when they arrive */
+.pt.reveal.in .val { animation: bounce-in .75s .15s cubic-bezier(.3, 1.6, .5, 1) both; }
+@keyframes bounce-in { from { transform: scale(0) rotate(-25deg); } }
+.x2 { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 50% { transform: scale(1.18) rotate(-5deg); } }
+.reveal.in .medal { animation: flip-in .8s cubic-bezier(.3, 1.4, .5, 1) both; }
+.reveal.in .badge-c:nth-child(2) .medal { animation-delay: .15s; }
+.reveal.in .badge-c:nth-child(3) .medal { animation-delay: .3s; }
+@keyframes flip-in { from { transform: rotateY(180deg) scale(.4); opacity: 0; } }
+.badge-c:hover .medal { animation: coin .7s ease; }
+@keyframes coin { 50% { transform: rotateY(180deg) scale(1.1); } }
+.table-wrap.in .yes { animation: pop .45s cubic-bezier(.3, 1.7, .5, 1) both; animation-delay: calc(var(--i, 0) * 35ms + .25s); }
+@keyframes pop { from { transform: scale(0); } }
+.win.reveal.in { transition: opacity .6s, transform .25s; }
+.win.reveal.in:hover { transform: translateY(-6px) rotate(-.6deg); }
+
+/* idea cards pop in in order the first time the board scrolls into view */
+.js .ideas:not(.in) .idea { opacity: 0; }
+.ideas.in:not(.done) .idea { animation: card-pop .5s cubic-bezier(.3, 1.5, .5, 1) both; animation-delay: calc(var(--i, 0) * 28ms); }
+@keyframes card-pop { from { opacity: 0; transform: translateY(18px) scale(.92); } }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-  .reveal { opacity: 1; transform: none; }
+  .reveal, .tier.reveal, .gate.reveal:not(.in) .box { opacity: 1 !important; transform: none !important; }
+  .js .ideas:not(.in) .idea { opacity: 1; }
+  .swim { display: none; }
 }
 
 @media (max-width: 980px) {
