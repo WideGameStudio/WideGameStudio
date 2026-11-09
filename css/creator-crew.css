@@ -65,7 +65,6 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 .g-rod { -webkit-mask-image: url(../img/creator-crew/glyph-rod.webp); mask-image: url(../img/creator-crew/glyph-rod.webp); }
 .g-timer { -webkit-mask-image: url(../img/creator-crew/glyph-timer.webp); mask-image: url(../img/creator-crew/glyph-timer.webp); }
 .g-fish { -webkit-mask-image: url(../img/creator-crew/glyph-fish.webp); mask-image: url(../img/creator-crew/glyph-fish.webp); }
-.g-star { -webkit-mask-image: url(../img/creator-crew/glyph-star.webp); mask-image: url(../img/creator-crew/glyph-star.webp); }
 .g-rays { -webkit-mask-image: url(../img/creator-crew/fx-rays.webp); mask-image: url(../img/creator-crew/fx-rays.webp); }
 
 /* panels and buttons: thick brown outline with a hard drop, like the in-game tablets */
@@ -99,8 +98,8 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 /* hero */
 .hero { position: relative; padding: 0 0 64px; background: linear-gradient(var(--primary) 0 50%, var(--background) 50%); }
 .hero-art { position: relative; max-width: 1600px; margin-inline: auto; }
-.hero-art img { width: 100%; height: auto; aspect-ratio: 10 / 3; object-fit: cover; object-position: 50% 40%; }
-.hero-card { position: relative; z-index: 2; margin-top: clamp(-120px, -8vw, -40px); padding: clamp(28px, 5vw, 52px); display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
+.hero-art img { width: 100%; height: auto; aspect-ratio: 10 / 3; object-fit: cover; object-position: 50% 50%; }
+.hero-card { position: relative; z-index: 2; margin-top: clamp(-56px, -4vw, -24px); padding: clamp(28px, 5vw, 52px); display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
 .hero-card .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; margin-bottom: 18px; background: var(--secondary); border: 3px solid var(--outline); border-radius: 999px; font-family: var(--font-display); font-size: .95rem; letter-spacing: .03em; }
 .hero h1 { font-size: clamp(2.3rem, 5.6vw, 3.9rem); margin-bottom: 18px; color: var(--text-primary); }
 .hero h1 span { color: var(--primary); }
@@ -137,8 +136,7 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 .tier.t4 { --rar: var(--rarity-mythic); }
 .tier .id { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
 .tier .icon { width: 96px; height: 96px; display: grid; place-items: center; background: var(--surface); border: var(--line) solid var(--outline); border-radius: 50%; overflow: hidden; }
-.tier .icon img { width: 82%; height: 82%; object-fit: contain; }
-.tier .icon.cos img { width: 135%; height: 135%; max-width: none; object-fit: cover; object-position: 50% 6%; }
+.tier .icon img { width: 96%; height: 96%; object-fit: contain; }
 .tier .num { font-family: var(--font-display); font-size: .85rem; letter-spacing: .05em; text-transform: uppercase; padding: 3px 10px; border: 3px solid var(--outline); border-radius: 999px; background: var(--rar); color: var(--outline); }
 .tier.t4 .num { color: var(--text-inverse); }
 .tier h3 { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
@@ -203,6 +201,7 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 tbody th { text-align: left; font-weight: 700; min-width: 210px; }
 thead th { background: var(--outline); color: var(--text-inverse); font-family: var(--font-display); font-weight: 400; font-size: 1.05rem; border-bottom: 0; }
 thead th:first-child { text-align: left; }
+thead th img { display: block; width: 44px; height: 44px; margin: 0 auto 4px; }
 thead th span { display: inline-block; padding: 3px 12px; border: 3px solid var(--text-inverse); border-radius: 999px; background: var(--c); color: var(--outline); }
 thead th.t4 span { color: var(--text-inverse); }
 td .yes { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 3px solid var(--outline); border-radius: 50%; background: var(--success); color: var(--text-inverse); font-weight: 700; line-height: 1; }
@@ -213,8 +212,7 @@ td.gem .g { color: var(--currency-diamond); }
 .wins { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 44px; }
 .win { position: relative; padding: 22px 20px 22px; overflow: hidden; }
 .win .pic { width: 84px; height: 84px; margin-bottom: 14px; display: grid; place-items: center; border: var(--line) solid var(--outline); border-radius: 50%; background: var(--c, var(--main)); overflow: hidden; }
-.win .pic img { width: 78%; height: 78%; object-fit: contain; }
-.win .pic.cos img { width: 130%; height: 130%; max-width: none; object-fit: cover; object-position: 50% 6%; }
+.win .pic img { width: 96%; height: 96%; object-fit: contain; }
 .win .pic .g { width: 44px; height: 44px; color: var(--outline); }
 .win h3 { font-size: 1.25rem; margin-bottom: 6px; }
 .win p { color: var(--text-secondary); font-size: .97rem; }
@@ -223,6 +221,8 @@ td.gem .g { color: var(--currency-diamond); }
 .rules { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 22px; align-items: start; }
 .rules > .panel { padding: 24px; }
 .rules h3 { margin-bottom: 14px; }
+.rules h3.with-icon { display: flex; align-items: center; gap: 8px; }
+.rules h3.with-icon img { width: 48px; height: 48px; margin: -8px 0 -8px -6px; }
 .dodont { list-style: none; display: grid; gap: 12px; }
 .dodont li { display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: center; font-weight: 700; }
 .dodont li::before { display: grid; place-items: center; width: 38px; height: 38px; border: 3px solid var(--outline); border-radius: 50%; color: var(--text-inverse); font-size: 1.2rem; }
@@ -230,7 +230,7 @@ td.gem .g { color: var(--currency-diamond); }
 .dodont .dont::before { content: "✕"; background: var(--error); }
 .miss { width: 100%; min-width: 0; border-collapse: collapse; margin-bottom: 14px; }
 .miss th, .miss td { text-align: left; padding: 10px 8px; border-bottom: 3px solid var(--main); font-size: .97rem; vertical-align: top; }
-.miss th { font-family: var(--font-display); font-weight: 400; white-space: nowrap; }
+.miss th { font-family: var(--font-display); font-weight: 400; }
 .miss tr:last-child th, .miss tr:last-child td { border-bottom: 0; }
 .note { padding: 10px 14px; background: var(--main); border-radius: 10px; font-size: .95rem; }
 .revlist { list-style: none; display: grid; gap: 10px; margin-bottom: 14px; }
@@ -294,15 +294,15 @@ td.gem .g { color: var(--currency-diamond); }
   .hero-card, .join, .board-grid { grid-template-columns: 1fr; }
   .tier { grid-template-columns: 1fr 1fr; }
   .tier .perks-col { grid-column: 1 / -1; }
-  .rules { grid-template-columns: 1fr 1fr; }
+  .rules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .rules > :last-child { grid-column: 1 / -1; }
   .wins { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
   .topbar .home span { display: none; }
   .hero { background: linear-gradient(var(--primary) 0 30%, var(--background) 30%); }
-  .hero-art img { aspect-ratio: 4 / 5; object-position: 50% 30%; }
-  .points, .rules, .wins { grid-template-columns: 1fr; }
+  .hero-art img { aspect-ratio: 16 / 10; object-position: 52% 50%; }
+  .points, .rules, .wins { grid-template-columns: minmax(0, 1fr); }
   .tier { grid-template-columns: 1fr; }
   .pt { grid-template-columns: 1fr; text-align: center; justify-items: center; }
   .badges { gap: 8px; }
