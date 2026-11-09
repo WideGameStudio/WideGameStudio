@@ -59,13 +59,9 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
   -2px -2px 0 var(--outline), 2px -2px 0 var(--outline), -2px 2px 0 var(--outline), 2px 2px 0 var(--outline),
   0 -2px 0 var(--outline), 0 2px 0 var(--outline), -2px 0 0 var(--outline), 2px 0 0 var(--outline); }
 
-/* single-ink UI glyphs, tinted with a palette colour through a mask */
-.g { display: inline-block; flex-shrink: 0; width: 1em; height: 1em; background: currentColor; -webkit-mask: center / contain no-repeat; mask: center / contain no-repeat; vertical-align: -.14em; }
-.g-diamond { -webkit-mask-image: url(../img/creator-crew/glyph-diamond.webp); mask-image: url(../img/creator-crew/glyph-diamond.webp); }
-.g-rod { -webkit-mask-image: url(../img/creator-crew/glyph-rod.webp); mask-image: url(../img/creator-crew/glyph-rod.webp); }
-.g-timer { -webkit-mask-image: url(../img/creator-crew/glyph-timer.webp); mask-image: url(../img/creator-crew/glyph-timer.webp); }
-.g-fish { -webkit-mask-image: url(../img/creator-crew/glyph-fish.webp); mask-image: url(../img/creator-crew/glyph-fish.webp); }
-.g-rays { -webkit-mask-image: url(../img/creator-crew/fx-rays.webp); mask-image: url(../img/creator-crew/fx-rays.webp); }
+/* currency chip: the white diamond glyph on currency-diamond, as the game shows it */
+.gem-chip { display: inline-grid; place-items: center; flex-shrink: 0; width: 1em; height: 1em; border: 3px solid var(--outline); border-radius: 50%; background: var(--currency-diamond); vertical-align: -.14em; }
+.gem-chip img { width: 60%; height: 60%; object-fit: contain; }
 
 /* panels and buttons: thick brown outline with a hard drop, like the in-game tablets */
 .panel { background: var(--surface); border: var(--line) solid var(--outline); border-radius: var(--r); box-shadow: 0 6px 0 var(--outline); }
@@ -136,14 +132,14 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 .tier.t4 { --rar: var(--rarity-mythic); }
 .tier .id { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
 .tier .icon { width: 96px; height: 96px; display: grid; place-items: center; background: var(--surface); border: var(--line) solid var(--outline); border-radius: 50%; overflow: hidden; }
-.tier .icon img { width: 96%; height: 96%; object-fit: contain; }
+.tier .icon img { width: 74%; height: 74%; object-fit: contain; }
 .tier .num { font-family: var(--font-display); font-size: .85rem; letter-spacing: .05em; text-transform: uppercase; padding: 3px 10px; border: 3px solid var(--outline); border-radius: 999px; background: var(--rar); color: var(--outline); }
 .tier.t4 .num { color: var(--text-inverse); }
 .tier h3 { font-size: clamp(1.9rem, 3.4vw, 2.5rem); }
 .tier .tag { font-style: italic; color: var(--text-secondary); font-weight: 700; }
 .tier .gems { display: flex; flex-direction: column; gap: 4px; }
 .tier .gems .amt { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1; }
-.tier .gems .amt .g { color: var(--currency-diamond); width: .8em; height: .8em; }
+.tier .gems .amt .gem-chip { width: .82em; height: .82em; }
 .tier .gems small { font-weight: 700; color: var(--text-secondary); font-size: .95rem; }
 .perks { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
 .perks li { padding: 6px 12px; background: var(--surface); border: 3px solid var(--outline); border-radius: 10px; font-weight: 700; font-size: .92rem; }
@@ -153,7 +149,7 @@ h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 .gate::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 0; border-left: 4px dashed #ffffffa6; }
 .gate .box { position: relative; max-width: 620px; padding: 14px 20px 14px 18px; display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center;
   background: var(--outline); color: var(--text-inverse); border: 3px solid var(--text-inverse); border-radius: 14px; font-size: .98rem; }
-.gate .box .g { width: 34px; height: 34px; color: var(--accent); }
+.gate .box .gate-ico { width: 34px; height: 34px; }
 .gate .box b { color: var(--accent); }
 .gate .box p + p { margin-top: 2px; }
 .gate .box .ok { color: #ffffffbf; font-size: .9rem; }
@@ -207,13 +203,12 @@ thead th.t4 span { color: var(--text-inverse); }
 td .yes { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 3px solid var(--outline); border-radius: 50%; background: var(--success); color: var(--text-inverse); font-weight: 700; line-height: 1; }
 td .no { color: var(--text-secondary); }
 td.gem { font-family: var(--font-display); white-space: nowrap; }
-td.gem .g { color: var(--currency-diamond); }
+td.gem .gem-chip { width: 26px; height: 26px; border-width: 2px; }
 
 .wins { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 44px; }
 .win { position: relative; padding: 22px 20px 22px; overflow: hidden; }
 .win .pic { width: 84px; height: 84px; margin-bottom: 14px; display: grid; place-items: center; border: var(--line) solid var(--outline); border-radius: 50%; background: var(--c, var(--main)); overflow: hidden; }
-.win .pic img { width: 96%; height: 96%; object-fit: contain; }
-.win .pic .g { width: 44px; height: 44px; color: var(--outline); }
+.win .pic img { width: 76%; height: 76%; object-fit: contain; }
 .win h3 { font-size: 1.25rem; margin-bottom: 6px; }
 .win p { color: var(--text-secondary); font-size: .97rem; }
 
@@ -256,7 +251,7 @@ td.gem .g { color: var(--currency-diamond); }
 #ideas .kicker { color: var(--accent); }
 .board-tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 26px; }
 .search { flex: 1 1 280px; display: flex; align-items: center; gap: 10px; padding: 0 16px; background: var(--surface); border: var(--line) solid var(--text-inverse); border-radius: 14px; color: var(--text-primary); }
-.search .g { color: var(--text-secondary); width: 22px; height: 22px; }
+.search .search-ico { width: 22px; height: 22px; }
 .search input { flex: 1; min-width: 0; padding: 14px 0; border: 0; background: none; font: inherit; color: inherit; outline: none; }
 .board-tools .count { font-weight: 700; color: #fff8e6b3; }
 .ideas { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
