@@ -34,6 +34,7 @@
                     <li><a href="#crew">The crew</a></li>
                     <li><a href="#tierup">Tier up</a></li>
                     <li><a href="#pay">Get your rewards</a></li>
+                    <li><a href="#ideas">Idea Board</a></li>
                     <li><a href="creator-crew.html">The program</a></li>
                 </ul>
             </nav>
@@ -52,7 +53,7 @@
                         <p class="lead">See your FISH ME! videos, the top views and likes in the crew, and how many Diamonds you get this Saturday.</p>
                         <div class="actions">
                             <a class="btn stroke-sm" href="#crew">Find my name</a>
-                            <a class="btn yellow" href="creator-crew.html#ideas">Get a video idea</a>
+                            <a class="btn yellow" href="#ideas">Get a video idea</a>
                         </div>
                     </div>
                     <div class="payday" id="payday"></div>
@@ -119,13 +120,27 @@
                     <div class="panel rule"><span class="st bad">Missing #FISHME</span><h3>Fix the caption</h3><p>It's a FISH ME! video but the caption has no <b>#FISHME</b>. Edit it and tell us in the Creator Hub.</p></div>
                 </div>
                 <div class="caption-box"><code>#FISHME discord.gg/fishmevr</code><button class="btn sm yellow" type="button" data-copy="#FISHME discord.gg/fishmevr">Copy</button></div>
-                <div class="panel idea-cta">
-                    <div>
-                        <h3>Out of ideas?</h3>
-                        <p>Pick one of the 50 Idea Board ideas, make it your way and put its number in your caption. Board ideas are worth 2 Catch Points.</p>
-                    </div>
-                    <a class="btn orange stroke-sm" href="creator-crew.html#ideas">🎣 Open the Idea Board</a>
+            </div>
+        </section>
+
+        <section id="ideas">
+            <div class="wrap">
+                <div class="head">
+                    <p class="kicker">Idea Board</p>
+                    <h2 class="stroke">50 ideas, 2 points each</h2>
+                    <p class="lead">Out of ideas? Pick one, make it your way and put its number in your caption. Board ideas are worth 2 Catch Points.</p>
                 </div>
+                <div class="board-tools">
+                    <label class="search">
+                        <img src="img/creator-crew/glyph-fish-muted.webp" alt="">
+                        <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search ideas</span>
+                        <input id="idea-search" type="search" placeholder="Search ideas: boss, Hot Rock, Machete..." autocomplete="off">
+                    </label>
+                    <button class="btn orange stroke-sm" type="button" id="cast">🎣 Cast for a random idea</button>
+                    <span class="count" id="idea-count" aria-live="polite">50 ideas</span>
+                </div>
+                <ol class="ideas" id="idea-list"></ol>
+                <p class="no-ideas" id="no-ideas">No ideas match that. Try another word.</p>
             </div>
         </section>
     </main>

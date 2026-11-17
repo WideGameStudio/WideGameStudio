@@ -183,6 +183,32 @@
     });
   }
 
+  /* idea board */
+  const doneBy = {};
+  DATA.videos.forEach(v => { if (v.idea && v.status === "ok") (doneBy[v.idea] ||= []).push(v.creator); });
+  $("#idea-list").innerHTML = IDEAS.map(([h, p], i) => {
+    const n = i + 1, who = doneBy[n];
+    return `<li class="idea${who ? " done-by" : ""}" data-n="${n}"><span class="n">#${n}</span><h3>${esc(h)}</h3><p>${esc(p)}</p>
+      ${who ? `<span class="made">✓ Made this week by ${who.map(w => esc(byName[w]?.discord || w)).join(", ")}</span>` : ""}
+      <button class="copy" type="button" data-copy="Idea #${n} #FISHME discord.gg/fishmevr" aria-label="Copy caption tag for idea ${n}">Copy tag</button></li>`;
+  }).join("");
+  const ideaEls = [...document.querySelectorAll(".idea")], search = $("#idea-search"), total = ideaEls.length;
+  $("#idea-count").textContent = `${total} ideas`;
+  search.addEventListener("input", () => {
+    const q = search.value.trim().toLowerCase().replace(/^#/, ""); let shown = 0;
+    ideaEls.forEach(li => { const hit = !q || li.textContent.toLowerCase().includes(q) || li.dataset.n === q; li.hidden = !hit; if (hit) shown++; });
+    $("#idea-count").textContent = shown === total ? `${total} ideas` : `${shown} of ${total} ideas`;
+    $("#no-ideas").style.display = shown ? "none" : "block";
+  });
+  $("#cast").addEventListener("click", () => {
+    if (search.value) { search.value = ""; search.dispatchEvent(new Event("input")); }
+    ideaEls.forEach(li => li.classList.remove("picked"));
+    const li = ideaEls[Math.floor(Math.random() * total)];
+    void li.offsetWidth; li.classList.add("picked");
+    li.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "center" });
+    say(`You caught idea #${li.dataset.n}: ${li.querySelector("h3").textContent}`);
+  });
+
   /* top bar: underline the section in view */
   const navLinks = [...document.querySelectorAll('.topbar ul a[href^="#"]')];
   const spy = new IntersectionObserver(es => es.forEach(e => {
