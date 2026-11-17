@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Crew Weekly Board | FISH ME! | Wide Game Studio</title>
+    <meta name="description" content="See your FISH ME! videos, the top views and likes in the Creator Crew, and how many Diamonds you get this Saturday.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="img/creator-crew/logo.webp">
+    <link rel="preload" href="fonts/TitanOne-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/creator-board.css">
+</head>
+
+<body>
+
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" fill="#fff6e0" stroke="#4a2b16" stroke-width="2.4" stroke-linejoin="round"/><circle cx="12" cy="12" r="3.6" fill="#1e9fe8" stroke="#4a2b16" stroke-width="2"/></symbol>
+            <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z" fill="#ff5a6e" stroke="#4a2b16" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+            <symbol id="crown" viewBox="0 0 64 44"><path d="M4 14l14 12L32 4l14 22 14-12-6 26H10z" fill="#ffd23f" stroke="#4a2b16" stroke-width="4" stroke-linejoin="round"/><circle cx="32" cy="28" r="4" fill="#e5432f" stroke="#4a2b16" stroke-width="2.5"/><circle cx="18" cy="31" r="3" fill="#38beea" stroke="#4a2b16" stroke-width="2.5"/><circle cx="46" cy="31" r="3" fill="#38beea" stroke="#4a2b16" stroke-width="2.5"/></symbol>
+        </defs>
+    </svg>
+
+    <header class="topbar">
+        <div class="wrap">
+            <a class="home" href="index.html"><img src="img/brands/logo200x200.png" alt="">Wide Game Studio</a>
+            <nav aria-label="Weekly board sections">
+                <ul>
+                    <li><a href="#top-videos">Top videos</a></li>
+                    <li><a href="#crew">The crew</a></li>
+                    <li><a href="#tierup">Tier up</a></li>
+                    <li><a href="#pay">Get your rewards</a></li>
+                    <li><a href="creator-crew.html">The program</a></li>
+                </ul>
+            </nav>
+            <a class="tb-btn" href="https://discord.gg/fishmevr" target="_blank" rel="noopener">Join Discord</a>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-art"><img src="img/creator-board/hero.webp" srcset="img/creator-board/hero-1200.webp 1200w, img/creator-board/hero.webp 2000w" sizes="100vw" alt="FISH ME! key art: monkeys fight a hammerhead shark on the beach" width="2000" height="1125" fetchpriority="high"></div>
+            <div class="wrap">
+                <div class="panel hero-card">
+                    <div>
+                        <span class="badge stroke-sm">Creator Crew · Weekly board</span>
+                        <h1>How's your catch <span>this week?</span></h1>
+                        <p class="lead">See your FISH ME! videos, the top views and likes in the crew, and how many Diamonds you get this Saturday.</p>
+                        <div class="actions">
+                            <a class="btn stroke-sm" href="#crew">Find my name</a>
+                            <a class="btn yellow" href="creator-crew.html#ideas">Get a video idea</a>
+                        </div>
+                    </div>
+                    <div class="payday" id="payday"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="top-videos" style="padding-top:24px">
+            <div class="wrap">
+                <div class="head">
+                    <p class="kicker">This week's top 3</p>
+                    <h2>Biggest catches of the week</h2>
+                    <p class="lead">The FISH ME! videos the crew posted this week with the most views and the most likes.</p>
+                </div>
+                <div class="podiums">
+                    <div>
+                        <div class="pod-title"><span class="pill"><svg aria-hidden="true"><use href="#eye"/></svg>Most viewed</span></div>
+                        <div class="podium" id="top-views"></div>
+                    </div>
+                    <div>
+                        <div class="pod-title"><span class="pill"><svg aria-hidden="true"><use href="#heart"/></svg>Most liked</span></div>
+                        <div class="podium" id="top-likes"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M-60 24 C 90 0, 210 46, 360 24 S 630 0, 780 24 S 1050 46, 1200 24 S 1410 0, 1500 24 V46 H-60z" fill="#38beea"/></svg>
+        <section class="dive" id="crew">
+            <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+            <div class="sea-fish" id="sea-fish" aria-hidden="true"></div>
+            <div class="wrap">
+                <div class="head">
+                    <p class="kicker">The whole crew</p>
+                    <h2 class="stroke">Saturday Diamonds by tier</h2>
+                    <p class="lead">Tap your name to see every video we found and its status. Psst: the fish swimming by can be caught.</p>
+                    <span class="catch-count" id="catch-count">🎣 Fish caught: 0</span>
+                </div>
+                <div class="tiers" id="tiers"></div>
+            </div>
+        </section>
+
+        <section id="tierup">
+            <div class="wrap">
+                <div class="head">
+                    <p class="kicker">Next to tier up</p>
+                    <h2>Creators that will tier up</h2>
+                    <p class="lead">Every approved video earns Catch Points: 1 for your own idea, 2 for an Idea Board idea. Fill the bar, or hit the views shortcut, and a Reviewer moves you up.</p>
+                </div>
+                <div class="tu-rules" id="tu-rules"></div>
+                <div class="gates" id="gates"></div>
+            </div>
+        </section>
+
+        <section id="pay">
+            <div class="wrap">
+                <div class="head">
+                    <p class="kicker">Get your rewards</p>
+                    <h2>How a video gets its Diamonds</h2>
+                </div>
+                <div class="rules">
+                    <div class="panel rule"><span class="st ok">Approved</span><h3>It counts!</h3><p>Your caption has <b>#FISHME</b> and the Discord link. Your Diamonds come on Saturday.</p></div>
+                    <div class="panel rule"><span class="st wait">Waiting for a Reviewer</span><h3>Almost there</h3><p>It has <b>#FISHME</b> but no Discord link in the caption. A Reviewer checks if the link is in the video. If it is, you get paid.</p></div>
+                    <div class="panel rule"><span class="st bad">Missing #FISHME</span><h3>Fix the caption</h3><p>It's a FISH ME! video but the caption has no <b>#FISHME</b>. Edit it and tell us in the Creator Hub.</p></div>
+                </div>
+                <div class="caption-box"><code>#FISHME discord.gg/fishmevr</code><button class="btn sm yellow" type="button" data-copy="#FISHME discord.gg/fishmevr">Copy</button></div>
+                <div class="panel idea-cta">
+                    <div>
+                        <h3>Out of ideas?</h3>
+                        <p>Pick one of the 50 Idea Board ideas, make it your way and put its number in your caption. Board ideas are worth 2 Catch Points.</p>
+                    </div>
+                    <a class="btn orange stroke-sm" href="creator-crew.html#ideas">🎣 Open the Idea Board</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-row">
+                <span id="checked"></span>
+                <a class="btn sm yellow" href="https://discord.com/channels/1449742980532535454/1450168470510768170" target="_blank" rel="noopener">Something looks wrong? Open up a ticket ↗</a>
+            </div>
+            <div class="footer-row">
+                <span>© <span id="year">2026</span> Wide Game Studio · FISH ME! Creator Crew</span>
+                <nav aria-label="Footer">
+                    <a href="creator-crew.html">Creator Crew</a>
+                    <a href="index.html">Home</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/creator-board-data.js"></script>
+    <script src="js/creator-board.js"></script>
+</body>
+
+</html>
