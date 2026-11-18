@@ -1,6 +1,9 @@
 /* FISH ME! Creator Crew weekly board (creator-board.html). Reads DATA from js/creator-board-data.js. */
 (function () {
   "use strict";
+  /* creators who joined mid-week only get videos from the day they joined (since) */
+  const since = Object.fromEntries(DATA.creators.filter(c => c.since).map(c => [c.name, c.since]));
+  DATA.videos = DATA.videos.filter(v => !since[v.creator] || v.date >= since[v.creator]);
   const $ = s => document.querySelector(s);
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -54,7 +57,7 @@
         <div class="pd-stat"><b class="num">${stats.filter(s => s.posted).length}</b><small>creators posted</small></div>
         <div class="pd-stat wide"><b class="num">${DIA}<span>${fmt(totalDia)}</span></b><small>Diamonds going out Saturday · +${fmt(totalPend)} if Reviewers approve the waiting videos</small></div>
       </div>
-      <div class="pd-k pd-note">Videos posted ${day(DATA.weekStart, { month: "short", day: "numeric" })} – ${day(DATA.payday, { month: "short", day: "numeric" })} count. Rewards go out every Saturday.</div>`;
+      <div class="pd-k pd-note">Videos posted ${day(DATA.weekStart, { month: "short", day: "numeric" })} – ${day(DATA.payday, { month: "short", day: "numeric" })} count. Rewards go out every Saturday. New members: videos count from the day you joined.</div>`;
   })();
 
   /* podiums */
