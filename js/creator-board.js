@@ -92,6 +92,7 @@
     const list = stats.filter(s => s.tier === name).sort((a, b) => b.diamonds - a.diamonds || b.pending - a.pending || b.posted - a.posted || a.name.localeCompare(b.name));
     const rows = list.map(s => {
       const plat = platOf(s.link);
+      const extra = (s.extra || []).map(u => { const p = platOf(u); return `<a href="${esc(u)}" target="_blank" rel="noopener" aria-label="${esc(s.profile || s.discord)} on ${p}"><span class="pl ${p.toLowerCase()}">${p}</span></a>`; }).join("");
       const vids = s.vids.length ? s.vids.map(v => `<div class="vitem"><span class="pf">${v.platform === "YouTube" ? "YT" : "TT"}</span>
           <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a>
           <span class="m num">${day(v.date)} · ${fmt(v.views)} views · ${fmt(v.likes)} likes</span>${chip(v.status)}</div>
@@ -99,7 +100,7 @@
         : `<p class="vnote">No FISH ME! videos with #FISHME found this week yet. Post one before Saturday!</p>`;
       const gems = t.monthly ? `<b>Monthly</b>` : `<b class="num${s.diamonds ? "" : " zero"}">${DIA}${fmt(s.diamonds)}</b>${s.pending ? `<small>+${fmt(s.pending)} if approved</small>` : ""}`;
       return `<details class="row"><summary>
-          <span class="who">${img(s.avatar)}<span class="who-t"><b>${esc(s.discord)}</b>${s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener"><span class="hd">${esc(s.profile)}</span><span class="pl ${plat.toLowerCase()}">${plat}</span></a>` : `<span class="nolink">No channel link yet</span>`}</span></span>
+          <span class="who">${img(s.avatar)}<span class="who-t"><b>${esc(s.discord)}</b>${s.link ? `<span class="chans"><a href="${esc(s.link)}" target="_blank" rel="noopener"><span class="hd">${esc(s.profile)}</span><span class="pl ${plat.toLowerCase()}">${plat}</span></a>${extra}</span>` : `<span class="nolink">No channel link yet</span>`}</span></span>
           <span class="cnt"><b class="num${s.posted ? "" : " zero"}">${s.posted}</b></span>
           <span class="gems">${gems}</span>${chev}</summary>
         <div class="vlist">${vids}</div></details>`;
@@ -225,6 +226,27 @@
     if (pt) return; pt = true;
     requestAnimationFrame(() => { if (scrollY < innerHeight * 1.2) heroImg.style.translate = "0 " + (scrollY * .3).toFixed(1) + "px"; pt = false; });
   }, { passive: true });
+  /* daily update countdown: the board refreshes every day at 17:00 Türkiye time (UTC+3, no daylight saving) = 14:00 UTC */
+  const REFRESH_UTC_HOUR = 14, NOW_FOR = 60 * 1000;
+  const rf = $("#refresh"), rfH = $("#rf-h"), rfM = $("#rf-m"), rfS = $("#rf-s");
+  const nextRefresh = from => {
+    const t = new Date(from); t.setUTCHours(REFRESH_UTC_HOUR, 0, 0, 0);
+    if (t <= from) t.setUTCDate(t.getUTCDate() + 1);
+    return t;
+  };
+  const pad = n => String(n).padStart(2, "0");
+  function tick() {
+    const now = Date.now();
+    const last = nextRefresh(new Date(now - 86400000)).getTime(); /* most recent 14:00 UTC */
+    const inWindow = now - last < NOW_FOR;
+    rf.classList.toggle("now", inWindow);
+    const left = Math.max(0, nextRefresh(new Date(now)).getTime() - now), sec = Math.floor(left / 1000);
+    rfH.textContent = pad(Math.floor(sec / 3600)); rfM.textContent = pad(Math.floor(sec / 60) % 60); rfS.textContent = pad(sec % 60);
+    rf.classList.toggle("soon", left < 10 * 60 * 1000);
+    setTimeout(tick, 1000 - (now % 1000) + 5);
+  }
+  tick();
+
   $("#checked").textContent = `Views and likes checked ${day(DATA.checked, { weekday: "long", month: "short", day: "numeric" })}. Numbers keep growing after that.`;
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

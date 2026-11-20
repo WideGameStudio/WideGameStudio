@@ -2,6 +2,7 @@
    Update this file once a week:
    - weekStart / payday / checked: dates as YYYY-MM-DD. Videos posted from weekStart up to payday count; Diamonds go out on payday (Saturday).
    - creators: one row per crew member. tier is Bait, Angler, Captain or Admiral. avatar is a 160x160 image in img/creator-board/avatars/.
+       extra: optional list of more channel links (another YouTube or TikTok); each one shows as its own chip.
        since: optional join date (YYYY-MM-DD) for someone who joined mid-week; only their videos from that day on count.
    - videos: one row per FISH ME! video found this week.
        status: "ok" = Approved, "wait" = Waiting for a Reviewer, "bad" = Missing #FISHME
@@ -72,7 +73,7 @@ const DATA = {
     {name:"reaper09181", discord:"reaper09181", tier:"Bait", link:"https://www.tiktok.com/@magic_vr8", handle:"magic_vr8", profile:"magic_vr8", since:"2026-11-15", avatar:"img/creator-board/avatars/new-reaper09181.webp"},
     {name:"Carolina467390", discord:"Carolina467390", tier:"Bait", link:"https://www.tiktok.com/@arkingzyt", handle:"arkingzyt", profile:"AR_KingzYT", since:"2026-11-15", avatar:"img/creator-board/avatars/new-carolina467390.webp"},
     {name:"itsrobinvr", discord:"itsrobinvr", tier:"Bait", link:"https://www.tiktok.com/@itskxviivr", handle:"itskxviivr", profile:"KxviiVr", since:"2026-11-15", avatar:"img/creator-board/avatars/new-itsrobinvr.webp"},
-    {name:"Brady08863", discord:"Brady08863", tier:"Bait", link:"https://www.tiktok.com/@tttbradyttt", handle:"tttbradyttt", profile:"Bradyvr", since:"2026-11-15", avatar:"img/creator-board/avatars/new-brady08863.webp"},
+    {name:"Brady08863", discord:"Brady08863", tier:"Bait", link:"https://www.tiktok.com/@tttbradyttt", handle:"tttbradyttt", profile:"Bradyvr", extra:["https://www.youtube.com/@Bradyvr_yt"], since:"2026-11-15", avatar:"img/creator-board/avatars/new-brady08863.webp"},
     {name:"brody_gayng", discord:"brody_gayng", tier:"Bait", link:"https://www.tiktok.com/@broskivr.1", handle:"broskivr.1", profile:"BroskiVR", since:"2026-11-15", avatar:"img/creator-board/avatars/new-brody_gayng.webp"},
     {name:"Jesternap619", discord:"Jesternap619", tier:"Bait", link:"https://www.youtube.com/@JesternapVr", handle:"JesternapVr", profile:"Jesternap", since:"2026-11-15", avatar:"img/creator-board/avatars/new-jesternap619.webp"},
     {name:"UGlyGuy", discord:"UGlyGuy", tier:"Bait", link:"https://www.youtube.com/@theoneandonlyplatypus13", handle:"theoneandonlyplatypus13", profile:"Mr. Platypus", since:"2026-11-15", avatar:"img/creator-board/avatars/new-uglyguy.webp"}
