@@ -1,9 +1,13 @@
 /* FISH ME! Creator Crew weekly board (creator-board.html). Reads DATA from js/creator-board-data.js. */
 (function () {
   "use strict";
-  /* creators who joined mid-week only get videos from the day they joined (since) */
+  /* creators who joined mid-week only get videos from the day they joined (since);
+     the ones from before move to DATA.earlier, which is shown but never counted */
   const since = Object.fromEntries(DATA.creators.filter(c => c.since).map(c => [c.name, c.since]));
-  DATA.videos = DATA.videos.filter(v => !since[v.creator] || v.date >= since[v.creator]);
+  const pre = v => since[v.creator] && v.date < since[v.creator];
+  DATA.earlier = (DATA.earlier || []).concat(DATA.videos.filter(pre).map(v => ({ ...v, joined: since[v.creator] })));
+  DATA.videos = DATA.videos.filter(v => !pre(v));
+  const MAX_PAID = DATA.maxPaid || Infinity;
   const $ = s => document.querySelector(s);
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -20,7 +24,11 @@
   const stats = DATA.creators.map(c => {
     const t = DATA.tiers[c.tier], vids = DATA.videos.filter(v => v.creator === c.name);
     const ok = vids.filter(v => v.status === "ok").length, wait = vids.filter(v => v.status === "wait").length;
-    return { ...c, vids, posted: vids.length, diamonds: t.monthly ? 0 : ok * t.rate, pending: t.monthly ? 0 : wait * t.rate };
+    const older = DATA.earlier.filter(v => v.creator === c.name).sort((a, b) => b.date.localeCompare(a.date));
+    /* only MAX_PAID videos a week are paid: approved ones first, then waiting ones fill what's left */
+    const paid = Math.min(ok, MAX_PAID), paidWait = Math.min(wait, MAX_PAID - paid);
+    return { ...c, vids, older, posted: vids.length, tagged: ok + wait, paid, capped: ok + wait > MAX_PAID,
+      diamonds: t.monthly ? 0 : paid * t.rate, pending: t.monthly ? 0 : paidWait * t.rate };
   });
 
   /* toast + copy */
@@ -55,9 +63,9 @@
       <div class="pd-stats">
         <div class="pd-stat"><b class="num">${DATA.videos.length}</b><small>FISH ME! videos this week</small></div>
         <div class="pd-stat"><b class="num">${stats.filter(s => s.posted).length}</b><small>creators posted</small></div>
-        <div class="pd-stat wide"><b class="num">${DIA}<span>${fmt(totalDia)}</span></b><small>Diamonds going out Saturday · +${fmt(totalPend)} if Reviewers approve the waiting videos</small></div>
+        <div class="pd-stat wide"><b class="num">${DIA}<span>${fmt(totalDia)}</span></b><small>Diamonds going out ${day(DATA.payday, { weekday: "long" })}${totalPend ? ` · +${fmt(totalPend)} if Reviewers approve the waiting videos` : " · all tagged videos approved"}</small></div>
       </div>
-      <div class="pd-k pd-note">Videos posted ${day(DATA.weekStart, { month: "short", day: "numeric" })} – ${day(DATA.payday, { month: "short", day: "numeric" })} count. Rewards go out every Saturday. New members: videos count from the day you joined.</div>`;
+      <div class="pd-k pd-note">Videos posted ${day(DATA.weekStart, { month: "short", day: "numeric" })} – ${day(DATA.payday, { month: "short", day: "numeric" })} count. Rewards go out every Saturday. New members: videos count from the day you joined.${DATA.maxPaid ? ` Up to ${DATA.maxPaid} paid videos a week, no spam.` : ""}</div>`;
   })();
 
   /* podiums */
@@ -97,13 +105,18 @@
           <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a>
           <span class="m num">${day(v.date)} · ${fmt(v.views)} views · ${fmt(v.likes)} likes</span>${chip(v.status)}</div>
           ${v.note ? `<p class="vnote">${esc(v.note)}</p>` : ""}`).join("")
-        : `<p class="vnote">No FISH ME! videos with #FISHME found this week yet. Post one before Saturday!</p>`;
+        : `<p class="vnote">${s.older.length ? "No new" : "No"} FISH ME! videos with #FISHME found this week yet. Post one before Saturday!</p>`;
+      const older = s.older.length ? `<p class="vold-h">Earlier FISH ME! videos · not counted this week</p>` + s.older.map(v => `<div class="vitem old"><span class="pf">${v.platform === "YouTube" ? "YT" : "TT"}</span>
+          <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a>
+          <span class="m num">${day(v.date)} · ${fmt(v.views)} views · ${fmt(v.likes)} likes</span><span class="st old">${v.joined ? `Before you joined (${day(v.joined, { month: "short", day: "numeric" })})` : "Before this week"}</span></div>`).join("") : "";
+      const cap = s.capped && !t.monthly ? `<p class="vnote cap"><b>${s.paid} of ${s.tagged} approved videos paid.</b> We pay up to ${MAX_PAID} videos a week. Do not spam videos for more Diamonds.</p>` : "";
+      const heads = s.note ? `<p class="vnote"><b>Heads up:</b> ${esc(s.note)}</p>` : "";
       const gems = t.monthly ? `<b>Monthly</b>` : `<b class="num${s.diamonds ? "" : " zero"}">${DIA}${fmt(s.diamonds)}</b>${s.pending ? `<small>+${fmt(s.pending)} if approved</small>` : ""}`;
       return `<details class="row"><summary>
           <span class="who">${img(s.avatar)}<span class="who-t"><b>${esc(s.discord)}</b>${s.link ? `<span class="chans"><a href="${esc(s.link)}" target="_blank" rel="noopener"><span class="hd">${esc(s.profile)}</span><span class="pl ${plat.toLowerCase()}">${plat}</span></a>${extra}</span>` : `<span class="nolink">No channel link yet</span>`}</span></span>
           <span class="cnt"><b class="num${s.posted ? "" : " zero"}">${s.posted}</b></span>
           <span class="gems">${gems}</span>${chev}</summary>
-        <div class="vlist">${vids}</div></details>`;
+        <div class="vlist">${cap}${heads}${vids}${older}</div></details>`;
     }).join("");
     return `<article class="tier ${t.cls}">
       <div class="thead">
