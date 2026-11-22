@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creator Crew Weekly Board | FISH ME! | Wide Game Studio</title>
-    <meta name="description" content="See your FISH ME! videos, the top views and likes in the Creator Crew, and how many Diamonds you get this Saturday.">
+    <meta name="description" content="See your FISH ME! videos, the top views and likes in the Creator Crew, and how many Diamonds you get this Sunday.">
     <meta name="robots" content="noindex">
     <link rel="icon" href="img/creator-crew/logo.webp">
     <link rel="preload" href="fonts/TitanOne-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/creator-board.css">
+    <!-- ?v= on the board CSS/JS: change it (to the date) whenever those files change, so browsers load the new version at once -->
+    <link rel="stylesheet" href="css/creator-board.css?v=20261123d">
 </head>
 
 <body>
@@ -42,6 +43,19 @@
         </div>
     </header>
 
+    <section class="schedule" aria-labelledby="sched-h">
+        <div class="wrap">
+            <h2 id="sched-h" class="sched-h">When does everything happen?</h2>
+            <ol class="sched">
+                <li class="sc sc-wed"><span class="sc-ic" aria-hidden="true">⬆️</span><span class="sc-day">Wednesday<small>every week</small></span><span class="sc-what">Creators tier up (Bait → Angler, Angler → Captain)</span></li>
+                <li class="sc sc-wed"><span class="sc-ic" aria-hidden="true">📣</span><span class="sc-day">Wednesday<small>every 2 weeks</small></span><span class="sc-what">New Content Creators are selected</span></li>
+                <li class="sc sc-sat"><span class="sc-ic" aria-hidden="true">📊</span><span class="sc-day">Saturday<small>every week</small></span><span class="sc-what">This progress page is updated</span></li>
+                <li class="sc sc-sun"><span class="sc-ic" aria-hidden="true">💎</span><span class="sc-day">Sunday<small>every week</small></span><span class="sc-what">Gems (Diamonds) are sent out</span></li>
+            </ol>
+            <p class="sched-note"><b>Waiting for your Gems?</b> They always arrive on <b>Sunday</b>. Please don't open a ticket about Gems before Sunday is over. Your ticket won't make them come faster!</p>
+        </div>
+    </section>
+
     <main id="top">
         <section class="hero">
             <div class="hero-art"><img src="img/creator-board/hero.webp" srcset="img/creator-board/hero-1200.webp 1200w, img/creator-board/hero.webp 2000w" sizes="100vw" alt="FISH ME! key art: monkeys fight a hammerhead shark on the beach" width="2000" height="1125" fetchpriority="high"></div>
@@ -50,7 +64,7 @@
                     <div>
                         <span class="badge stroke-sm">Creator Crew · Weekly board</span>
                         <h1>How's your catch <span>this week?</span></h1>
-                        <p class="lead">See your FISH ME! videos, the top views and likes in the crew, and how many Diamonds you get this Saturday.</p>
+                        <p class="lead">See your FISH ME! videos, the top views and likes in the crew, and how many Diamonds you get this Sunday.</p>
                         <div class="actions">
                             <a class="btn stroke-sm" href="#crew">Find my name</a>
                             <a class="btn yellow" href="#ideas">Get a video idea</a>
@@ -88,7 +102,7 @@
             <div class="wrap">
                 <div class="head">
                     <p class="kicker">The whole crew</p>
-                    <h2 class="stroke">Saturday Diamonds by tier</h2>
+                    <h2 class="stroke">Sunday Diamonds by tier</h2>
                     <p class="lead">Tap your name to see every video we found and its status. Psst: the fish swimming by can be caught.</p>
                     <p class="lead spam-lead"><b>Up to 5 paid videos a week.</b> Do not spam videos for more Diamonds. We watch all content posted and we value your effort.</p>
                     <span class="catch-count" id="catch-count">🎣 Fish caught: 0</span>
@@ -102,7 +116,20 @@
                 <div class="head">
                     <p class="kicker">Next to tier up</p>
                     <h2>Creators that will tier up</h2>
-                    <p class="lead">Every approved video earns Catch Points: 1 for your own idea, 2 for an Idea Board idea. Fill the bar, or hit the views shortcut, and a Reviewer moves you up.</p>
+                    <p class="lead">Bait creators earn Catch Points: 1 for your own idea, 2 for an Idea Board idea. Anglers need videos and views to become Captain. Reach the goal and a Reviewer moves you up on the next tier-up day: <b>every Wednesday</b>.</p>
+                </div>
+                <div class="rule-change" role="note">
+                    <span class="rc-tag">New rule</span>
+                    <div>
+                        <h3>Angler → Captain has changed</h3>
+                        <p>We changed this rule to avoid spam content and give you a fresh challenge. To go from <b>Angler</b> to <b>Captain</b> you now need:</p>
+                        <ol class="rc-list">
+                            <li><b>At least 10 videos</b> posted as an Angler, <i>and</i></li>
+                            <li><b>one</b> of these view goals (easiest first):
+                                <ul><li><b>6 videos</b> with <b>5,000+ views</b> each</li><li><b>2 videos</b> with <b>15,000+ views</b> each</li><li><b>1 video</b> with <b>30,000+ views</b></li></ul></li>
+                        </ol>
+                        <p class="rc-small">Catch Points don't count for Angler → Captain anymore. Bait → Angler stays the same.</p>
+                    </div>
                 </div>
                 <div class="tu-rules" id="tu-rules"></div>
                 <div class="gates" id="gates"></div>
@@ -116,7 +143,7 @@
                     <h2>How a video gets its Diamonds</h2>
                 </div>
                 <div class="rules">
-                    <div class="panel rule"><span class="st ok">Approved</span><h3>It counts!</h3><p>Your caption has <b>#FISHME</b> and the Discord link. Your Diamonds come on Saturday.</p></div>
+                    <div class="panel rule"><span class="st ok">Approved</span><h3>It counts!</h3><p>Your caption has <b>#FISHME</b> and the Discord link. Your Diamonds come on Sunday.</p></div>
                     <div class="panel rule"><span class="st wait">Waiting for a Reviewer</span><h3>Almost there</h3><p>It has <b>#FISHME</b> but no Discord link in the caption. A Reviewer checks if the link is in the video. If it is, you get paid.</p></div>
                     <div class="panel rule"><span class="st bad">Missing #FISHME</span><h3>Fix the caption</h3><p>It's a FISH ME! video but the caption has no <b>#FISHME</b>. Edit it and tell us in the Creator Hub.</p></div>
                 </div>
@@ -165,9 +192,10 @@
         </div>
     </footer>
 
-    <aside class="refresh" id="refresh" aria-label="Next board update">
+    <aside class="refresh" id="refresh" aria-label="Next board update (every Saturday)">
         <span class="rf-k">Next update in</span>
         <div class="rf-clock" id="refresh-clock" role="timer">
+            <span class="rf-u"><b id="rf-d">-</b><i>days</i></span><span class="rf-sep">:</span>
             <span class="rf-u"><b id="rf-h">--</b><i>hrs</i></span><span class="rf-sep">:</span>
             <span class="rf-u"><b id="rf-m">--</b><i>min</i></span><span class="rf-sep">:</span>
             <span class="rf-u"><b id="rf-s">--</b><i>sec</i></span>
@@ -177,8 +205,8 @@
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <script src="js/creator-board-data.js"></script>
-    <script src="js/creator-board.js"></script>
+    <script src="js/creator-board-data.js?v=20261123d"></script>
+    <script src="js/creator-board.js?v=20261123d"></script>
 </body>
 
 </html>

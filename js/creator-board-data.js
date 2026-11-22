@@ -77,7 +77,7 @@ const DATA = {
     {name:"reaper09181", discord:"reaper09181", tier:"Bait", link:"https://www.tiktok.com/@magic_vr8", handle:"magic_vr8", profile:"magic_vr8", since:"2026-11-15", avatar:"img/creator-board/avatars/new-reaper09181.webp"},
     {name:"Carolina467390", discord:"Carolina467390", tier:"Bait", link:"https://www.tiktok.com/@arkingzyt", handle:"arkingzyt", profile:"AR_KingzYT", since:"2026-11-15", avatar:"img/creator-board/avatars/new-carolina467390.webp"},
     {name:"itsrobinvr", discord:"itsrobinvr", tier:"Bait", link:"https://www.tiktok.com/@itskxviivr", handle:"itskxviivr", profile:"KxviiVr", since:"2026-11-15", avatar:"img/creator-board/avatars/new-itsrobinvr.webp"},
-    {name:"Brady08863", discord:"Brady08863", tier:"Bait", link:"https://www.tiktok.com/@tttbradyttt", handle:"tttbradyttt", profile:"Bradyvr", extra:["https://www.youtube.com/@Bradyvr_yt"], since:"2026-11-15", note:"Your 3 FISH ME! videos from Nov 15–16 are set to private on TikTok, so we can't count them. Make them public to get your Diamonds!", avatar:"img/creator-board/avatars/new-brady08863.webp"},
+    {name:"Brady08863", discord:"Brady08863", tier:"Bait", link:"https://www.youtube.com/@Bradyvr_yt", handle:"Bradyvr_yt", profile:"Bradyvr", since:"2026-11-15", avatar:"img/creator-board/avatars/new-brady08863.webp"},
     {name:"brody_gayng", discord:"brody_gayng", tier:"Bait", link:"https://www.tiktok.com/@broskivr.1", handle:"broskivr.1", profile:"BroskiVR", since:"2026-11-15", avatar:"img/creator-board/avatars/new-brody_gayng.webp"},
     {name:"Jesternap619", discord:"Jesternap619", tier:"Bait", link:"https://www.youtube.com/@JesternapVr", handle:"JesternapVr", profile:"Jesternap", since:"2026-11-15", avatar:"img/creator-board/avatars/new-jesternap619.webp"},
     {name:"UGlyGuy", discord:"UGlyGuy", tier:"Bait", link:"https://www.youtube.com/@theoneandonlyplatypus13", handle:"theoneandonlyplatypus13", profile:"Mr. Platypus", since:"2026-11-15", avatar:"img/creator-board/avatars/new-uglyguy.webp"}
@@ -253,7 +253,15 @@ const DATA = {
     {creator:"dustin73245256357", platform:"YouTube", url:"https://www.youtube.com/shorts/WjPHZQURSmY", title:"common crate day 1", date:"2026-11-18", views:12, likes:0, status:"ok", note:"#FISHME added in a comment."},
     {creator:"dustin73245256357", platform:"YouTube", url:"https://www.youtube.com/shorts/MDkbWzH3TKI", title:"recomended rods", date:"2026-11-18", views:2, likes:0, status:"ok", note:"#FISHME added in a comment."},
     {creator:"dustin73245256357", platform:"YouTube", url:"https://www.youtube.com/shorts/pyKlfC57r_s", title:"special rewards", date:"2026-11-18", views:5, likes:0, status:"ok", note:"#FISHME added in a comment."},
-    {creator:"dustin73245256357", platform:"YouTube", url:"https://www.youtube.com/shorts/vBxa4-zfypk", title:"cc name tag reactions", date:"2026-11-14", views:7, likes:0, status:"ok", note:"#FISHME added in a comment."}
+    {creator:"dustin73245256357", platform:"YouTube", url:"https://www.youtube.com/shorts/vBxa4-zfypk", title:"cc name tag reactions", date:"2026-11-14", views:7, likes:0, status:"ok", note:"#FISHME added in a comment."},
+    {creator:"Brady08863", platform:"YouTube", url:"https://www.youtube.com/shorts/hpyIW4SMXpk", title:"day one", date:"2026-11-22", views:0, likes:0, status:"ok"},
+    {creator:"Brady08863", platform:"YouTube", url:"https://www.youtube.com/shorts/5sKeb-n_vt8", title:"new cc hub", date:"2026-11-21", views:5, likes:0, status:"ok"},
+    {creator:"Brady08863", platform:"YouTube", url:"https://www.youtube.com/shorts/u5NY4OTraRo", title:"trick shot", date:"2026-11-21", views:516, likes:2, status:"ok"},
+    {creator:"Brady08863", platform:"YouTube", url:"https://www.youtube.com/shorts/IzQYxq-dJpM", title:"no way we made it", date:"2026-11-21", views:936, likes:2, status:"ok"},
+    {creator:"Brady08863", platform:"YouTube", url:"https://www.youtube.com/shorts/Jpoq0wbj3iA", title:"oh noo", date:"2026-11-20", views:273, likes:4, status:"ok"},
+    {creator:"Brady08863", platform:"YouTube", url:"https://www.youtube.com/shorts/PphGIN0n-PI", title:"new update in fishme", date:"2026-11-20", views:153, likes:3, status:"bad", note:"Uses #fishmeme, not #FISHME."},
+    {creator:"Brady08863", platform:"YouTube", url:"https://www.youtube.com/shorts/Evy1TE2O66I", title:"I need 2k views", date:"2026-11-19", views:406, likes:4, status:"bad", note:"Uses #fishmeme, not #FISHME."},
+    {creator:"Brady08863", platform:"YouTube", url:"https://www.youtube.com/shorts/7c-NnoDj02Y", title:"Cc in fish me", date:"2026-11-18", views:1322, likes:7, status:"bad", note:"Uses #fishmeme, not #FISHME."}
   ],
   /* FISH ME! videos posted before this week (shown, not counted) */
   earlier: [

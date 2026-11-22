@@ -65,7 +65,7 @@
         <div class="pd-stat"><b class="num">${stats.filter(s => s.posted).length}</b><small>creators posted</small></div>
         <div class="pd-stat wide"><b class="num">${DIA}<span>${fmt(totalDia)}</span></b><small>Diamonds going out ${day(DATA.payday, { weekday: "long" })}${totalPend ? ` · +${fmt(totalPend)} if Reviewers approve the waiting videos` : " · all tagged videos approved"}</small></div>
       </div>
-      <div class="pd-k pd-note">Videos posted ${day(DATA.weekStart, { month: "short", day: "numeric" })} – ${day(DATA.payday, { month: "short", day: "numeric" })} count. Rewards go out every Saturday. New members: videos count from the day you joined.${DATA.maxPaid ? ` Up to ${DATA.maxPaid} paid videos a week, no spam.` : ""}</div>`;
+      <div class="pd-k pd-note">Videos posted ${day(DATA.weekStart, { month: "short", day: "numeric" })} – ${day(DATA.payday, { month: "short", day: "numeric" })} count. This page updates every Saturday, Diamonds go out every Sunday. New members: videos count from the day you joined.${DATA.maxPaid ? ` Up to ${DATA.maxPaid} paid videos a week, no spam.` : ""}</div>`;
   })();
 
   /* podiums */
@@ -124,24 +124,33 @@
         <div class="tid"><span class="tnum">${t.level} · ${list.length} creator${list.length === 1 ? "" : "s"}</span><h3>${name}</h3></div>
         <div class="trate"><span class="amt num">${DIA}${fmt(t.rate)}</span><small>${t.unit}</small></div>
       </div>
-      ${list.length ? `<div class="roster"><div class="cols"><span>Creator</span><span>Videos this week</span><span>Saturday Diamonds</span><span></span></div>${rows}</div>`
+      ${list.length ? `<div class="roster"><div class="cols"><span>Creator</span><span>Videos this week</span><span>Sunday Diamonds</span><span></span></div>${rows}</div>`
         : `<p class="empty-tier">No ${name}s yet. Keep posting and you could be the first!</p>`}
     </article>`;
   }).join("");
 
-  /* tier up: Catch Points from approved videos, a striped bar for waiting videos, plus the views shortcut */
+  /* tier up. Bait -> Angler: Catch Points from approved videos (striped bar for waiting ones) or the views shortcut.
+     Angler -> Captain (changed 22 Nov 2026, against spam): at least 10 videos AND one of the view goals. */
   const NEXT = {
     Bait: { to: "Angler", points: 5, short: { n: 2, views: 2000 }, shortText: "2 videos with 2,000+ views", ok: "1 Reviewer says OK" },
-    Angler: { to: "Captain", points: 10, short: { n: 3, views: 4000 }, alt: { n: 1, views: 15000 }, shortText: "3 videos with 4,000+ views, or 1 with 15,000+", ok: "2 Reviewers say OK" }
+    Angler: { to: "Captain", videos: 10, goals: [{ n: 6, views: 5000 }, { n: 2, views: 15000 }, { n: 1, views: 30000 }] /* easy -> hard */, ok: "2 Reviewers say OK" }
   };
   const pts = v => v.idea ? 2 : 1;
-  $("#tu-rules").innerHTML = Object.entries(NEXT).map(([from, r]) => `<span class="tu-rule">${img(DATA.tiers[from].icon)}<b>${from} → ${r.to}:</b> ${r.points} Catch Points, or ${r.shortText}</span>`).join("");
+  const goalTxt = g => `${g.n} video${g.n > 1 ? "s" : ""} with ${fmt(g.views)}+ views${g.n > 1 ? " each" : ""}`;
+  $("#tu-rules").innerHTML = Object.entries(NEXT).map(([from, r]) => `<span class="tu-rule${r.goals ? " new" : ""}">${img(DATA.tiers[from].icon)}<span><b>${from} → ${r.to}:</b> ${r.goals
+    ? `post at least <b>${r.videos} videos</b>, and reach one of these: ${r.goals.map(goalTxt).join(", or ")}`
+    : `${r.points} Catch Points, or ${r.shortText}`}</span></span>`).join("");
   const climbers = stats.filter(s => NEXT[s.tier]).map(s => {
     const r = NEXT[s.tier];
     const okV = s.vids.filter(v => v.status === "ok"), waitV = s.vids.filter(v => v.status === "wait");
     const have = okV.reduce((a, v) => a + pts(v), 0) + (s.pointsBefore || 0), maybe = waitV.reduce((a, v) => a + pts(v), 0);
-    const big = okV.filter(v => v.views >= r.short.views).length, huge = r.alt ? okV.filter(v => v.views >= r.alt.views).length : 0;
-    const ready = have >= r.points || big >= r.short.n || (r.alt && huge >= r.alt.n);
+    if (r.goals) {
+      const nv = okV.length, goals = r.goals.map(g => ({ ...g, got: okV.filter(v => v.views >= g.views).length }));
+      const hit = goals.some(g => g.got >= g.n), ready = nv >= r.videos && hit;
+      return { ...s, r, have: nv, maybe: waitV.length, goals, hit, ready, pct: Math.min(1, nv / r.videos), pctMaybe: Math.min(1, (nv + waitV.length) / r.videos) };
+    }
+    const big = okV.filter(v => v.views >= r.short.views).length;
+    const ready = have >= r.points || big >= r.short.n;
     return { ...s, r, have, maybe, big, ready, pct: Math.min(1, have / r.points), pctMaybe: Math.min(1, (have + maybe) / r.points) };
   }).filter(c => c.have || c.maybe).sort((a, b) => b.ready - a.ready || b.pct - a.pct || b.pctMaybe - a.pctMaybe);
   $("#gates").innerHTML = climbers.length ? climbers.map(c => `
@@ -149,10 +158,12 @@
       <div class="gc-top">${img(c.avatar, "gc-av")}
         <div class="gc-name"><b>${esc(c.discord)}</b><span>${esc(c.profile)} · ${platOf(c.link)}</span>
           <span class="gc-path"><i>${img(DATA.tiers[c.tier].icon)}</i>${c.tier}<em aria-hidden="true">›</em><i>${img(DATA.tiers[c.r.to].icon)}</i>${c.r.to}</span></div></div>
-      ${c.ready ? `<span class="gc-ready">Ready to tier up! ${c.r.ok}</span>` : ""}
-      <div class="meter"><div class="meter-l"><span>Catch Points</span><span><b class="num">${c.have}</b> / ${c.r.points}</span></div>
+      ${c.ready ? `<span class="gc-ready">Ready to tier up! ${c.r.ok} · moves up on Wednesday</span>` : ""}
+      <div class="meter"><div class="meter-l"><span>${c.r.goals ? "Videos posted" : "Catch Points"}</span><span><b class="num">${c.have}</b> / ${c.r.goals ? c.r.videos : c.r.points}</span></div>
         <div class="bar"><span class="ghost" style="width:${(c.pctMaybe * 100).toFixed(1)}%"></span><span class="fill" data-w="${(c.pct * 100).toFixed(1)}" style="width:0"></span></div></div>
-      <p class="gc-note">${c.maybe ? `<b>+${c.maybe}</b> more if the waiting videos get approved. ` : ""}${c.ready ? "" : `${Math.max(0, c.r.points - c.have)} to go.`} Shortcut: ${c.big} of ${c.r.short.n} videos with ${fmt(c.r.short.views)}+ views.</p>
+      ${c.r.goals ? `<p class="gc-note">${c.have >= c.r.videos ? `${c.r.videos} videos done!` : `${c.r.videos - c.have} more video${c.r.videos - c.have > 1 ? "s" : ""} to go.`} ${c.hit ? "<b>View goal reached!</b>" : "And reach one view goal:"}</p>
+      <ul class="gc-goals">${c.goals.map(g => `<li class="${g.got >= g.n ? "done" : ""}"><b class="num">${Math.min(g.got, g.n)} / ${g.n}</b> video${g.n > 1 ? "s" : ""} with ${fmt(g.views)}+ views</li>`).join("")}</ul>`
+      : `<p class="gc-note">${c.maybe ? `<b>+${c.maybe}</b> more if the waiting videos get approved. ` : ""}${c.ready ? "" : `${Math.max(0, c.r.points - c.have)} to go.`} Shortcut: ${c.big} of ${c.r.short.n} videos with ${fmt(c.r.short.views)}+ views.</p>`}
     </article>`).join("") : `<p class="tu-empty">No Catch Points yet this round. Post your first approved video to start climbing!</p>`;
   const fillIO = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.querySelectorAll(".fill").forEach(f => f.style.width = f.dataset.w + "%"); fillIO.unobserve(e.target); }
@@ -239,22 +250,23 @@
     if (pt) return; pt = true;
     requestAnimationFrame(() => { if (scrollY < innerHeight * 1.2) heroImg.style.translate = "0 " + (scrollY * .3).toFixed(1) + "px"; pt = false; });
   }, { passive: true });
-  /* daily update countdown: the board refreshes every day at 17:00 Türkiye time (UTC+3, no daylight saving) = 14:00 UTC */
-  const REFRESH_UTC_HOUR = 14, NOW_FOR = 60 * 1000;
-  const rf = $("#refresh"), rfH = $("#rf-h"), rfM = $("#rf-m"), rfS = $("#rf-s");
+  /* weekly update countdown: the board is updated every Saturday at 17:00 Türkiye time (UTC+3, no daylight saving) = Saturday 14:00 UTC */
+  const REFRESH_UTC_DAY = 6 /* Saturday */, REFRESH_UTC_HOUR = 14, NOW_FOR = 60 * 1000, WEEK = 7 * 86400000;
+  const rf = $("#refresh"), rfD = $("#rf-d"), rfH = $("#rf-h"), rfM = $("#rf-m"), rfS = $("#rf-s");
   const nextRefresh = from => {
     const t = new Date(from); t.setUTCHours(REFRESH_UTC_HOUR, 0, 0, 0);
-    if (t <= from) t.setUTCDate(t.getUTCDate() + 1);
+    t.setUTCDate(t.getUTCDate() + (REFRESH_UTC_DAY - t.getUTCDay() + 7) % 7);
+    if (t <= from) t.setUTCDate(t.getUTCDate() + 7);
     return t;
   };
   const pad = n => String(n).padStart(2, "0");
   function tick() {
     const now = Date.now();
-    const last = nextRefresh(new Date(now - 86400000)).getTime(); /* most recent 14:00 UTC */
+    const last = nextRefresh(new Date(now - WEEK)).getTime(); /* most recent Saturday 14:00 UTC */
     const inWindow = now - last < NOW_FOR;
     rf.classList.toggle("now", inWindow);
     const left = Math.max(0, nextRefresh(new Date(now)).getTime() - now), sec = Math.floor(left / 1000);
-    rfH.textContent = pad(Math.floor(sec / 3600)); rfM.textContent = pad(Math.floor(sec / 60) % 60); rfS.textContent = pad(sec % 60);
+    rfD.textContent = Math.floor(sec / 86400); rfH.textContent = pad(Math.floor(sec / 3600) % 24); rfM.textContent = pad(Math.floor(sec / 60) % 60); rfS.textContent = pad(sec % 60);
     rf.classList.toggle("soon", left < 10 * 60 * 1000);
     setTimeout(tick, 1000 - (now % 1000) + 5);
   }
