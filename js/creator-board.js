@@ -7,6 +7,7 @@
   const pre = v => since[v.creator] && v.date < since[v.creator];
   DATA.earlier = (DATA.earlier || []).concat(DATA.videos.filter(pre).map(v => ({ ...v, joined: since[v.creator] })));
   DATA.videos = DATA.videos.filter(v => !pre(v));
+  DATA.history = DATA.history || []; /* approved videos from earlier weeks: only used for tier-up progress */
   const MAX_PAID = DATA.maxPaid || Infinity;
   const $ = s => document.querySelector(s);
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -68,10 +69,14 @@
       <div class="pd-k pd-note">Videos posted ${day(DATA.weekStart, { month: "short", day: "numeric" })} – ${day(DATA.payday, { month: "short", day: "numeric" })} count. This page updates every Saturday, Diamonds go out every Sunday. New members: videos count from the day you joined.${DATA.maxPaid ? ` Up to ${DATA.maxPaid} paid videos a week, no spam.` : ""}</div>`;
   })();
 
+  /* this week's counting dates, shown above the schedule */
+  $("#window").innerHTML = `<span class="w-k">📅 Videos that count this week</span><span class="w-d">${day(DATA.weekStart, { weekday: "long", month: "short", day: "numeric" })} – ${day(DATA.payday, { weekday: "long", month: "short", day: "numeric" })}</span><span class="w-n">Only FISH ME! videos posted between these dates count. Videos posted before or after them won't count.</span>`;
+
   /* podiums */
   function podium(el, key, unit) {
     const top = [...DATA.videos].sort((a, b) => (b[key] ?? 0) - (a[key] ?? 0) || b.views - a.views).slice(0, 3);
     const suf = ["st", "nd", "rd"];
+    if (!top.length) { el.innerHTML = `<p class="tu-empty">No videos counted yet this week. The top 3 show up when this page updates on Saturday.</p>`; return; }
     el.innerHTML = top.map((v, i) => {
       const t = tierOf(v.creator), c = byName[v.creator];
       // the whole card opens the creator's channel; the video button inside still opens the video
@@ -142,7 +147,7 @@
     : `${r.points} Catch Points, or ${r.shortText}`}</span></span>`).join("");
   const climbers = stats.filter(s => NEXT[s.tier]).map(s => {
     const r = NEXT[s.tier];
-    const okV = s.vids.filter(v => v.status === "ok"), waitV = s.vids.filter(v => v.status === "wait");
+    const okV = [...s.vids, ...DATA.history.filter(v => v.creator === s.name)].filter(v => v.status === "ok"), waitV = s.vids.filter(v => v.status === "wait");
     const have = okV.reduce((a, v) => a + pts(v), 0) + (s.pointsBefore || 0), maybe = waitV.reduce((a, v) => a + pts(v), 0);
     if (r.goals) {
       const nv = okV.length, goals = r.goals.map(g => ({ ...g, got: okV.filter(v => v.views >= g.views).length }));
